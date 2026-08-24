@@ -8,7 +8,10 @@
  * - Controlar la apertura y cierre del selector desplegable en dispositivos móviles.
  * - Navegación entre categorías mediante botones "Anterior" / "Siguiente".
  * - Soporte para navegación por URL hash (#desayunos, #entradas, etc.).
- * - Scroll suave al inicio del contenido al cambiar de categoría.
+ * - Scroll suave controlado por JS al cambiar de categoría:
+ *     → Calcula offset real del header fijo + barra de categorías sticky.
+ *     → Funciona en desktop y móvil.
+ *     → Al cargar con hash, evita el scroll nativo del navegador.
  */
 
 (function () {
@@ -54,6 +57,62 @@
   let activeCategoryId = 'desayunos';
 
   /**
+   * Calcula el offset total de los elementos fijos/sticky que cubren la parte
+   * superior de la ventana: header fijo + barra de categorías sticky.
+   *
+   * Se mide dinámicamente con getBoundingClientRect para ser exacto en cualquier
+   * breakpoint y estado del header (transparente vs. scrolled).
+   *
+   * @returns {number} Offset en píxeles a restar del scroll target
+   */
+  function getStickyOffset() {
+    var offset = 0;
+
+    // 1. Header fijo
+    var header = document.querySelector('.header');
+    if (header) {
+      offset += header.getBoundingClientRect().height;
+    }
+
+    // 2. Barra de categorías sticky
+    if (categoryNav) {
+      offset += categoryNav.getBoundingClientRect().height;
+    }
+
+    // Pequeño margen de respiración (8px) para que el título no quede
+    // pegado a la barra de categorías
+    offset += 8;
+
+    return offset;
+  }
+
+  /**
+   * Realiza un scroll hasta la sección activa, compensando exactamente
+   * la altura de los elementos fijos (header + barra de categorías sticky).
+   *
+   * @param {string} categoryId     ID de la sección objetivo
+   * @param {string} [behavior]     'smooth' | 'instant' (default: 'smooth')
+   */
+  function scrollToSection(categoryId, behavior) {
+    behavior = behavior || 'smooth';
+
+    var section = document.getElementById(categoryId);
+    if (!section) return;
+
+    // getBoundingClientRect da la posición relativa al viewport actual
+    var rect = section.getBoundingClientRect();
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    var stickyOffset = getStickyOffset();
+    var targetY = scrollTop + rect.top - stickyOffset;
+
+    window.scrollTo({
+      top: Math.max(0, targetY),
+      behavior: behavior
+    });
+  }
+
+  /**
    * Inicialización al cargar el DOM
    */
   function init() {
@@ -71,7 +130,7 @@
     categoryLinks.forEach(function (link) {
       link.addEventListener('click', function (e) {
         e.preventDefault();
-        const targetId = getTargetIdFromHref(link.getAttribute('href'));
+        var targetId = getTargetIdFromHref(link.getAttribute('href'));
         if (targetId) {
           switchCategory(targetId, true);
         }
@@ -82,7 +141,7 @@
     if (categoryToggle) {
       categoryToggle.addEventListener('click', function (e) {
         e.stopPropagation();
-        const isOpen = categoryNav.classList.contains('is-open');
+        var isOpen = categoryNav.classList.contains('is-open');
         setMobileDropdown(!isOpen);
       });
     }
@@ -103,10 +162,10 @@
 
     // Delegación de eventos para botones "Anterior" y "Siguiente"
     document.addEventListener('click', function (e) {
-      const btn = e.target.closest('.menu-nav-btn');
+      var btn = e.target.closest('.menu-nav-btn');
       if (btn) {
         e.preventDefault();
-        const targetId = btn.getAttribute('data-target') || getTargetIdFromHref(btn.getAttribute('href'));
+        var targetId = btn.getAttribute('data-target') || getTargetIdFromHref(btn.getAttribute('href'));
         if (targetId) {
           switchCategory(targetId, true);
         }
@@ -115,23 +174,45 @@
 
     // Escuchar cambios de hash en la ventana (navegación atrás/adelante del navegador)
     window.addEventListener('hashchange', function () {
-      const hashId = getHashCategoryId();
+      var hashId = getHashCategoryId();
       if (hashId && hashId !== activeCategoryId) {
         switchCategory(hashId, true);
       }
     });
 
-    // Determinar categoría inicial desde el hash o por defecto 'desayunos'
-    const initialHash = getHashCategoryId();
-    const initialCategory = CATEGORIES.includes(initialHash) ? initialHash : 'desayunos';
-    switchCategory(initialCategory, false);
+    // -----------------------------------------------------------------------
+    // Categoría inicial desde el hash o por defecto 'desayunos'
+    //
+    // Si la página se carga con un hash válido (#chocolate, #cafeteria, etc.):
+    //   1. Mostramos la sección correcta sin hacer scroll todavía.
+    //   2. Tras dos requestAnimationFrame (para que el browser haya pintado
+    //      y haya intentado su scroll nativo al hash), hacemos scroll 'instant'
+    //      con nuestro offset correcto. Esto cancela cualquier posición incorrecta
+    //      del browser y posiciona el título debajo de los elementos sticky.
+    // -----------------------------------------------------------------------
+    var initialHash = getHashCategoryId();
+    var initialCategory = CATEGORIES.includes(initialHash) ? initialHash : 'desayunos';
+
+    if (initialHash && CATEGORIES.includes(initialHash)) {
+      // Mostrar la sección correcta sin scroll todavía
+      switchCategory(initialCategory, false);
+
+      // Después del primer paint, reposicionar instantáneamente
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          scrollToSection(initialCategory, 'instant');
+        });
+      });
+    } else {
+      switchCategory(initialCategory, false);
+    }
   }
 
   /**
    * Extrae el ID de categoría del hash de la URL
    */
   function getHashCategoryId() {
-    const rawHash = window.location.hash.replace(/^#/, '').trim();
+    var rawHash = window.location.hash.replace(/^#/, '').trim();
     return CATEGORIES.includes(rawHash) ? rawHash : null;
   }
 
@@ -140,7 +221,7 @@
    */
   function getTargetIdFromHref(href) {
     if (!href) return null;
-    const match = href.match(/#([a-zA-Z0-9_-]+)/);
+    var match = href.match(/#([a-zA-Z0-9_-]+)/);
     return match ? match[1] : null;
   }
 
@@ -161,8 +242,8 @@
 
   /**
    * Cambia la categoría activa y actualiza la vista
-   * @param {string} categoryId ID de la categoría a mostrar
-   * @param {boolean} shouldScroll Si se debe realizar scroll suave al contenido
+   * @param {string}  categoryId   ID de la categoría a mostrar
+   * @param {boolean} shouldScroll Si se debe realizar scroll al contenido
    */
   function switchCategory(categoryId, shouldScroll) {
     if (!CATEGORIES.includes(categoryId)) {
@@ -173,7 +254,7 @@
 
     // 1. Mostrar únicamente la sección seleccionada y ocultar todas las demás
     categorySections.forEach(function (section) {
-      const isTarget = section.id === categoryId;
+      var isTarget = section.id === categoryId;
       section.classList.toggle('is-active', isTarget);
       if (isTarget) {
         section.removeAttribute('hidden');
@@ -184,8 +265,8 @@
 
     // 2. Actualizar estado visual de los enlaces de navegación (desktop & móvil)
     categoryLinks.forEach(function (link) {
-      const linkTarget = getTargetIdFromHref(link.getAttribute('href')) || link.getAttribute('data-category');
-      const isActive = linkTarget === categoryId;
+      var linkTarget = getTargetIdFromHref(link.getAttribute('href')) || link.getAttribute('data-category');
+      var isActive = linkTarget === categoryId;
       link.classList.toggle('is-active', isActive);
       link.setAttribute('aria-selected', String(isActive));
     });
@@ -207,35 +288,14 @@
       }
     }
 
-    // 6. Scroll suave hacia el inicio de la categoría activa
+    // 6. Scroll hacia el inicio de la categoría activa
     if (shouldScroll) {
-      scrollToCategoryTop();
+      // rAF garantiza que hidden fue removido y el browser recalculó el layout
+      // antes de que midamos la posición de la sección con getBoundingClientRect
+      requestAnimationFrame(function () {
+        scrollToSection(categoryId, 'smooth');
+      });
     }
-  }
-
-  /**
-   * Realiza un scroll suave hacia el contenedor de categorías / inicio del contenido,
-   * calculando la compensación del header y de la barra de navegación sticky.
-   */
-  function scrollToCategoryTop() {
-    if (!categoryNav) return;
-
-    // Obtener la posición del categoryNav
-    const navRect = categoryNav.getBoundingClientRect();
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Altura del header fijo según ancho de pantalla
-    const isMobile = window.innerWidth <= 650;
-    const isSmallMobile = window.innerWidth <= 400;
-    const headerHeight = isSmallMobile ? 52 : (isMobile ? 56 : 72);
-
-    // Posición calculada para dejar el nav y la sección en la vista óptima
-    const targetY = scrollTop + navRect.top - headerHeight;
-
-    window.scrollTo({
-      top: Math.max(0, targetY),
-      behavior: 'smooth'
-    });
   }
 
   // Ejecutar inicialización cuando el DOM esté listo
@@ -245,3 +305,4 @@
     init();
   }
 })();
+

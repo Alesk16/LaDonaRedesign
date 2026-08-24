@@ -99,6 +99,11 @@
     box-shadow: var(--sombra-media);
 }
 
+/* Compensar header fijo al navegar con ancla (#cayambe, #cumbaya) */
+.sucursal-card[id] {
+    scroll-margin-top: 100px;
+}
+
 /* Imagen y badge */
 .sucursal-image {
     position: relative;

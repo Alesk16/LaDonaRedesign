@@ -508,6 +508,11 @@ section[id] {
     transition: transform var(--transicion), box-shadow var(--transicion);
 }
 
+/* Tarjeta de sucursal clickeable (index.html) */
+.branch-card[data-branch-url] {
+    cursor: pointer;
+}
+
 .branch-image {
     height: 300px;
     overflow: hidden;

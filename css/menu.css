@@ -134,6 +134,13 @@
     display: none;
     padding: 70px 0 80px;
     background: var(--blanco);
+    /*
+     * min-height garantiza que incluso las secciones con poco contenido
+     * (Cafetería, Chocolate, Bebidas, Cervezas) ocupen suficiente espacio para
+     * poder hacer scroll hasta dejar el título arriba, debajo del header + nav bar.
+     * 160px ≈ header fijo (72px) + barra de categorías (~68px) + margen extra.
+     */
+    min-height: calc(100vh - 160px);
 }
 
 .menu-page-section.is-active {
@@ -157,7 +164,7 @@
 }
 
 .menu-page-section[id] {
-    scroll-margin-top: 130px;
+    scroll-margin-top: 160px;
 }
 
 .menu-page-section .section-heading {
@@ -706,10 +713,11 @@
     /* Secciones de categorías en móvil */
     .menu-page-section {
         padding: 44px 0 54px;
+        min-height: calc(100vh - 130px);
     }
 
     .menu-page-section[id] {
-        scroll-margin-top: 108px;
+        scroll-margin-top: 130px;
     }
 
     .menu-page-section .section-heading {

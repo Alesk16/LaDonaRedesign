@@ -6,7 +6,7 @@
  * - Actualizar en tiempo real el resumen de reserva conforme el usuario completa el formulario.
  * - Formatear fechas y horas para una lectura clara.
  * - Validar los campos requeridos del formulario.
- * - Mostrar el mensaje de confirmación de solicitud preparada sin enviar datos externos.
+ * - Al enviar, construir un mensaje de WhatsApp y abrirlo en la sucursal seleccionada.
  */
 
 (function () {
@@ -22,6 +22,7 @@
   const inputFecha = document.getElementById('fecha');
   const inputHora = document.getElementById('hora');
   const selectOcasion = document.getElementById('ocasion');
+  const inputComentarios = document.getElementById('comentarios');
   const btnSubmit = document.getElementById('btnSubmit');
   const successCard = document.getElementById('reservasSuccess');
 
@@ -34,6 +35,12 @@
   const sumOcasion = document.getElementById('sumOcasion');
 
   if (!form) return;
+
+  // ─── Números de WhatsApp por sucursal ────────────────────────────────────────
+  const WHATSAPP_SUCURSALES = {
+    Cayambe: '593994031040',
+    'Cumbayá': '593980240747'
+  };
 
   /**
    * Establece la fecha mínima de reserva como la fecha actual
@@ -196,7 +203,69 @@
   }
 
   /**
-   * Maneja el envío del formulario
+   * Construye el mensaje de WhatsApp con todos los datos del formulario.
+   * Los campos opcionales (ocasión, comentarios) se omiten si están vacíos.
+   * @param {string} sucursal - Nombre de la sucursal seleccionada
+   * @returns {string} Mensaje formateado listo para encodeURIComponent
+   */
+  function buildWhatsAppMessage(sucursal) {
+    const nombre      = inputNombre      ? inputNombre.value.trim()      : '';
+    const telefono    = inputTelefono    ? inputTelefono.value.trim()    : '';
+    const email       = inputEmail       ? inputEmail.value.trim()       : '';
+    const personas    = inputPersonas    ? inputPersonas.value.trim()    : '';
+    const fecha       = inputFecha       ? formatDisplayDate(inputFecha.value) : '';
+    const hora        = inputHora        ? formatDisplayTime(inputHora.value) : '';
+    const ocasion     = selectOcasion    ? selectOcasion.value.trim()    : '';
+    const comentarios = inputComentarios ? inputComentarios.value.trim() : '';
+
+    const personasLabel = parseInt(personas, 10) === 1 ? '1 persona' : `${personas} personas`;
+
+    let mensaje =
+      `Hola, quisiera realizar una reserva en La Doña Hacienda.\n\n` +
+      `📍 Sucursal: ${sucursal}\n` +
+      `👤 Nombre: ${nombre}\n` +
+      `📞 Teléfono: ${telefono}\n` +
+      `📧 Correo: ${email}\n` +
+      `👥 Número de personas: ${personasLabel}\n` +
+      `📅 Fecha: ${fecha}\n` +
+      `🕐 Hora: ${hora}\n`;
+
+    if (ocasion) {
+      mensaje += `🎉 Ocasión: ${ocasion}\n`;
+    }
+
+    if (comentarios) {
+      mensaje += `📝 Comentarios o requerimientos especiales: ${comentarios}\n`;
+    }
+
+    mensaje += `\nPor favor, confirmar disponibilidad. ¡Gracias!`;
+
+    return mensaje;
+  }
+
+  /**
+   * Selecciona el número de WhatsApp según la sucursal y abre la conversación
+   * en una nueva pestaña usando wa.me con el mensaje codificado.
+   * @param {string} sucursal - Valor del select (ej. "Cayambe" o "Cumbayá")
+   */
+  function openWhatsApp(sucursal) {
+    const numero = WHATSAPP_SUCURSALES[sucursal];
+    if (!numero) {
+      console.error('[Reservas] Número de WhatsApp no encontrado para:', sucursal);
+      return;
+    }
+    const mensaje = buildWhatsAppMessage(sucursal);
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+
+  /**
+   * Maneja el envío del formulario:
+   * 1. Valida todos los campos obligatorios.
+   * 2. Si hay errores, hace foco en el primero y NO abre WhatsApp.
+   * 3. Si todo es válido, abre WhatsApp con los datos de la reserva.
+   * 4. NO limpia el formulario para que el usuario pueda revisarlo al regresar.
+   * 5. NO afirma que la reserva está confirmada (solo indica que se envió la solicitud).
    */
   function handleSubmit(e) {
     e.preventDefault();
@@ -228,10 +297,14 @@
       if (firstInvalid) {
         firstInvalid.focus();
       }
-      return;
+      return; // No abrir WhatsApp si faltan datos obligatorios
     }
 
-    // Mostrar mensaje de confirmación de solicitud preparada
+    // Abrir WhatsApp con los datos del formulario en la sucursal correcta
+    const sucursal = selectSucursal ? selectSucursal.value : '';
+    openWhatsApp(sucursal);
+
+    // Mostrar aviso informativo (sin afirmar que la reserva está confirmada)
     if (successCard) {
       successCard.removeAttribute('hidden');
       successCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -240,20 +313,63 @@
     // Actualizar badge del resumen
     const badge = document.querySelector('.summary-badge');
     if (badge) {
-      badge.textContent = 'Solicitud registrada';
+      badge.textContent = 'Solicitud enviada a WhatsApp';
       badge.style.background = 'rgb(80 118 77 / 20%)';
       badge.style.color = 'var(--verde-principal)';
     }
 
-    // Deshabilitar botón temporalmente para indicar éxito de registro
+    // Actualizar botón para indicar que se abrió WhatsApp;
+    // se restaura a los 4 s para permitir reintentos si es necesario
     if (btnSubmit) {
-      btnSubmit.textContent = 'Solicitud registrada ✓';
+      btnSubmit.textContent = 'WhatsApp abierto ✓';
       btnSubmit.style.background = 'var(--verde-principal)';
+
+      setTimeout(() => {
+        btnSubmit.textContent = 'Solicitar reserva';
+        btnSubmit.style.background = '';
+      }, 4000);
     }
+  }
+
+  /**
+   * Lee el parámetro ?sucursal= de la URL y, si corresponde a una opción
+   * válida del select, la preselecciona automáticamente al cargar la página.
+   * El usuario puede cambiar la sucursal manualmente en cualquier momento.
+   *
+   * Ejemplo de URL: reservas.html?sucursal=Cayambe
+   *                 reservas.html?sucursal=Cumbay%C3%A1
+   */
+  function preselectSucursalFromURL() {
+    if (!selectSucursal) return;
+
+    var params = new URLSearchParams(window.location.search);
+    var sucursalParam = params.get('sucursal');
+
+    if (!sucursalParam) return; // Sin parámetro: comportamiento normal
+
+    // Verificar que el valor sea una sucursal conocida (evitar valores arbitrarios)
+    var esValida = WHATSAPP_SUCURSALES.hasOwnProperty(sucursalParam);
+    if (!esValida) {
+      console.warn('[Reservas] Parámetro ?sucursal= no reconocido:', sucursalParam);
+      return;
+    }
+
+    // Preseleccionar la sucursal en el select
+    selectSucursal.value = sucursalParam;
+
+    // Confirmar que el value realmente cambió (por si el option no existe)
+    if (selectSucursal.value !== sucursalParam) {
+      console.warn('[Reservas] No se encontró la opción en el select para:', sucursalParam);
+      return;
+    }
+
+    // Actualizar el resumen lateral inmediatamente
+    updateSummary();
   }
 
   // Inicialización
   setupMinDate();
   setupLiveListeners();
+  preselectSucursalFromURL();
   form.addEventListener('submit', handleSubmit);
 })();
