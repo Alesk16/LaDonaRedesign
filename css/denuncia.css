@@ -1,0 +1,714 @@
+/* ==========================================================================
+   LA DOÑA HACIENDA — ESTILOS EXCLUSIVOS DE DENUNCIAS (pages/denuncia.html)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ESTADO ACTIVO EN NAVEGACIÓN PRINCIPAL
+   -------------------------------------------------------------------------- */
+.nav a.active:not(.nav-button) {
+    color: var(--blanco);
+}
+
+.nav a.active:not(.nav-button)::after {
+    transform: scaleX(1);
+    background: var(--naranja-principal);
+}
+
+.header-scrolled .nav a.active:not(.nav-button) {
+    color: var(--naranja-principal);
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO DE DENUNCIAS
+   -------------------------------------------------------------------------- */
+.denuncia-hero {
+    position: relative;
+    display: grid;
+    min-height: clamp(320px, 38svh, 400px);
+    place-items: center;
+    background: url("../img/hero/hero.jpg") center / cover;
+    color: var(--blanco);
+    isolation: isolate;
+    text-align: center;
+}
+
+.denuncia-hero .hero-overlay {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--superposicion-hero);
+}
+
+.denuncia-hero-content {
+    width: min(calc(100% - 48px), var(--ancho-contenedor));
+    padding: calc(var(--space-2xl) + var(--space-md)) 0 var(--space-lg);
+}
+
+.denuncia-hero .section-label {
+    color: var(--naranja-claro);
+    margin-bottom: var(--space-xs);
+    letter-spacing: .2em;
+    font-size: .75rem;
+}
+
+.denuncia-hero h1 {
+    font-family: Alata, sans-serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--blanco);
+}
+
+.denuncia-hero p {
+    max-width: 620px;
+    margin: var(--space-sm) auto 0;
+    font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+    color: rgb(255 255 255 / 92%);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   2. SECCIÓN PRINCIPAL Y LAYOUT
+   -------------------------------------------------------------------------- */
+.denuncia-section {
+    padding: 70px 0 90px;
+    background: var(--blanco);
+}
+
+.denuncia-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   3. TARJETA DEL FORMULARIO
+   -------------------------------------------------------------------------- */
+.denuncia-card {
+    padding: 38px 42px;
+    border-radius: var(--radio-grande);
+    background: var(--crema);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid rgb(80 118 77 / 12%);
+}
+
+.card-subtitle {
+    display: inline-block;
+    color: var(--naranja-principal);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    margin-bottom: 6px;
+}
+
+.form-header {
+    margin-bottom: 24px;
+}
+
+.form-header h2 {
+    color: var(--verde-principal);
+    font-family: Alata, sans-serif;
+    font-size: clamp(1.6rem, 2.4vw, 2rem);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.form-header p {
+    margin-top: 8px;
+    color: var(--texto-secundario);
+    font-size: .95rem;
+    line-height: 1.55;
+}
+
+/* AVISO DE INTERFAZ */
+.denuncia-notice {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    background: rgb(80 118 77 / 8%);
+    border-left: 4px solid var(--verde-principal);
+    border-radius: 8px;
+}
+
+.notice-icon {
+    font-size: 1.2rem;
+    color: var(--verde-principal);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.notice-body strong {
+    display: block;
+    color: var(--verde-oscuro);
+    font-size: .88rem;
+    margin-bottom: 4px;
+}
+
+.notice-body p {
+    margin: 0;
+    color: var(--texto-secundario);
+    font-size: .84rem;
+    line-height: 1.45;
+}
+
+/* FIELDSET DE MODALIDAD */
+.form-fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.form-legend {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--verde-oscuro);
+    font-family: Alata, sans-serif;
+    font-size: .94rem;
+    font-weight: 400;
+}
+
+.modality-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.modality-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: var(--blanco);
+    border: 1.5px solid rgb(80 118 77 / 20%);
+    border-radius: var(--radio);
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.modality-card:hover {
+    border-color: var(--verde-principal);
+    box-shadow: 0 4px 12px rgb(80 118 77 / 10%);
+}
+
+.modality-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modality-custom-radio {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgb(80 118 77 / 40%);
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: grid;
+    place-items: center;
+    transition: var(--transicion);
+}
+
+.modality-custom-radio::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--verde-principal);
+    transform: scale(0);
+    transition: transform 0.2s ease;
+}
+
+.modality-card input[type="radio"]:checked + .modality-custom-radio {
+    border-color: var(--verde-principal);
+}
+
+.modality-card input[type="radio"]:checked + .modality-custom-radio::after {
+    transform: scale(1);
+}
+
+.modality-card:has(input[type="radio"]:checked) {
+    border-color: var(--verde-principal);
+    background: rgb(80 118 77 / 4%);
+    box-shadow: 0 4px 16px rgb(80 118 77 / 12%);
+}
+
+.modality-card input[type="radio"]:focus-visible + .modality-custom-radio {
+    outline: 2px solid var(--naranja-principal);
+    outline-offset: 2px;
+}
+
+.modality-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.modality-title {
+    font-family: Alata, sans-serif;
+    font-size: .92rem;
+    color: var(--verde-oscuro);
+}
+
+.modality-desc {
+    font-size: .78rem;
+    color: var(--texto-secundario);
+    line-height: 1.35;
+}
+
+/* GRILLA DEL FORMULARIO */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 24px;
+}
+
+.form-col-full {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: var(--verde-oscuro);
+    font-family: Alata, sans-serif;
+    font-size: .92rem;
+    font-weight: 400;
+}
+
+.form-required {
+    color: var(--naranja-principal);
+    font-weight: 700;
+}
+
+.label-with-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.char-counter {
+    font-size: .78rem;
+    color: var(--texto-secundario);
+}
+
+/* INPUTS, SELECTS, TEXTAREAS */
+.denuncia-form input[type="text"],
+.denuncia-form input[type="tel"],
+.denuncia-form input[type="email"],
+.denuncia-form input[type="date"],
+.denuncia-form select,
+.denuncia-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-family: Raleway, sans-serif;
+    font-size: .92rem;
+    color: var(--texto-principal);
+    background: var(--blanco);
+    border: 1.5px solid rgb(80 118 77 / 22%);
+    border-radius: var(--radio);
+    outline: none;
+    transition: var(--transicion);
+}
+
+.denuncia-form textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.denuncia-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2350764d' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.denuncia-form input:focus,
+.denuncia-form select:focus,
+.denuncia-form textarea:focus {
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 3px rgb(80 118 77 / 18%);
+}
+
+/* ESTADOS DE ERROR */
+.form-error-msg {
+    display: none;
+    margin-top: 6px;
+    font-size: .8rem;
+    color: #c53030;
+    font-weight: 500;
+}
+
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+    border-color: #c53030;
+    background: #fff8f8;
+}
+
+.form-group.has-error input:focus,
+.form-group.has-error select:focus,
+.form-group.has-error textarea:focus {
+    box-shadow: 0 0 0 3px rgb(197 48 48 / 18%);
+}
+
+.form-group.has-error .form-error-msg {
+    display: block;
+}
+
+/* SECCIÓN DE DATOS DE CONTACTO */
+.contact-data-section {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px dashed rgb(80 118 77 / 25%);
+    transition: var(--transicion);
+}
+
+.contact-data-section.is-disabled {
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.contact-section-header {
+    margin-bottom: 18px;
+}
+
+.contact-section-header h3 {
+    font-family: Alata, sans-serif;
+    font-size: 1.05rem;
+    color: var(--verde-oscuro);
+    font-weight: 400;
+}
+
+.contact-section-header p {
+    font-size: .82rem;
+    color: var(--texto-secundario);
+    margin-top: 4px;
+}
+
+/* CHECKBOX LEGAL */
+.legal-check-group {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgb(80 118 77 / 15%);
+}
+
+.custom-checkbox {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(80 118 77 / 40%);
+    border-radius: 6px;
+    background: var(--blanco);
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: grid;
+    place-items: center;
+    transition: var(--transicion);
+}
+
+.checkbox-box::after {
+    content: '';
+    width: 6px;
+    height: 10px;
+    border: solid var(--blanco);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) scale(0);
+    margin-bottom: 2px;
+    transition: transform 0.2s ease;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-box {
+    background: var(--verde-principal);
+    border-color: var(--verde-principal);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-box::after {
+    transform: rotate(45deg) scale(1);
+}
+
+.custom-checkbox input[type="checkbox"]:focus-visible + .checkbox-box {
+    outline: 2px solid var(--naranja-principal);
+    outline-offset: 2px;
+}
+
+.checkbox-label {
+    font-size: .84rem;
+    color: var(--texto-secundario);
+    line-height: 1.45;
+}
+
+/* BOTÓN DE ACCIONES */
+.form-actions {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-full {
+    width: 100%;
+    padding: 15px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--radio);
+}
+
+.form-disclaimer {
+    font-size: .78rem;
+    color: var(--texto-secundario);
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+}
+
+/* FEEDBACK DE VALIDACIÓN DE INTERFAZ */
+.denuncia-ui-feedback {
+    margin-top: 24px;
+    padding: 18px 22px;
+    background: #f0f7f0;
+    border: 1px solid rgb(80 118 77 / 25%);
+    border-radius: var(--radio);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.feedback-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--verde-principal);
+    color: var(--blanco);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: .95rem;
+    flex-shrink: 0;
+}
+
+.feedback-text h4 {
+    color: var(--verde-oscuro);
+    font-family: Alata, sans-serif;
+    font-size: .96rem;
+    margin-bottom: 4px;
+}
+
+.feedback-text p {
+    color: var(--texto-secundario);
+    font-size: .84rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. BARRA LATERAL (SIDEBAR)
+   -------------------------------------------------------------------------- */
+.denuncia-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-card {
+    padding: 30px 28px;
+    border-radius: var(--radio-grande);
+    background: var(--crema);
+    border: 1px solid rgb(80 118 77 / 12%);
+    box-shadow: var(--sombra-suave);
+}
+
+.sidebar-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.sidebar-card h3 {
+    font-family: Alata, sans-serif;
+    color: var(--verde-principal);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.sidebar-card p {
+    color: var(--texto-secundario);
+    font-size: .88rem;
+    line-height: 1.55;
+    margin-bottom: 14px;
+}
+
+.sidebar-list {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--texto-secundario);
+    font-size: .85rem;
+    line-height: 1.6;
+}
+
+.sidebar-list li {
+    margin-bottom: 6px;
+}
+
+.sidebar-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar-steps li {
+    color: var(--texto-secundario);
+    font-size: .84rem;
+    line-height: 1.45;
+    padding-left: 10px;
+    border-left: 2px solid var(--verde-principal);
+}
+
+.sidebar-steps strong {
+    color: var(--verde-oscuro);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.sidebar-card-highlight {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    border-color: var(--verde-oscuro);
+}
+
+.sidebar-card-highlight h3 {
+    color: var(--naranja-claro);
+}
+
+.sidebar-card-highlight p {
+    color: rgb(255 255 255 / 85%);
+}
+
+.sidebar-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.contact-line {
+    font-size: .84rem;
+    line-height: 1.4;
+}
+
+.contact-line strong {
+    display: block;
+    color: var(--blanco);
+    font-family: Alata, sans-serif;
+    font-size: .88rem;
+}
+
+.contact-line span {
+    color: rgb(255 255 255 / 75%);
+}
+
+/* ENLACE ACTIVO EN FOOTER */
+.active-footer-link {
+    color: var(--naranja-principal) !important;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   5. RESPONSIVE BREAKPOINTS (900px, 650px, 400px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .denuncia-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .denuncia-sidebar {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .denuncia-card {
+        padding: 32px 28px;
+    }
+}
+
+@media (max-width: 650px) {
+    .denuncia-section {
+        padding: 48px 0 70px;
+    }
+
+    .denuncia-card {
+        padding: 24px 20px;
+        border-radius: var(--radio);
+    }
+
+    .modality-options {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .form-col-full {
+        grid-column: auto;
+    }
+
+    .denuncia-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-card {
+        padding: 24px 20px;
+        border-radius: var(--radio);
+    }
+}
+
+@media (max-width: 400px) {
+    .denuncia-card {
+        padding: 20px 16px;
+    }
+
+    .form-header h2 {
+        font-size: 1.45rem;
+    }
+
+    .modality-card {
+        padding: 12px;
+    }
+
+    .btn-full {
+        padding: 13px 20px;
+        font-size: .92rem;
+    }
+}

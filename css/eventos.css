@@ -1,0 +1,963 @@
+/* ==========================================================================
+   LA DOÑA HACIENDA — ESTILOS EXCLUSIVOS DE EVENTOS (pages/eventos.html)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ESTADO ACTIVO EN NAVEGACIÓN PRINCIPAL
+   -------------------------------------------------------------------------- */
+.nav a.active:not(.nav-button) {
+    color: var(--blanco);
+}
+
+.nav a.active:not(.nav-button)::after {
+    transform: scaleX(1);
+    background: var(--naranja-principal);
+}
+
+.header-scrolled .nav a.active:not(.nav-button) {
+    color: var(--naranja-principal);
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO DE EVENTOS
+   -------------------------------------------------------------------------- */
+.eventos-hero {
+    position: relative;
+    display: grid;
+    min-height: clamp(340px, 42svh, 420px);
+    place-items: center;
+    background: url("../img/hero/hero.jpg") center / cover;
+    color: var(--blanco);
+    isolation: isolate;
+    text-align: center;
+}
+
+.eventos-hero .hero-overlay {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--superposicion-hero);
+}
+
+.eventos-hero-content {
+    width: min(calc(100% - 48px), var(--ancho-contenedor));
+    padding: calc(var(--space-2xl) + var(--space-md)) 0 var(--space-lg);
+}
+
+.eventos-hero .section-label {
+    color: var(--naranja-claro);
+    margin-bottom: var(--space-xs);
+}
+
+.eventos-hero h1 {
+    font-family: Alata, sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--blanco);
+}
+
+.eventos-hero p {
+    max-width: 620px;
+    margin: var(--space-sm) auto 0;
+    font-size: clamp(0.98rem, 1.35vw, 1.12rem);
+    color: rgb(255 255 255 / 92%);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   3. SECCIONES Y FONDOS ALTERNOS
+   -------------------------------------------------------------------------- */
+.eventos-section {
+    padding: 85px 0 100px;
+}
+
+.proximos-section {
+    background: var(--crema);
+}
+
+.fijos-section {
+    background: var(--blanco);
+}
+
+.realizados-section {
+    background: var(--crema);
+}
+
+/* --------------------------------------------------------------------------
+   4. PLACEHOLDERS VISUALES ELEGANTES PARA IMÁGENES
+   -------------------------------------------------------------------------- */
+.evento-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(145deg, #263a27, #365337);
+    color: rgb(255 255 255 / 85%);
+    transition: transform 0.5s ease;
+    user-select: none;
+}
+
+.fijo-placeholder {
+    background: linear-gradient(145deg, #2a412c, #406041);
+}
+
+.realizado-placeholder {
+    background: linear-gradient(145deg, #1f3020, #314a33);
+}
+
+.placeholder-icon {
+    font-size: 2.2rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 6px rgb(0 0 0 / 20%));
+}
+
+.placeholder-tag {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--naranja-claro);
+    background: rgb(0 0 0 / 25%);
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid rgb(255 255 255 / 15%);
+}
+
+/* --------------------------------------------------------------------------
+   5. SECCIÓN: PRÓXIMOS EVENTOS
+   -------------------------------------------------------------------------- */
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    align-items: stretch;
+}
+
+.evento-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--radio-grande);
+    background: var(--blanco);
+    border: 1px solid rgb(80 118 77 / 12%);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.evento-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-media);
+}
+
+.evento-card:hover .evento-image-placeholder {
+    transform: scale(1.04);
+}
+
+.evento-image {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    background: var(--verde-oscuro);
+}
+
+.evento-status-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgb(80 118 77 / 92%);
+    color: var(--blanco);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+.evento-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 32px 30px 34px;
+}
+
+.evento-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.evento-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgb(80 118 77 / 8%);
+    color: var(--texto-secundario);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.meta-icon {
+    font-size: 0.88rem;
+    line-height: 1;
+}
+
+.evento-header {
+    margin-bottom: 12px;
+}
+
+.evento-header h3 {
+    font-family: Alata, sans-serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: var(--verde-principal);
+    line-height: 1.25;
+}
+
+.evento-description {
+    color: var(--texto-secundario);
+    font-size: 0.94rem;
+    line-height: 1.6;
+    margin-bottom: 26px;
+    flex-grow: 1;
+}
+
+.evento-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+}
+
+.evento-actions .btn {
+    width: 100%;
+}
+
+/* Banner de aviso para próximas fechas */
+.evento-notice-banner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+    padding: 26px 32px;
+    border-radius: var(--radio-grande);
+    background: var(--blanco);
+    border: 1px dashed rgb(80 118 77 / 35%);
+    box-shadow: var(--sombra-suave);
+}
+
+.notice-badge {
+    flex-shrink: 0;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgb(234 87 27 / 12%);
+    color: var(--naranja-principal);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.notice-info h3 {
+    font-family: Alata, sans-serif;
+    font-size: 1.28rem;
+    font-weight: 400;
+    color: var(--verde-principal);
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.notice-info p {
+    color: var(--texto-secundario);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. SECCIÓN: EVENTOS FIJOS
+   -------------------------------------------------------------------------- */
+.eventos-fijos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    align-items: stretch;
+}
+
+.evento-fijo-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--radio-grande);
+    background: var(--crema);
+    border: 1px solid rgb(80 118 77 / 12%);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.evento-fijo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-media);
+}
+
+.evento-fijo-card:hover .evento-image-placeholder {
+    transform: scale(1.04);
+}
+
+.evento-fijo-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: var(--verde-oscuro);
+}
+
+.evento-fijo-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 28px 26px 30px;
+}
+
+.evento-fijo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.frecuencia-pill,
+.sucursal-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.frecuencia-pill {
+    background: rgb(80 118 77 / 12%);
+    color: var(--verde-oscuro);
+}
+
+.sucursal-pill {
+    background: rgb(234 87 27 / 10%);
+    color: var(--naranja-secundario);
+}
+
+.pill-icon {
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
+.evento-fijo-header {
+    margin-bottom: 10px;
+}
+
+.evento-fijo-header h3 {
+    font-family: Alata, sans-serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--verde-principal);
+    line-height: 1.25;
+}
+
+/* --------------------------------------------------------------------------
+   7. SECCIÓN: EVENTOS REALIZADOS (HISTORIAL / GALERÍA)
+   -------------------------------------------------------------------------- */
+.eventos-realizados-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.evento-realizado-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--radio);
+    background: var(--blanco);
+    border: 1px solid rgb(80 118 77 / 12%);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.evento-realizado-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.evento-realizado-card:hover .evento-image-placeholder {
+    transform: scale(1.04);
+}
+
+.evento-realizado-media {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: var(--verde-oscuro);
+}
+
+.evento-realizado-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 24px 22px 26px;
+}
+
+.evento-realizado-content .evento-header h3 {
+    font-size: 1.32rem;
+}
+
+.evento-realizado-content .evento-description {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. SECCIÓN: CTA FINAL
+   -------------------------------------------------------------------------- */
+.eventos-cta-section {
+    padding: 30px 0 110px;
+    background: var(--blanco);
+}
+
+.eventos-cta-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radio-grande);
+    background: url("../img/hero/hero.jpg") center / cover;
+    color: var(--blanco);
+    text-align: center;
+    padding: 76px 36px;
+    isolation: isolate;
+    box-shadow: var(--sombra-media);
+}
+
+.eventos-cta-box .cta-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, rgb(20 35 22 / 92%), rgb(47 70 48 / 88%));
+}
+
+.cta-content {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.cta-label {
+    color: var(--naranja-claro);
+    margin-bottom: var(--space-xs);
+}
+
+.cta-content h2 {
+    font-family: Alata, sans-serif;
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    font-weight: 400;
+    color: var(--blanco);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.cta-content p {
+    color: rgb(255 255 255 / 92%);
+    font-size: clamp(0.96rem, 1.3vw, 1.1rem);
+    line-height: 1.65;
+    margin-bottom: 34px;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   9. MODAL / VISTA AMPLIADA DE GALERÍA (EVENTOS REALIZADOS)
+   -------------------------------------------------------------------------- */
+.evento-realizado-card[role="button"] {
+    cursor: pointer;
+}
+
+.evento-realizado-card:focus-visible {
+    outline: 3px solid var(--naranja-principal);
+    outline-offset: 3px;
+}
+
+.evento-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.evento-modal.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.evento-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgb(20 35 22 / 85%);
+    backdrop-filter: blur(6px);
+}
+
+.evento-modal-dialog {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 760px);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--blanco);
+    border-radius: var(--radio-grande);
+    border: 1px solid rgb(80 118 77 / 18%);
+    box-shadow: 0 20px 50px rgb(0 0 0 / 30%);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.evento-modal.is-active .evento-modal-dialog {
+    transform: scale(1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(0 0 0 / 60%);
+    color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0;
+    transition: background-color var(--transicion), transform var(--transicion);
+}
+
+.modal-close-btn:hover {
+    background: var(--naranja-principal);
+    transform: rotate(90deg);
+}
+
+.modal-close-btn:focus-visible {
+    outline: 3px solid var(--naranja-claro);
+    outline-offset: 2px;
+}
+
+.modal-media-container {
+    width: 100%;
+    min-height: 300px;
+    max-height: 440px;
+    background: var(--verde-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top-left-radius: var(--radio-grande);
+    border-top-right-radius: var(--radio-grande);
+}
+
+.modal-media-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-media-container .evento-image-placeholder {
+    min-height: 300px;
+}
+
+.modal-info-container {
+    padding: 30px 32px 34px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-info-container h3 {
+    font-family: Alata, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--verde-principal);
+    margin: 6px 0 8px;
+    line-height: 1.25;
+}
+
+.modal-date {
+    display: inline-block;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--naranja-principal);
+    margin-bottom: 14px;
+}
+
+.modal-info-container p {
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   10. RESPONSIVE — BREAKPOINTS EXCLUSIVOS (900px, 650px, 400px)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Breakpoint: 900px (Tablets y pantallas intermedias)
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+
+    .eventos-hero {
+        min-height: 380px;
+    }
+
+    .eventos-hero-content {
+        padding: calc(var(--space-2xl) + 8px) 0 var(--space-md);
+    }
+
+    .eventos-section {
+        padding: 70px 0 85px;
+    }
+
+    .eventos-grid,
+    .eventos-fijos-grid {
+        gap: 24px;
+    }
+
+    .eventos-realizados-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .evento-image {
+        height: 240px;
+    }
+
+    .evento-content {
+        padding: 26px 22px 28px;
+    }
+
+    .evento-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .evento-notice-banner {
+        margin-top: 36px;
+        padding: 24px 28px;
+        gap: 20px;
+    }
+
+    .eventos-cta-box {
+        padding: 60px 28px;
+    }
+
+    .evento-modal-dialog {
+        width: min(100%, 700px);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Breakpoint: 650px (Móviles estándar)
+   -------------------------------------------------------------------------- */
+@media (max-width: 650px) {
+
+    /* Hero en móvil */
+    .eventos-hero {
+        min-height: clamp(340px, 40svh, 380px);
+        background-position: center center;
+    }
+
+    .eventos-hero-content {
+        width: calc(100% - 32px);
+        padding: calc(var(--space-xl) + 16px) 0 var(--space-md);
+    }
+
+    .eventos-hero .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.16em;
+        margin-bottom: 6px;
+    }
+
+    .eventos-hero h1 {
+        font-size: clamp(2rem, 7.2vw, 2.5rem);
+        line-height: 1.15;
+    }
+
+    .eventos-hero p {
+        max-width: 380px;
+        margin: 10px auto 0;
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    /* Secciones */
+    .eventos-section {
+        padding: 50px 0 65px;
+    }
+
+    /* Grids a 1 sola columna */
+    .eventos-grid,
+    .eventos-fijos-grid,
+    .eventos-realizados-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .evento-card,
+    .evento-fijo-card {
+        border-radius: var(--radio);
+    }
+
+    .evento-image,
+    .evento-fijo-image,
+    .evento-realizado-media {
+        height: 220px;
+    }
+
+    .evento-content {
+        padding: 24px 20px;
+    }
+
+    .evento-fijo-content,
+    .evento-realizado-content {
+        padding: 22px 18px;
+    }
+
+    .evento-header h3 {
+        font-size: 1.35rem;
+    }
+
+    .evento-actions {
+        flex-direction: column;
+    }
+
+    .evento-actions .btn {
+        width: 100%;
+    }
+
+    .evento-notice-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 22px 20px;
+        border-radius: var(--radio);
+        margin-top: 30px;
+    }
+
+    /* CTA en móvil */
+    .eventos-cta-section {
+        padding: 20px 0 70px;
+    }
+
+    .eventos-cta-box {
+        padding: 48px 20px;
+        border-radius: var(--radio);
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+    }
+
+    /* Modal en móvil */
+    .evento-modal {
+        padding: 12px;
+    }
+
+    .evento-modal-dialog {
+        border-radius: var(--radio);
+    }
+
+    .modal-media-container {
+        min-height: 220px;
+        max-height: 280px;
+        border-top-left-radius: var(--radio);
+        border-top-right-radius: var(--radio);
+    }
+
+    .modal-media-container .evento-image-placeholder {
+        min-height: 220px;
+    }
+
+    .modal-info-container {
+        padding: 22px 20px;
+    }
+
+    .modal-close-btn {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.4rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Breakpoint: 400px (Móviles compactos: 400px, 360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 400px) {
+
+    .eventos-hero {
+        min-height: 330px;
+    }
+
+    .eventos-hero-content {
+        width: calc(100% - 24px);
+        padding: calc(var(--space-xl) + 8px) 0 var(--space-sm);
+    }
+
+    .eventos-hero .section-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
+    }
+
+    .eventos-hero h1 {
+        font-size: clamp(1.8rem, 8vw, 2.2rem);
+        line-height: 1.15;
+    }
+
+    .eventos-hero p {
+        max-width: 300px;
+        margin-top: 8px;
+        font-size: 0.86rem;
+        line-height: 1.45;
+    }
+
+    .eventos-section {
+        padding: 38px 0 50px;
+    }
+
+    .evento-image,
+    .evento-fijo-image,
+    .evento-realizado-media {
+        height: 190px;
+    }
+
+    .placeholder-icon {
+        font-size: 1.8rem;
+    }
+
+    .placeholder-tag {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+
+    .evento-content,
+    .evento-fijo-content,
+    .evento-realizado-content {
+        padding: 18px 16px;
+    }
+
+    .evento-meta {
+        gap: 6px;
+    }
+
+    .evento-meta-item,
+    .frecuencia-pill,
+    .sucursal-pill {
+        font-size: 0.72rem;
+        padding: 3px 9px;
+    }
+
+    .evento-header h3,
+    .evento-fijo-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .evento-description {
+        font-size: 0.86rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .evento-actions .btn {
+        min-height: 46px;
+        font-size: 0.82rem;
+        padding: 10px 16px;
+    }
+
+    .evento-notice-banner {
+        padding: 18px 16px;
+    }
+
+    .notice-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .notice-info p {
+        font-size: 0.85rem;
+    }
+
+    .eventos-cta-box {
+        padding: 40px 16px;
+    }
+
+    .cta-content h2 {
+        font-size: 1.65rem;
+    }
+
+    .cta-content p {
+        font-size: 0.88rem;
+    }
+
+    .cta-actions .btn {
+        min-height: 46px;
+        font-size: 0.82rem;
+        padding: 10px 16px;
+    }
+
+    /* Modal en pantallas compactas */
+    .modal-media-container {
+        min-height: 180px;
+        max-height: 200px;
+    }
+
+    .modal-media-container .evento-image-placeholder {
+        min-height: 180px;
+    }
+
+    .modal-info-container {
+        padding: 18px 16px;
+    }
+
+    .modal-info-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .modal-info-container p {
+        font-size: 0.86rem;
+    }
+}

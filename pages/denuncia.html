@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Canal de Denuncias de La Doña Hacienda. Canal ético y confidencial para reportar irregularidades y garantizar la transparencia." />
+
+    <title>Canal de Denuncias | La Doña Hacienda</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Raleway:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS Denuncia -->
+    <link rel="stylesheet" href="../css/denuncia.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <!-- LOGO -->
+
+            <a href="../index.html" class="logo">
+
+                <img src="../img/logo.png" alt="La Doña Hacienda">
+
+            </a>
+
+
+            <!-- BOTÓN MENÚ MÓVIL -->
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-controls="mainNav"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav class="nav" id="mainNav">
+
+                <a href="../index.html">
+                    Inicio
+                </a>
+
+                <a href="../index.html#experiencia">
+                    Nosotros
+                </a>
+
+                <a href="menu.html">
+                    Menú
+                </a>
+
+                <a href="sucursales.html">
+                    Sucursales
+                </a>
+
+                <a href="../index.html#experiencias">
+                    Experiencias
+                </a>
+
+                <a href="eventos.html">
+                    Eventos
+                </a>
+
+                <a href="denuncia.html" class="active">
+                    Denuncias
+                </a>
+
+                <a href="../index.html#contacto">
+                    Contacto
+                </a>
+
+                <a href="reservas.html" class="nav-button">
+
+                    Reservar
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+    ====================================== -->
+
+    <main>
+
+        <!-- =====================================
+             1. HERO DE DENUNCIAS
+        ====================================== -->
+
+        <section class="denuncia-hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="denuncia-hero-content">
+
+                <span class="section-label">
+                    TRANSPARENCIA Y ÉTICA
+                </span>
+
+                <h1>
+                    Canal de Denuncias
+                </h1>
+
+                <p>
+                    Espacio confidencial orientado a la integridad, la transparencia y el cumplimiento de nuestros principios institucionales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             2. SECCIÓN PRINCIPAL: FORMULARIO Y GUÍA
+        ====================================== -->
+
+        <section class="denuncia-section">
+
+            <div class="container">
+
+                <div class="denuncia-layout">
+
+                    <!-- COLUMNA PRINCIPAL: FORMULARIO DE REPORTE -->
+
+                    <div class="denuncia-form-container">
+
+                        <div class="denuncia-card">
+
+                            <div class="form-header">
+
+                                <span class="card-subtitle">
+                                    FORMULARIO DE REPORTE
+                                </span>
+
+                                <h2>
+                                    Registrar un reporte
+                                </h2>
+
+                                <p>
+                                    Completa los campos para ingresar tu reporte. Puedes elegir realizarlo de forma identificada o anónima.
+                                </p>
+
+                            </div>
+
+
+                            <!-- AVISO DE INTERFAZ PROVISIONAL -->
+                            <div class="denuncia-notice" role="note">
+                                <div class="notice-icon" aria-hidden="true">ℹ</div>
+                                <div class="notice-body">
+                                    <strong>Canal en fase de integración visual:</strong>
+                                    <p>Este formulario opera de forma estática para revisión de interfaz. Los campos y categorías mostrados están sujetos a confirmación oficial.</p>
+                                </div>
+                            </div>
+
+
+                            <!-- FORMULARIO PROTOTIPO -->
+                            <!-- DATO REAL PENDIENTE: Estructura definitiva de campos validada por la administración de La Doña Hacienda -->
+                            <form id="denunciaForm" class="denuncia-form" novalidate>
+
+                                <!-- MODALIDAD DE REPORTE: IDENTIFICADA / ANÓNIMA -->
+                                <!-- DATO REAL PENDIENTE: Modalidades y políticas de anonimato oficiales -->
+                                <div class="form-group form-col-full">
+                                    <fieldset class="form-fieldset">
+                                        <legend class="form-legend">
+                                            Modalidad del reporte <span class="form-required">*</span>
+                                        </legend>
+
+                                        <div class="modality-options">
+                                            <label class="modality-card">
+                                                <input type="radio" name="modalidad" value="identificada" checked id="modIdentificada">
+                                                <span class="modality-custom-radio" aria-hidden="true"></span>
+                                                <div class="modality-info">
+                                                    <span class="modality-title">Reporte identificado</span>
+                                                    <span class="modality-desc">Permite dar seguimiento personalizado a tu caso manteniendo estricta confidencialidad.</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="modality-card">
+                                                <input type="radio" name="modalidad" value="anonima" id="modAnonima">
+                                                <span class="modality-custom-radio" aria-hidden="true"></span>
+                                                <div class="modality-info">
+                                                    <span class="modality-title">Reporte anónimo</span>
+                                                    <span class="modality-desc">No se registrarán tus datos personales de contacto.</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+
+                                <div class="form-grid">
+
+                                    <!-- TIPO O MOTIVO DE REPORTE -->
+                                    <!-- DATO REAL PENDIENTE: Catálogo oficial de tipos de denuncia aprobados por La Doña Hacienda -->
+                                    <div class="form-group form-col-full">
+                                        <label for="tipoDenuncia">
+                                            Tipo o motivo del reporte <span class="form-required">*</span>
+                                        </label>
+                                        <select id="tipoDenuncia" name="tipoDenuncia" required>
+                                            <option value="">Selecciona una opción provisional...</option>
+                                            <!-- DATO REAL PENDIENTE: Categorías oficiales -->
+                                            <option value="conducta">Conducta inapropiada o trato laboral</option>
+                                            <option value="higiene">Calidad, higiene y seguridad alimentaria</option>
+                                            <option value="servicio">Atención al cliente y servicio</option>
+                                            <option value="administrativa">Irregularidad administrativa o financiera</option>
+                                            <option value="politicas">Incumplimiento de normativas internas</option>
+                                            <option value="otro">Otro motivo</option>
+                                        </select>
+                                        <span class="form-error-msg" id="errorTipo">Por favor selecciona un motivo de reporte.</span>
+                                    </div>
+
+
+                                    <!-- SUCURSAL / LUGAR -->
+                                    <!-- DATO REAL PENDIENTE: Lista de locaciones y áreas administrativas oficiales -->
+                                    <div class="form-group">
+                                        <label for="sucursal">
+                                            Sucursal o área involucrada <span class="form-required">*</span>
+                                        </label>
+                                        <select id="sucursal" name="sucursal" required>
+                                            <option value="">Selecciona una sucursal...</option>
+                                            <option value="Cayambe">Sucursal Cayambe</option>
+                                            <option value="Cumbayá">Sucursal Cumbayá</option>
+                                            <option value="General">Administración / General</option>
+                                        </select>
+                                        <span class="form-error-msg" id="errorSucursal">Selecciona la sucursal o área relacionada.</span>
+                                    </div>
+
+
+                                    <!-- FECHA APROXIMADA -->
+                                    <!-- DATO REAL PENDIENTE: Requerimiento de fecha exacta o aproximada -->
+                                    <div class="form-group">
+                                        <label for="fechaHecho">
+                                            Fecha aproximada del hecho <span class="form-required">*</span>
+                                        </label>
+                                        <input type="date" id="fechaHecho" name="fechaHecho" required>
+                                        <span class="form-error-msg" id="errorFecha">Ingresa una fecha válida.</span>
+                                    </div>
+
+
+                                    <!-- DESCRIPCIÓN DE LOS HECHOS -->
+                                    <!-- DATO REAL PENDIENTE: Preguntas guía y límite de extensión oficial -->
+                                    <div class="form-group form-col-full">
+                                        <div class="label-with-counter">
+                                            <label for="descripcion">
+                                                Descripción detallada de los hechos <span class="form-required">*</span>
+                                            </label>
+                                            <span class="char-counter" id="charCounter">0 / 2000</span>
+                                        </div>
+                                        <textarea id="descripcion" name="descripcion" rows="6" maxlength="2000"
+                                            placeholder="Detalla de forma objetiva qué sucedió, personas involucradas, circunstancias y cualquier detalle relevante..." required></textarea>
+                                        <span class="form-error-msg" id="errorDescripcion">Por favor ingresa una descripción detallada (mínimo 20 caracteres).</span>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- SECCIÓN DE DATOS DE CONTACTO (CONDICIONAL SEGÚN MODALIDAD) -->
+                                <!-- DATO REAL PENDIENTE: Campos obligatorios de identificación y política de tratamiento de datos -->
+                                <div class="contact-data-section" id="contactoSection">
+
+                                    <div class="contact-section-header">
+                                        <h3>Datos de contacto del denunciante</h3>
+                                        <p>Esta información solo se utilizará para fines de verificación y seguimiento confidencial.</p>
+                                    </div>
+
+                                    <div class="form-grid">
+
+                                        <!-- Nombre Completo -->
+                                        <div class="form-group form-col-full">
+                                            <label for="nombre">
+                                                Nombre completo <span class="form-required" id="reqNombre">*</span>
+                                            </label>
+                                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="name">
+                                            <span class="form-error-msg" id="errorNombre">Ingresa tu nombre completo.</span>
+                                        </div>
+
+                                        <!-- Teléfono -->
+                                        <div class="form-group">
+                                            <label for="telefono">
+                                                Teléfono de contacto <span class="form-required" id="reqTelefono">*</span>
+                                            </label>
+                                            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 099 123 4567" autocomplete="tel">
+                                            <span class="form-error-msg" id="errorTelefono">Ingresa un número de teléfono válido.</span>
+                                        </div>
+
+                                        <!-- Correo Electrónico -->
+                                        <div class="form-group">
+                                            <label for="email">
+                                                Correo electrónico <span class="form-required" id="reqEmail">*</span>
+                                            </label>
+                                            <input type="email" id="email" name="email" placeholder="Ej. correo@ejemplo.com" autocomplete="email">
+                                            <span class="form-error-msg" id="errorEmail">Ingresa un correo electrónico válido.</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- DECLARACIÓN DE VERACIDAD Y TÉRMINOS -->
+                                <!-- DATO REAL PENDIENTE: Texto legal oficial de consentimiento y política de privacidad del canal ético -->
+                                <div class="form-group form-col-full legal-check-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" id="declaracionLegal" name="declaracionLegal" required>
+                                        <span class="checkbox-box" aria-hidden="true"></span>
+                                        <span class="checkbox-label">
+                                            Declaro que la información proporcionada es presentada de buena fe y corresponde a hechos verídicos según mi conocimiento.
+                                            <!-- DATO REAL PENDIENTE: Enlace a términos oficiales del canal de denuncias -->
+                                        </span>
+                                    </label>
+                                    <span class="form-error-msg" id="errorLegal">Debes confirmar la declaración para continuar.</span>
+                                </div>
+
+
+                                <!-- BOTÓN DE ACCIÓN (SOLO INTERFAZ / SIN ENVÍO A BACKEND) -->
+                                <div class="form-actions">
+                                    <button type="submit" id="btnSubmitDenuncia" class="btn btn-primary btn-full">
+                                        Registrar reporte
+                                    </button>
+                                    <p class="form-disclaimer">
+                                        * Interfaz visual estática para revisión del diseño. No se realiza envío de datos ni almacenamiento en servidores.
+                                    </p>
+                                </div>
+
+
+                                <!-- ESTADO VISUAL DE VALIDACIÓN EN INTERFAZ -->
+                                <div class="denuncia-ui-feedback" id="uiFeedback" hidden aria-live="polite">
+                                    <div class="feedback-badge">✓</div>
+                                    <div class="feedback-text">
+                                        <h4>Validación de interfaz completada</h4>
+                                        <p>Todos los campos requeridos han sido completados correctamente en esta prueba de diseño.</p>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- COLUMNA LATERAL: GUÍA INFORMATIVA E INSTITUCIONAL -->
+
+                    <aside class="denuncia-sidebar">
+
+                        <!-- TARJETA 1: GARANTÍA DE CONFIDENCIALIDAD -->
+                        <div class="sidebar-card">
+                            <div class="sidebar-card-icon">🛡️</div>
+                            <h3>Confidencialidad y Protección</h3>
+                            <p>
+                                La Doña Hacienda fomenta un canal seguro donde toda información recibida es tratada con reserva y respeto.
+                            </p>
+                            <!-- DATO REAL PENDIENTE: Política oficial institucional de no represalias y resguardo de identidad -->
+                            <ul class="sidebar-list">
+                                <li>Tratamiento estrictamente confidencial.</li>
+                                <li>Opción de anonimato en todo momento.</li>
+                                <li><!-- DATO REAL PENDIENTE: Cláusula de protección al denunciante -->Protección y no represalias.</li>
+                            </ul>
+                        </div>
+
+
+                        <!-- TARJETA 2: PROCESO GENERAL DE ATENCIÓN -->
+                        <!-- DATO REAL PENDIENTE: Flujo de atención, comité responsable y plazos oficiales de resolución -->
+                        <div class="sidebar-card">
+                            <div class="sidebar-card-icon">📋</div>
+                            <h3>Proceso de Atención</h3>
+                            <p>
+                                Procedimiento informativo previsto para la gestión de reportes:
+                            </p>
+                            <ol class="sidebar-steps">
+                                <li>
+                                    <strong>1. Recepción:</strong> Registro del reporte a través de los canales habilitados.
+                                </li>
+                                <li>
+                                    <strong>2. Evaluación:</strong> Análisis preliminar de pertinencia y antecedentes.
+                                    <!-- DATO REAL PENDIENTE: Órgano evaluador oficial -->
+                                </li>
+                                <li>
+                                    <strong>3. Indagación:</strong> Revisión interna con la debida reserva.
+                                    <!-- DATO REAL PENDIENTE: Tiempos de respuesta oficiales -->
+                                </li>
+                                <li>
+                                    <strong>4. Resolución:</strong> Adopción de medidas correctivas cuando corresponda.
+                                </li>
+                            </ol>
+                        </div>
+
+
+                        <!-- TARJETA 3: CANALES DE ATENCIÓN -->
+                        <!-- DATO REAL PENDIENTE: Datos de contacto reales, correos del comité ético y líneas telefónicas oficiales -->
+                        <div class="sidebar-card sidebar-card-highlight">
+                            <div class="sidebar-card-icon">📞</div>
+                            <h3>Canales de Atención</h3>
+                            <p>
+                                Información de contacto institucional:
+                            </p>
+                            <div class="sidebar-contact-info">
+                                <div class="contact-line">
+                                    <strong>Correo institucional:</strong>
+                                    <span><!-- DATO REAL PENDIENTE -->Información pendiente</span>
+                                </div>
+                                <div class="contact-line">
+                                    <strong>Línea de atención:</strong>
+                                    <span><!-- DATO REAL PENDIENTE -->Información pendiente</span>
+                                </div>
+                                <div class="contact-line">
+                                    <strong>Horario de atención:</strong>
+                                    <span><!-- DATO REAL PENDIENTE -->Información pendiente</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <img src="../img/logo.png" alt="La Doña Hacienda">
+
+                    <p>
+                        Una experiencia para compartir.
+                    </p>
+
+                </div>
+
+
+                <!-- NAVEGACIÓN -->
+
+                <div class="footer-links">
+
+                    <h3>
+                        Navegación
+                    </h3>
+
+                    <a href="../index.html">
+                        Inicio
+                    </a>
+
+                    <a href="../index.html#experiencia">
+                        Nosotros
+                    </a>
+
+                    <a href="menu.html">
+                        Menú
+                    </a>
+
+                    <a href="sucursales.html">
+                        Sucursales
+                    </a>
+
+                    <a href="../index.html#experiencias">
+                        Experiencias
+                    </a>
+
+                    <a href="eventos.html">
+                        Eventos
+                    </a>
+
+                    <a href="../index.html#contacto">
+                        Contacto
+                    </a>
+
+                </div>
+
+
+                <!-- INFORMACIÓN -->
+
+                <div class="footer-links">
+
+                    <h3>
+                        Información
+                    </h3>
+
+                    <a href="reservas.html">
+                        Reservaciones
+                    </a>
+
+                    <a href="denuncia.html" class="active-footer-link">
+                        Denuncias
+                    </a>
+
+                    <a href="#">
+                        Términos y condiciones
+                    </a>
+
+                    <a href="#">
+                        Política de privacidad
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 La Doña Hacienda. Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT GLOBAL -->
+    <script src="../js/main.js"></script>
+
+    <!-- JAVASCRIPT EXCLUSIVO DE DENUNCIAS -->
+    <script src="../js/denuncia.js"></script>
+
+</body>
+
+</html>

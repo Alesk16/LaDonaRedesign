@@ -1,0 +1,468 @@
+/* ==========================================================================
+   LA DOÑA HACIENDA — ESTILOS EXCLUSIVOS DE SUCURSALES (pages/sucursales.html)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ESTADO ACTIVO EN NAVEGACIÓN PRINCIPAL
+   -------------------------------------------------------------------------- */
+.nav a.active:not(.nav-button) {
+    color: var(--blanco);
+}
+
+.nav a.active:not(.nav-button)::after {
+    transform: scaleX(1);
+    background: var(--naranja-principal);
+}
+
+.header-scrolled .nav a.active:not(.nav-button) {
+    color: var(--naranja-principal);
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO DE SUCURSALES
+   -------------------------------------------------------------------------- */
+.sucursales-hero {
+    position: relative;
+    display: grid;
+    min-height: clamp(340px, 42svh, 420px);
+    place-items: center;
+    background: url("../img/hero/hero.jpg") center / cover;
+    color: var(--blanco);
+    isolation: isolate;
+    text-align: center;
+}
+
+.sucursales-hero .hero-overlay {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--superposicion-hero);
+}
+
+.sucursales-hero-content {
+    width: min(calc(100% - 48px), var(--ancho-contenedor));
+    padding: calc(var(--space-2xl) + var(--space-md)) 0 var(--space-lg);
+}
+
+.sucursales-hero .section-label {
+    color: var(--naranja-claro);
+    margin-bottom: var(--space-xs);
+}
+
+.sucursales-hero h1 {
+    font-family: Alata, sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--blanco);
+}
+
+.sucursales-hero p {
+    max-width: 580px;
+    margin: var(--space-sm) auto 0;
+    font-size: clamp(0.98rem, 1.35vw, 1.12rem);
+    color: rgb(255 255 255 / 92%);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   3. SECCIÓN PRINCIPAL Y GRID DE SUCURSALES
+   -------------------------------------------------------------------------- */
+.sucursales-section {
+    background: var(--crema);
+    padding: 85px 0 105px;
+}
+
+.sucursales-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    align-items: stretch;
+}
+
+/* --------------------------------------------------------------------------
+   4. TARJETA DE SUCURSAL
+   -------------------------------------------------------------------------- */
+.sucursal-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--radio-grande);
+    background: var(--blanco);
+    border: 1px solid rgb(80 118 77 / 12%);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.sucursal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-media);
+}
+
+/* Imagen y badge */
+.sucursal-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: var(--verde-oscuro);
+}
+
+.sucursal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.sucursal-card:hover .sucursal-image img {
+    transform: scale(1.04);
+}
+
+.sucursal-status-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgb(80 118 77 / 92%);
+    color: var(--blanco);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+/* Contenido de la tarjeta */
+.sucursal-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 34px 32px 36px;
+}
+
+.sucursal-header {
+    margin-bottom: 22px;
+}
+
+.sucursal-label {
+    display: block;
+    color: var(--naranja-principal);
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    margin-bottom: 6px;
+}
+
+.sucursal-header h3 {
+    color: var(--verde-principal);
+    font-family: Alata, sans-serif;
+    font-size: clamp(1.8rem, 2.4vw, 2.2rem);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+/* Lista de información */
+.sucursal-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 32px;
+    flex: 1 1 auto;
+}
+
+.sucursal-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.sucursal-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    border-radius: 50%;
+    background: rgb(80 118 77 / 8%);
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.sucursal-info-detail {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.sucursal-info-title {
+    display: block;
+    color: var(--verde-oscuro);
+    font-family: Alata, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.sucursal-info-detail p {
+    color: var(--texto-secundario);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    word-break: break-word;
+}
+
+.info-pending {
+    color: var(--texto-secundario);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Acciones y Botones */
+.sucursal-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgb(80 118 77 / 12%);
+}
+
+.btn-outline {
+    border: 1.5px solid var(--verde-principal);
+    background: transparent;
+    color: var(--verde-principal);
+}
+
+.btn-outline:hover {
+    background: var(--verde-principal);
+    color: var(--blanco);
+    border-color: var(--verde-principal);
+}
+
+/* --------------------------------------------------------------------------
+   5. BANNER PRÓXIMAMENTE
+   -------------------------------------------------------------------------- */
+.branch-future-banner {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 48px;
+    padding: 28px 36px;
+    border-radius: var(--radio-grande);
+    background: var(--blanco);
+    border: 1.5px dashed rgb(80 118 77 / 26%);
+    box-shadow: var(--sombra-suave);
+}
+
+.branch-future-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgb(234 87 27 / 12%);
+    color: var(--naranja-principal);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.branch-future-info h3 {
+    color: var(--verde-principal);
+    font-family: Alata, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.branch-future-info p {
+    color: var(--texto-secundario);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVE — BREAKPOINTS (900px, 650px, 400px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .sucursales-section {
+        padding: 70px 0 85px;
+    }
+
+    .sucursales-grid {
+        gap: 24px;
+    }
+
+    .sucursal-image {
+        height: 260px;
+    }
+
+    .sucursal-content {
+        padding: 28px 24px;
+    }
+
+    .branch-future-banner {
+        margin-top: 36px;
+        padding: 24px 28px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    /* Hero en móvil */
+    .sucursales-hero {
+        min-height: clamp(340px, 40svh, 380px);
+        background-position: center center;
+    }
+
+    .sucursales-hero-content {
+        width: calc(100% - 32px);
+        padding: calc(var(--space-xl) + 16px) 0 var(--space-md);
+    }
+
+    .sucursales-hero .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.16em;
+        margin-bottom: 6px;
+    }
+
+    .sucursales-hero h1 {
+        font-size: clamp(2rem, 7.2vw, 2.5rem);
+        line-height: 1.15;
+    }
+
+    .sucursales-hero p {
+        max-width: 380px;
+        margin: 10px auto 0;
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    /* Grid en 1 columna */
+    .sucursales-section {
+        padding: 50px 0 65px;
+    }
+
+    .sucursales-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .sucursal-card {
+        border-radius: var(--radio);
+    }
+
+    .sucursal-image {
+        height: 240px;
+    }
+
+    .sucursal-content {
+        padding: 24px 20px;
+    }
+
+    .sucursal-header {
+        margin-bottom: 18px;
+    }
+
+    .sucursal-header h3 {
+        font-size: 1.7rem;
+    }
+
+    .sucursal-info-list {
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .sucursal-actions {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .sucursal-actions .btn {
+        width: 100%;
+    }
+
+    .branch-future-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 22px 20px;
+        border-radius: var(--radio);
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    /* Hero en pantallas pequeñas (<=400px y 360px) */
+    .sucursales-hero {
+        min-height: 350px;
+        background-position: 45% center;
+    }
+
+    .sucursales-hero-content {
+        width: calc(100% - 24px);
+        padding: calc(var(--space-xl) + 8px) 0 var(--space-sm);
+    }
+
+    .sucursales-hero .section-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
+    }
+
+    .sucursales-hero h1 {
+        font-size: clamp(1.8rem, 8vw, 2.2rem);
+        line-height: 1.15;
+    }
+
+    .sucursales-hero p {
+        max-width: 300px;
+        margin-top: 8px;
+        font-size: 0.86rem;
+        line-height: 1.45;
+    }
+
+    .sucursales-section {
+        padding: 36px 0 50px;
+    }
+
+    .sucursal-image {
+        height: 200px;
+    }
+
+    .sucursal-content {
+        padding: 20px 16px;
+    }
+
+    .sucursal-header h3 {
+        font-size: 1.45rem;
+    }
+
+    .sucursal-info-detail p {
+        font-size: 0.88rem;
+    }
+
+    .sucursal-actions .btn {
+        min-height: 46px;
+        font-size: 0.82rem;
+        padding: 10px 16px;
+    }
+
+    .branch-future-banner {
+        padding: 18px 16px;
+    }
+
+    .branch-future-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .branch-future-info p {
+        font-size: 0.86rem;
+    }
+}

@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Reserva tu mesa en La Doña Hacienda. Disfruta de una experiencia gastronómica auténtica en un ambiente acogedor." />
+
+    <title>Reservar | La Doña Hacienda</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Raleway:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS Reservas -->
+    <link rel="stylesheet" href="../css/reservas.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <!-- LOGO -->
+
+            <a href="../index.html#inicio" class="logo">
+
+                <img src="../img/logo.png" alt="La Doña Hacienda">
+
+            </a>
+
+
+            <!-- BOTÓN MENÚ MÓVIL -->
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-controls="mainNav"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav class="nav" id="mainNav">
+
+                <a href="../index.html#inicio">
+                    Inicio
+                </a>
+
+                <a href="../index.html#experiencia">
+                    Nosotros
+                </a>
+
+                <a href="menu.html">
+                    Menú
+                </a>
+
+                <a href="../index.html#sucursales">
+                    Sucursales
+                </a>
+
+                <a href="../index.html#experiencias">
+                    Experiencias
+                </a>
+
+                <a href="../index.html#eventos">
+                    Eventos
+                </a>
+
+                <a href="denuncia.html">
+                    Denuncias
+                </a>
+
+                <a href="../index.html#contacto">
+                    Contacto
+                </a>
+
+                <a href="reservas.html" class="nav-button active">
+
+                    Reservar
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+    ====================================== -->
+
+    <main>
+
+        <!-- =====================================
+             1. HERO DE RESERVAS
+        ====================================== -->
+
+        <section class="reservas-hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="reservas-hero-content">
+
+                <span class="section-label">
+                    RESERVA TU MOMENTO
+                </span>
+
+                <h1>
+                    Reserva en La Doña Hacienda
+                </h1>
+
+                <p>
+                    Queremos que cada visita sea especial. Completa tus datos y solicita tu reserva.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             2. SECCIÓN PRINCIPAL DE RESERVA
+        ====================================== -->
+
+        <section class="reservas-section">
+
+            <div class="container">
+
+                <div class="reservas-layout">
+
+                    <!-- COLUMNA IZQUIERDA: FORMULARIO -->
+
+                    <div class="reservas-form-container">
+
+                        <div class="reservas-card">
+
+                            <div class="form-header">
+
+                                <h2>
+                                    Datos de la reserva
+                                </h2>
+
+                                <p>
+                                    Ingresa la información requerida para procesar tu solicitud.
+                                </p>
+
+                            </div>
+
+
+                            <!-- MENSAJE DE CONFIRMACIÓN -->
+
+                            <div class="reservas-success-card" id="reservasSuccess" hidden aria-live="polite">
+
+                                <div class="success-icon-badge">
+                                    ✓
+                                </div>
+
+                                <h3>
+                                    Solicitud preparada
+                                </h3>
+
+                                <p>
+                                    Tu solicitud de reserva ha sido registrada para revisión.
+                                </p>
+
+                                <span class="success-reminder">
+                                    Nos pondremos en contacto contigo para verificar la disponibilidad.
+                                </span>
+
+                            </div>
+
+
+                            <!-- FORMULARIO -->
+
+                            <form id="reservasForm" class="reservas-form" novalidate>
+
+                                <div class="form-grid">
+
+                                    <!-- Nombre Completo -->
+                                    <div class="form-group form-col-full">
+                                        <label for="nombre">Nombre completo <span class="form-required">*</span></label>
+                                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Mendoza" required autocomplete="name">
+                                        <span class="form-error-msg" id="errorNombre">Por favor ingresa tu nombre completo.</span>
+                                    </div>
+
+                                    <!-- Teléfono -->
+                                    <div class="form-group">
+                                        <label for="telefono">Teléfono <span class="form-required">*</span></label>
+                                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 099 123 4567" required autocomplete="tel">
+                                        <span class="form-error-msg" id="errorTelefono">Por favor ingresa un número de teléfono.</span>
+                                    </div>
+
+                                    <!-- Correo Electrónico -->
+                                    <div class="form-group">
+                                        <label for="email">Correo electrónico <span class="form-required">*</span></label>
+                                        <input type="email" id="email" name="email" placeholder="Ej. carlos@correo.com" required autocomplete="email">
+                                        <span class="form-error-msg" id="errorEmail">Por favor ingresa un correo válido.</span>
+                                    </div>
+
+                                    <!-- Número de Personas -->
+                                    <div class="form-group">
+                                        <label for="personas">Número de personas <span class="form-required">*</span></label>
+                                        <input type="number" id="personas" name="personas" min="1" max="50" placeholder="Ej. 4" required>
+                                        <span class="form-error-msg" id="errorPersonas">Ingresa el número de personas (mínimo 1).</span>
+                                    </div>
+
+                                    <!-- Sucursal -->
+                                    <div class="form-group">
+                                        <label for="sucursal">Sucursal <span class="form-required">*</span></label>
+                                        <select id="sucursal" name="sucursal" required>
+                                            <option value="">Selecciona una sucursal</option>
+                                            <!-- AGREGAR SUCURSALES REALES -->
+                                            <option value="Cayambe">Cayambe</option>
+                                            <option value="Cumbayá">Cumbayá</option>
+                                        </select>
+                                        <span class="form-error-msg" id="errorSucursal">Selecciona una sucursal.</span>
+                                    </div>
+
+                                    <!-- Fecha -->
+                                    <div class="form-group">
+                                        <label for="fecha">Fecha <span class="form-required">*</span></label>
+                                        <input type="date" id="fecha" name="fecha" required>
+                                        <span class="form-error-msg" id="errorFecha">Selecciona una fecha válida.</span>
+                                    </div>
+
+                                    <!-- Hora -->
+                                    <div class="form-group">
+                                        <label for="hora">Hora <span class="form-required">*</span></label>
+                                        <input type="time" id="hora" name="hora" required>
+                                        <span class="form-error-msg" id="errorHora">Selecciona una hora válida.</span>
+                                    </div>
+
+                                    <!-- Ocasión -->
+                                    <div class="form-group form-col-full">
+                                        <label for="ocasion">Ocasión (opcional)</label>
+                                        <select id="ocasion" name="ocasion">
+                                            <option value="">Selecciona una ocasión</option>
+                                            <option value="Reunión familiar">Reunión familiar</option>
+                                            <option value="Cumpleaños">Cumpleaños</option>
+                                            <option value="Celebración">Celebración</option>
+                                            <option value="Reunión de trabajo">Reunión de trabajo</option>
+                                            <option value="Otra">Otra</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Comentarios -->
+                                    <div class="form-group form-col-full">
+                                        <label for="comentarios">Comentarios o requerimientos especiales (opcional)</label>
+                                        <textarea id="comentarios" name="comentarios" rows="3" placeholder="Indícanos si tienes alguna preferencia o requerimiento especial..."></textarea>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- BOTÓN DE ENVÍO -->
+
+                                <div class="form-actions">
+
+                                    <button type="submit" class="btn btn-primary btn-submit" id="btnSubmit">
+                                        Solicitar reserva
+                                    </button>
+
+                                </div>
+
+
+                                <!-- NOTA DE DISPONIBILIDAD -->
+
+                                <p class="reservas-disclaimer">
+                                    Las reservas están sujetas a disponibilidad y confirmación por parte de La Doña Hacienda.
+                                </p>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COLUMNA DERECHA: RESUMEN DE RESERVA -->
+
+                    <aside class="reservas-summary-container">
+
+                        <div class="summary-card">
+
+                            <div class="summary-header">
+
+                                <h3>
+                                    Tu reserva
+                                </h3>
+
+                                <span class="summary-badge">
+                                    En preparación
+                                </span>
+
+                            </div>
+
+
+                            <div class="summary-body">
+
+                                <div class="summary-item">
+                                    <span class="summary-label">Nombre</span>
+                                    <span class="summary-value" id="sumNombre">—</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="summary-label">Personas</span>
+                                    <span class="summary-value" id="sumPersonas">—</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="summary-label">Fecha</span>
+                                    <span class="summary-value" id="sumFecha">—</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="summary-label">Hora</span>
+                                    <span class="summary-value" id="sumHora">—</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="summary-label">Sucursal</span>
+                                    <span class="summary-value" id="sumSucursal">—</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="summary-label">Ocasión</span>
+                                    <span class="summary-value" id="sumOcasion">—</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="summary-footer">
+
+                                <p class="summary-note">
+                                    Verifica que tus datos sean correctos antes de enviar la solicitud.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <img src="../img/logo.png" alt="La Doña Hacienda">
+
+                    <p>
+                        Una experiencia para compartir.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Navegación
+                    </h3>
+
+                    <a href="../index.html">
+                        Inicio
+                    </a>
+
+                    <a href="../index.html#experiencia">
+                        Nosotros
+                    </a>
+
+                    <a href="menu.html">
+                        Menú
+                    </a>
+
+                    <a href="sucursales.html">
+                        Sucursales
+                    </a>
+
+                    <a href="../index.html#experiencias">
+                        Experiencias
+                    </a>
+
+                    <a href="eventos.html">
+                        Eventos
+                    </a>
+
+                    <a href="../index.html#contacto">
+                        Contacto
+                    </a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Información
+                    </h3>
+
+                    <a href="reservas.html">
+                        Reservaciones
+                    </a>
+
+                    <a href="denuncia.html">
+                        Denuncias
+                    </a>
+
+                    <a href="#">
+                        Términos y condiciones
+                    </a>
+
+                    <a href="#">
+                        Política de privacidad
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 La Doña Hacienda. Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT GLOBAL -->
+    <script src="../js/main.js"></script>
+
+    <!-- JAVASCRIPT EXCLUSIVO DE RESERVAS -->
+    <script src="../js/reservas.js"></script>
+
+</body>
+
+</html>

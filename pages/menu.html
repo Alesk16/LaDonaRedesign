@@ -1,0 +1,2089 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Menú de La Doña Hacienda - Sabores auténticos, especialidades y momentos para compartir." />
+
+    <title>Menú | La Doña Hacienda</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Raleway:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS Menú -->
+    <link rel="stylesheet" href="../css/menu.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <!-- LOGO -->
+
+            <a href="../index.html#inicio" class="logo">
+
+                <img src="../img/logo.png" alt="La Doña Hacienda">
+
+            </a>
+
+
+            <!-- BOTÓN MENÚ MÓVIL -->
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-controls="mainNav"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav class="nav" id="mainNav">
+
+                <a href="../index.html#inicio">
+                    Inicio
+                </a>
+
+                <a href="../index.html#experiencia">
+                    Nosotros
+                </a>
+
+                <a href="menu.html" class="active">
+                    Menú
+                </a>
+
+                <a href="../index.html#sucursales">
+                    Sucursales
+                </a>
+
+                <a href="../index.html#experiencias">
+                    Experiencias
+                </a>
+
+                <a href="../index.html#eventos">
+                    Eventos
+                </a>
+
+                <a href="denuncia.html">
+                    Denuncias
+                </a>
+
+                <a href="../index.html#contacto">
+                    Contacto
+                </a>
+
+                <a href="../index.html#reservas" class="nav-button">
+
+                    Reservar
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+    ====================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             1. HERO DEL MENÚ
+        ====================================== -->
+
+        <section class="menu-hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="menu-hero-content">
+
+                <span class="section-label">
+                    SABORES DE LA HACIENDA
+                </span>
+
+                <h1>
+                    Nuestro menú
+                </h1>
+
+                <p>
+                    Una selección pensada para disfrutar buenos sabores y compartir momentos especiales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             2. NAVEGACIÓN DE CATEGORÍAS
+        ====================================== -->
+
+        <nav class="menu-nav-bar" id="categoryNav" aria-label="Navegación por categorías del menú">
+
+            <div class="menu-nav-wrapper">
+
+                <!-- Botón selector para móvil (<=650px) -->
+                <button class="menu-nav-toggle" id="categoryToggle" aria-expanded="false" aria-controls="categoryList">
+                    <span class="menu-nav-toggle-main">
+                        <span class="menu-nav-toggle-label">Categorías del menú</span>
+                        <span class="menu-nav-toggle-current" id="categoryToggleCurrent">Desayunos</span>
+                    </span>
+                    <span class="menu-nav-toggle-icon" aria-hidden="true">▾</span>
+                </button>
+
+                <!-- Panel / Lista de categorías (Desktop: horizontal / Móvil: menú desplegable) -->
+                <div class="menu-nav-container" id="categoryList" role="tablist" aria-label="Categorías del menú">
+
+                    <a href="#desayunos" class="menu-nav-link is-active" role="tab" aria-selected="true" data-category="desayunos">
+                        Desayunos
+                    </a>
+
+                    <a href="#entradas" class="menu-nav-link" role="tab" aria-selected="false" data-category="entradas">
+                        Entradas
+                    </a>
+
+                    <a href="#especialidades" class="menu-nav-link" role="tab" aria-selected="false" data-category="especialidades">
+                        Especialidades
+                    </a>
+
+                    <a href="#sanduches" class="menu-nav-link" role="tab" aria-selected="false" data-category="sanduches">
+                        Sanduches
+                    </a>
+
+                    <a href="#hamburguesas" class="menu-nav-link" role="tab" aria-selected="false" data-category="hamburguesas">
+                        Hamburguesas
+                    </a>
+
+                    <a href="#vegetariano" class="menu-nav-link" role="tab" aria-selected="false" data-category="vegetariano">
+                        Vegetariano
+                    </a>
+
+                    <a href="#postres" class="menu-nav-link" role="tab" aria-selected="false" data-category="postres">
+                        Postres
+                    </a>
+
+                    <a href="#cafeteria" class="menu-nav-link" role="tab" aria-selected="false" data-category="cafeteria">
+                        Cafetería
+                    </a>
+
+                    <a href="#chocolate" class="menu-nav-link" role="tab" aria-selected="false" data-category="chocolate">
+                        Chocolate
+                    </a>
+
+                    <a href="#bebidas" class="menu-nav-link" role="tab" aria-selected="false" data-category="bebidas">
+                        Bebidas
+                    </a>
+
+                    <a href="#cervezas-vinos" class="menu-nav-link" role="tab" aria-selected="false" data-category="cervezas-vinos">
+                        Cervezas y vinos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- =====================================
+             3. DESAYUNOS (CATEGORÍA 1)
+        ====================================== -->
+
+        <section class="menu-page-section is-active" id="desayunos">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        PARA EMPEZAR EL DÍA
+                    </span>
+
+                    <h2>
+                        Desayunos
+                    </h2>
+
+                    <p>
+                        Incluyen jugo o batido de fruta, pan, bizcocho, mantequilla, mermelada, nata o queso, café, té o chocolate.
+                    </p>
+
+                </div>
+
+
+                <!-- Subsección: Desayunos -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Desayunos
+                    </h3>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Tostada de Aguacate con Huevos</h4>
+                                <span class="menu-item-price">$13.90</span>
+                            </div>
+                            <p class="menu-item-desc">Pan ciabatta de la casa con guacamole y huevos fritos.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Hacienda Tradicional</h4>
+                                <span class="menu-item-price">$14.99</span>
+                            </div>
+                            <p class="menu-item-desc">Huevos a la cazuela (tomates fritos, con queso y jamón).</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Hacienda del Patrón o Vegetales</h4>
+                                <span class="menu-item-price">$16.75</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Patrón</h4>
+                                <span class="menu-item-price">$19.95</span>
+                            </div>
+                            <p class="menu-item-desc">Churrasco (lomo de res o pechuga de pollo con huevos fritos, ensalada y arroz).</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Doña</h4>
+                                <span class="menu-item-price">$16.50</span>
+                            </div>
+                            <p class="menu-item-desc">Yogurt natural o yogurt de mora con fruta fresca y granola (acompañado de huevos al gusto con jamón o tocino).</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Montubio</h4>
+                                <span class="menu-item-price">$19.90</span>
+                            </div>
+                            <p class="menu-item-desc">Majado de verde con queso y estofado de res o pollo (queso manaba, maduros, huevos al gusto, sal prieta y nuestro delicioso estofado).</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Vaquero</h4>
+                                <span class="menu-item-price">$26.00</span>
+                            </div>
+                            <p class="menu-item-desc">Tomahawk 350gr. (Steak's Brangus con huevos fritos, papa campesina y arroz).</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Costeño</h4>
+                                <span class="menu-item-price">$16.50</span>
+                            </div>
+                            <p class="menu-item-desc">Tigrillo (majado de verde con huevo frito, queso, cebolla, chicharrón y aguacate).</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Andino</h4>
+                                <span class="menu-item-price">$13.90</span>
+                            </div>
+                            <p class="menu-item-desc">Tradicionales humitas con huevos fritos.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Morlaco</h4>
+                                <span class="menu-item-price">$13.90</span>
+                            </div>
+                            <p class="menu-item-desc">Mote pillo (desayuno cuencano con mote, huevos revueltos y queso mozzarella).</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Morlaco con Chicharrón o Tocino</h4>
+                                <span class="menu-item-price">$15.50</span>
+                            </div>
+                            <p class="menu-item-desc">Mote pillo con chicharrón o tocino (desayuno cuencano con mote, huevos revueltos y queso mozzarella).</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Americano</h4>
+                                <span class="menu-item-price">$11.25</span>
+                            </div>
+                            <p class="menu-item-desc">Pancakes, huevos al gusto con jamón o tocino o salchicha.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Continental</h4>
+                                <span class="menu-item-price">$8.99</span>
+                            </div>
+                            <p class="menu-item-desc">Jugo de fruta, variedad de pan, mantequilla, mermelada/nata o queso/café, té o chocolate.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Guagua</h4>
+                                <span class="menu-item-price">$8.00</span>
+                            </div>
+                            <p class="menu-item-desc">Pancakes (huevos al gusto, cereal con leche o yogurt natural).</p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Adicionales -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Adicionales
+                    </h3>
+
+                    <div class="menu-compact-grid">
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Porción de Pancakes</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$4.99</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Vegetales</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$1.50</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Muesli</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$6.50</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Champiñones</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Jamón</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$1.75</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Queso Mozzarella</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Tocino</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.60</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Queso Cheddar</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Chorizo</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.50</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Salchicha de Desayuno</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.00</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Omelette -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Omelette
+                    </h3>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Omelette con Queso</h4>
+                                <span class="menu-item-price">$4.80</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Omelette Mixto (2 ingredientes)</h4>
+                                <span class="menu-item-price">$5.00</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Omelette (4 ingredientes)</h4>
+                                <span class="menu-item-price">$6.00</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Omelette Vegetariano</h4>
+                                <span class="menu-item-price">$8.00</span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Huevos a la Cazuela -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Huevos a la Cazuela
+                    </h3>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Tradicional</h4>
+                                <span class="menu-item-price">$8.99</span>
+                            </div>
+                            <p class="menu-item-desc">Huevos gratinados con queso y jamón.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Del Patrón</h4>
+                                <span class="menu-item-price">$10.90</span>
+                            </div>
+                            <p class="menu-item-desc">Con tocino, tomate, cebolla, pimiento y champiñón.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Vegetales del Huerto</h4>
+                                <span class="menu-item-price">$10.90</span>
+                            </div>
+                            <p class="menu-item-desc">Con tomate, cebolla, pimiento y champiñón.</p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#entradas" class="menu-nav-btn menu-nav-btn-next" data-target="entradas">
+                        <span>Ver Entradas y Picadas</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             4. ENTRADAS Y PICADAS (CATEGORÍA 2)
+        ====================================== -->
+
+        <section class="menu-page-section section-alt" id="entradas" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        PARA COMPARTIR
+                    </span>
+
+                    <h2>
+                        Entradas y Picadas
+                    </h2>
+
+                </div>
+
+
+                <!-- Subsección: Entradas y Picadas -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Entradas y Picadas
+                    </h3>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Bandeja Criolla</h4>
+                                <span class="menu-item-price">$19.95</span>
+                            </div>
+                            <p class="menu-item-desc">Para compartir con 4 personas. Empanadas de morocho res o pollo, bonitísimas, guacamole, mote sucio, chochos y otros acompañamientos de la casa.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Empanada de Mejido</h4>
+                                <span class="menu-item-price">$4.70</span>
+                            </div>
+                            <p class="menu-item-desc">Rellenas de queso, pasas y azúcar.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Empanada de Viento</h4>
+                                <span class="menu-item-price">$4.70</span>
+                            </div>
+                            <p class="menu-item-desc">Rellenas de queso fresco.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Empanada de Morocho</h4>
+                                <span class="menu-item-price">$4.99</span>
+                            </div>
+                            <p class="menu-item-desc">Rellenas de pollo y carne.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Tigrillo</h4>
+                                <span class="menu-item-price">$8.99</span>
+                            </div>
+                            <p class="menu-item-desc">Con huevo, aguacate y chicharrón.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Tigrillo con Estofado</h4>
+                                <span class="menu-item-price">$12.50</span>
+                            </div>
+                            <p class="menu-item-desc">Con estofado de res o pollo.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Choclo con Queso y Mantequilla</h4>
+                                <span class="menu-item-price">$3.99</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Habas Tiernas con Queso</h4>
+                                <span class="menu-item-price">$3.99</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Mote Sucio con Chicharrón</h4>
+                                <span class="menu-item-price">$8.00</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Mote Blanco con Chicharrón</h4>
+                                <span class="menu-item-price">$6.75</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Canasta de Pan Hecho en Casa</h4>
+                                <span class="menu-item-price">$4.50</span>
+                            </div>
+                            <p class="menu-item-desc">Con mantequilla y mermelada.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Bonitísimas</h4>
+                                <span class="menu-item-price">$6.00</span>
+                            </div>
+                            <p class="menu-item-desc">Tortillas de maíz con papa.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Humita con Queso</h4>
+                                <span class="menu-item-price">$3.85</span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Sopas -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Sopas
+                    </h3>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Locro Cayambeño</h4>
+                                <span class="menu-item-price">$12.00</span>
+                            </div>
+                            <p class="menu-item-desc">Choclito frito, cebolla y pollo mechado.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Locro Ishigto</h4>
+                                <span class="menu-item-price">$12.00</span>
+                            </div>
+                            <p class="menu-item-desc">Cuero, chicharrón y morcilla negra.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Locro Cangahua</h4>
+                                <span class="menu-item-price">$12.00</span>
+                            </div>
+                            <p class="menu-item-desc">Mozzarella, chochos, tostado y chorizo.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Locro Criollo</h4>
+                                <span class="menu-item-price">$8.75</span>
+                            </div>
+                            <p class="menu-item-desc">Aguacate y queso.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Locro con Chicharrón</h4>
+                                <span class="menu-item-price">$10.75</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Arma Tu Locro</h4>
+                                <span class="menu-item-price">$12.75</span>
+                            </div>
+                            <p class="menu-item-desc">Magueño frito, huevo duro, cuero, chicharrón, morcilla negra, choclito frito, pollo mechado, mozzarella, chochos, tostado y chorizo.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Aguado de Pollo</h4>
+                                <span class="menu-item-price">$9.00</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Sopa de Pollo</h4>
+                                <span class="menu-item-price">$9.00</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Ají de Carne</h4>
+                                <span class="menu-item-price">$11.50</span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Ensaladas -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Ensaladas
+                    </h3>
+
+                    <p class="menu-subcategory-note">
+                        Todas nuestras ensaladas están hechas con ingredientes de nuestra huerta orgánica.
+                    </p>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Del Huerto</h4>
+                                <span class="menu-item-price">$10.90</span>
+                            </div>
+                            <p class="menu-item-desc">Lechuga, tomate cherry, huevos de codorniz, queso, mozzarella, frutillas, aceitunas negras, aguacate acompañado de vinagreta de la casa y pan de ajo.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Ishigto</h4>
+                                <span class="menu-item-price">$10.00</span>
+                            </div>
+                            <p class="menu-item-desc">Espinaca, albahaca, palmito, pimiento rojo, choclo tierno, nuez caramelizada, uvillas y vinagreta dulce.</p>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Kumbajá</h4>
+                                <span class="menu-item-price">$11.90</span>
+                            </div>
+                            <p class="menu-item-desc">Mix de lechugas con quinua, aceituna negra, zucchini, tomate cherry, manzana caramelizada, pernil de pollo acompañado de vinagreta balsámica.</p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#desayunos" class="menu-nav-btn menu-nav-btn-prev" data-target="desayunos">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Desayunos</span>
+                    </a>
+                    <a href="#especialidades" class="menu-nav-btn menu-nav-btn-next" data-target="especialidades">
+                        <span>Ver Especialidades de la Hacienda</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             5. ESPECIALIDADES DE LA HACIENDA (CATEGORÍA 3)
+        ====================================== -->
+
+        <section class="menu-page-section" id="especialidades" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        NUESTRA COCINA
+                    </span>
+
+                    <h2>
+                        Especialidades de la Hacienda
+                    </h2>
+
+                </div>
+
+
+                <!-- Subsección: Especiales de la Hacienda -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Especiales de la Hacienda
+                    </h3>
+
+                    <p class="menu-subcategory-note">
+                        Acompañados con la salsa de tu preferencia.
+                    </p>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Tomahawk Brangus (700gr)</h4>
+                                <span class="menu-item-price">$39.90</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Picaña Brangus (400gr)</h4>
+                                <span class="menu-item-price">$32.00</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Bife de Chorizo Brangus (400gr)</h4>
+                                <span class="menu-item-price">$29.90</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Colita de Cuadril (400gr)</h4>
+                                <span class="menu-item-price">$26.00</span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Lomos -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Lomos
+                    </h3>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Lomo Fino (300gr)</h4>
+                                <span class="menu-item-price">$25.00</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Lomo Fino (150gr)</h4>
+                                <span class="menu-item-price">$19.00</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Churrasco a la Plancha (150gr)</h4>
+                                <span class="menu-item-price">$17.50</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Milanesa de Res (150gr)</h4>
+                                <span class="menu-item-price">$15.75</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Milanesa Napolitana (150gr)</h4>
+                                <span class="menu-item-price">$21.75</span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Cerdo -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Cerdo
+                    </h3>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Hornado (250gr)</h4>
+                                <span class="menu-item-price">$18.50</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Fritada de la Hacienda</h4>
+                                <span class="menu-item-price">$18.50</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Chugchucaras</h4>
+                                <span class="menu-item-price">$17.50</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Chuleta Ahumada (150gr)</h4>
+                                <span class="menu-item-price">$16.80</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Costillas de Cerdo (400gr)</h4>
+                                <span class="menu-item-price">$26.00</span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Pollo -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Pollo
+                    </h3>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Pechuga a la Plancha</h4>
+                                <span class="menu-item-price">$13.50</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Churrasco Gallero</h4>
+                                <span class="menu-item-price">$16.50</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Milanesa Napolitana</h4>
+                                <span class="menu-item-price">$16.90</span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Variedades -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Variedades
+                    </h3>
+
+                    <div class="menu-items-grid">
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Trucha al Sartén</h4>
+                                <span class="menu-item-price">$16.50</span>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Chuleta de Cordero (300gr)</h4>
+                                <span class="menu-item-price">$25.00</span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Guarniciones -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Guarniciones
+                    </h3>
+
+                    <p class="menu-subcategory-note">
+                        Elige 2 guarniciones a tu elección
+                    </p>
+
+                    <div class="menu-guarniciones-container">
+
+                        <div class="menu-guarniciones-group">
+                            <h4 class="menu-guarniciones-group-title">Ensaladas</h4>
+                            <div class="menu-compact-grid">
+                                <article class="menu-item-compact">
+                                    <span class="menu-item-name">Mixta</span>
+                                </article>
+                                <article class="menu-item-compact">
+                                    <span class="menu-item-name">Verde</span>
+                                </article>
+                                <article class="menu-item-compact">
+                                    <span class="menu-item-name">Escarlata</span>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="menu-guarniciones-group">
+                            <h4 class="menu-guarniciones-group-title">Otras Guarniciones</h4>
+                            <div class="menu-compact-grid">
+                                <article class="menu-item-compact">
+                                    <span class="menu-item-name">Papa Horno</span>
+                                </article>
+                                <article class="menu-item-compact">
+                                    <span class="menu-item-name">Papa Grill</span>
+                                </article>
+                                <article class="menu-item-compact">
+                                    <span class="menu-item-name">Papa Frita</span>
+                                </article>
+                                <article class="menu-item-compact">
+                                    <span class="menu-item-name">Suflé</span>
+                                </article>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#entradas" class="menu-nav-btn menu-nav-btn-prev" data-target="entradas">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Entradas y Picadas</span>
+                    </a>
+                    <a href="#sanduches" class="menu-nav-btn menu-nav-btn-next" data-target="sanduches">
+                        <span>Ver Sanduches</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             6. SANDUCHES (CATEGORÍA 4)
+        ====================================== -->
+
+        <section class="menu-page-section section-alt" id="sanduches" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        HECHOS AL MOMENTO
+                    </span>
+
+                    <h2>
+                        Sanduches
+                    </h2>
+
+                </div>
+
+                <div class="menu-items-grid">
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sanduche Napolitano</h4>
+                            <span class="menu-item-price">$12.50</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sanduche Pernil de Pollo</h4>
+                            <span class="menu-item-price">$12.50</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#especialidades" class="menu-nav-btn menu-nav-btn-prev" data-target="especialidades">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Especialidades de la Hacienda</span>
+                    </a>
+                    <a href="#hamburguesas" class="menu-nav-btn menu-nav-btn-next" data-target="hamburguesas">
+                        <span>Ver Hamburguesas</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             7. HAMBURGUESAS (CATEGORÍA 5)
+        ====================================== -->
+
+        <section class="menu-page-section" id="hamburguesas" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        RECETA DE LA CASA
+                    </span>
+
+                    <h2>
+                        Hamburguesas
+                    </h2>
+
+                </div>
+
+                <div class="menu-items-grid">
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Monster</h4>
+                            <span class="menu-item-price">$15.50</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Hacienda</h4>
+                            <span class="menu-item-price">$13.50</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Simple</h4>
+                            <span class="menu-item-price">$10.50</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Doble</h4>
+                            <span class="menu-item-price">$12.50</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#sanduches" class="menu-nav-btn menu-nav-btn-prev" data-target="sanduches">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Sanduches</span>
+                    </a>
+                    <a href="#vegetariano" class="menu-nav-btn menu-nav-btn-next" data-target="vegetariano">
+                        <span>Ver Opción vegetariana</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             8. OPCIÓN VEGETARIANA (CATEGORÍA 6)
+        ====================================== -->
+
+        <section class="menu-page-section section-alt" id="vegetariano" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        ALTERNATIVAS
+                    </span>
+
+                    <h2>
+                        Opción vegetariana
+                    </h2>
+
+                </div>
+
+                <div class="menu-items-grid">
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Berenjenas Gratinadas</h4>
+                            <span class="menu-item-price">$13.50</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Vegetales a la Plancha</h4>
+                            <span class="menu-item-price">$13.50</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Huevos a la Cazuela Vegetariano</h4>
+                            <span class="menu-item-price">$11.50</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Hamburguesa Vegetariana</h4>
+                            <span class="menu-item-price">$12.50</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#hamburguesas" class="menu-nav-btn menu-nav-btn-prev" data-target="hamburguesas">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Hamburguesas</span>
+                    </a>
+                    <a href="#postres" class="menu-nav-btn menu-nav-btn-next" data-target="postres">
+                        <span>Ver Postres</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             9. POSTRES (CATEGORÍA 7)
+        ====================================== -->
+
+        <section class="menu-page-section" id="postres" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        EL TOQUE DULCE
+                    </span>
+
+                    <h2>
+                        Postres
+                    </h2>
+
+                </div>
+
+                <div class="menu-items-grid">
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Copa Hacienda</h4>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Brownie con helado</h4>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Cheesecake con salsa de frutos rojos</h4>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Higos con queso</h4>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Tres leches</h4>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Banana split</h4>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Torta de chocolate</h4>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Pie tradicional de manzana</h4>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Mousse selva negra</h4>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#vegetariano" class="menu-nav-btn menu-nav-btn-prev" data-target="vegetariano">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Opción vegetariana</span>
+                    </a>
+                    <a href="#cafeteria" class="menu-nav-btn menu-nav-btn-next" data-target="cafeteria">
+                        <span>Ver Cafetería</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             10. CAFETERÍA (CATEGORÍA 8)
+        ====================================== -->
+
+        <section class="menu-page-section section-alt" id="cafeteria" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        TRADICIÓN Y AROMA
+                    </span>
+
+                    <h2>
+                        Cafetería
+                    </h2>
+
+                </div>
+
+                <div class="menu-compact-grid">
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Café Latte</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Capuccino</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Mocaccino</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Expresso</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Americano</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Agua aromática</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Té inglés</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Té infusión de frutas</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Vino hervido</span>
+                    </article>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#postres" class="menu-nav-btn menu-nav-btn-prev" data-target="postres">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Postres</span>
+                    </a>
+                    <a href="#chocolate" class="menu-nav-btn menu-nav-btn-next" data-target="chocolate">
+                        <span>Ver Chocolate</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             11. CHOCOLATE (CATEGORÍA 9)
+        ====================================== -->
+
+        <section class="menu-page-section" id="chocolate" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        SABOR DE HACIENDA
+                    </span>
+
+                    <h2>
+                        Chocolate
+                    </h2>
+
+                </div>
+
+                <div class="menu-compact-grid">
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Chocolate Caliente</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Chocolate Mágico</span>
+                    </article>
+
+                    <article class="menu-item-compact">
+                        <span class="menu-item-name">Chocolate Feliz</span>
+                    </article>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#cafeteria" class="menu-nav-btn menu-nav-btn-prev" data-target="cafeteria">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Cafetería</span>
+                    </a>
+                    <a href="#bebidas" class="menu-nav-btn menu-nav-btn-next" data-target="bebidas">
+                        <span>Ver Bebidas</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             12. BEBIDAS (CATEGORÍA 10)
+        ====================================== -->
+
+        <section class="menu-page-section section-alt" id="bebidas" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        REFRESCANTES
+                    </span>
+
+                    <h2>
+                        Bebidas
+                    </h2>
+
+                </div>
+
+
+                <!-- Subsección: Jugos naturales -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Jugos naturales
+                    </h3>
+
+                    <p class="menu-subcategory-note">
+                        Variedades: Maracuyá, naranjilla, frutilla, uvilla, mora, piña, naranja, coco, mango, papaya, babaco, tamarindo, guanábana, tomate de árbol.
+                    </p>
+
+                    <div class="menu-compact-grid">
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Jugo Natural</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$4.55</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Combina Tu Fruta Favorita</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$4.75</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Batido de Frutas con Leche de Ordeño</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$4.90</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Limonadas de la Hacienda -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Limonadas de la Hacienda
+                    </h3>
+
+                    <div class="menu-compact-grid">
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Natural</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.65</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">De Coco</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$3.90</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">De Frutilla</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$3.90</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Electric Lemonade (Blue Curacao)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$6.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">De Mango</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$3.90</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">De Menta</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$3.90</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Imperial</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$3.90</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Milkshakes -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Milkshakes
+                    </h3>
+
+                    <p class="menu-subcategory-note">
+                        Sabores: Mora, Oreo, Chocolate, Vainilla o Manjar.
+                    </p>
+
+                    <div class="menu-compact-grid">
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Milkshake</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$6.90</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Bebidas Soft -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Bebidas Soft
+                    </h3>
+
+                    <div class="menu-compact-grid">
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Té Frío de la Casa</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.55</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Horchata de Frutas</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.65</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Capuccino Frío con Helado</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$5.25</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Moca Frappé</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$3.50</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Rosero Quiteño</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$3.50</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Ponche Frío</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$5.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Affogato</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$5.50</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Agua con Gas Güitig (300ml)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$1.80</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Agua sin Gas (600ml)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$1.60</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Gaseosas (Regular / Light / Zero / 7 Up 300ml)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$2.50</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#chocolate" class="menu-nav-btn menu-nav-btn-prev" data-target="chocolate">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Chocolate</span>
+                    </a>
+                    <a href="#cervezas-vinos" class="menu-nav-btn menu-nav-btn-next" data-target="cervezas-vinos">
+                        <span>Ver Cervezas y vinos</span>
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             13. CERVEZAS Y VINOS (CATEGORÍA 11)
+        ====================================== -->
+
+        <section class="menu-page-section" id="cervezas-vinos" hidden>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        SELECCIÓN
+                    </span>
+
+                    <h2>
+                        Cervezas y vinos
+                    </h2>
+
+                </div>
+
+
+                <!-- Subsección: Cervezas -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Cervezas
+                    </h3>
+
+                    <div class="menu-compact-grid">
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Club</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$3.60</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Pilsener</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$3.50</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Corona</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$5.00</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Cervezas artesanales -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Cervezas artesanales
+                    </h3>
+
+                    <div class="menu-compact-grid">
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Draft Santana (370ml)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$5.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Draft Santana (550ml)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$7.60</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Lata Santana (330ml)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$7.75</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Cócteles -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Cócteles
+                    </h3>
+
+                    <div class="menu-compact-grid">
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Jarra de Sangría</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$27.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Copa Sangría</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$6.90</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Tinto de Verano</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$6.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Vino Hervido</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$6.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Jarra Tinto Verano</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$27.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Mimosa</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$6.90</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Margarita Tradicional</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$7.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Margarita Frozen (Frutilla, Tamarindo, Mango o Maracuyá)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$8.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Tequila Sunrise</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$8.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Electric Lemonade</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$6.00</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subsección: Vinos -->
+                <div class="menu-subcategory">
+
+                    <h3 class="menu-subcategory-title">
+                        Vinos
+                    </h3>
+
+                    <div class="menu-compact-grid">
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Marchiagüe (Cabernet Sauvignon - Carmenere)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$58.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Carmen Frida Kahlo Gran Reserva (Carmenere)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$49.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Carmen Frida Kahlo Reserva (Carmenere)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$32.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Diablo Dark Red (Blended Tinto)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$49.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Carmen Insigne (Carmenere, Merlot - Malbec)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$25.00</span>
+                        </article>
+
+                        <article class="menu-item-compact">
+                            <span class="menu-item-name">Panul (Cabernet Sauvignon, Carmenere, Merlot, Malbec)</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">$20.00</span>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="menu-nav-footer">
+                    <a href="#bebidas" class="menu-nav-btn menu-nav-btn-prev" data-target="bebidas">
+                        <span class="menu-nav-btn-arrow" aria-hidden="true">←</span>
+                        <span>Bebidas</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <img src="../img/logo.png" alt="La Doña Hacienda">
+
+                    <p>
+                        Una experiencia para compartir.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Navegación
+                    </h3>
+
+                    <a href="../index.html">
+                        Inicio
+                    </a>
+
+                    <a href="../index.html#experiencia">
+                        Nosotros
+                    </a>
+
+                    <a href="menu.html">
+                        Menú
+                    </a>
+
+                    <a href="sucursales.html">
+                        Sucursales
+                    </a>
+
+                    <a href="../index.html#experiencias">
+                        Experiencias
+                    </a>
+
+                    <a href="eventos.html">
+                        Eventos
+                    </a>
+
+                    <a href="../index.html#contacto">
+                        Contacto
+                    </a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Información
+                    </h3>
+
+                    <a href="reservas.html">
+                        Reservaciones
+                    </a>
+
+                    <a href="denuncia.html">
+                        Denuncias
+                    </a>
+
+                    <a href="#">
+                        Términos y condiciones
+                    </a>
+
+                    <a href="#">
+                        Política de privacidad
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 La Doña Hacienda. Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT GLOBAL -->
+    <script src="../js/main.js"></script>
+
+    <!-- JAVASCRIPT EXCLUSIVO DEL MENÚ -->
+    <script src="../js/menu.js"></script>
+
+</body>
+
+</html>
