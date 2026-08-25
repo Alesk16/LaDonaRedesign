@@ -1,0 +1,421 @@
+/* ==========================================================================
+   LA DOÑA HACIENDA — ESTILOS EXCLUSIVOS DE NOSOTROS (pages/nosotros.html)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO DE NOSOTROS
+   -------------------------------------------------------------------------- */
+.nosotros-hero {
+    position: relative;
+    display: grid;
+    min-height: clamp(680px, 94svh, 840px);
+    place-items: center;
+    background: url("../img/hero/hero.jpg") center / cover;
+    color: var(--blanco);
+    isolation: isolate;
+    text-align: center;
+}
+
+.nosotros-hero .hero-overlay {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--superposicion-hero);
+}
+
+.nosotros-hero-content {
+    position: relative;
+    width: min(calc(100% - 48px), 900px);
+    padding: calc(var(--space-2xl) + var(--space-lg)) 0 calc(var(--space-xl) + var(--space-md));
+}
+
+.nosotros-hero .hero-subtitle {
+    margin-bottom: var(--space-sm);
+}
+
+.nosotros-hero h1 {
+    font-family: Alata, sans-serif;
+    font-size: clamp(2.8rem, 6.4vw, 4.9rem);
+    font-weight: 400;
+    line-height: 1.06;
+    color: var(--blanco);
+}
+
+.nosotros-hero p {
+    max-width: 560px;
+    margin: var(--space-md) auto 0;
+    font-size: clamp(1rem, 1.5vw, 1.16rem);
+    color: rgb(255 255 255 / 92%);
+    line-height: 1.65;
+}
+
+.nosotros-hero .hero-buttons {
+    justify-content: center;
+}
+
+.nosotros-hero .hero-scroll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   2. BLOQUES EDITORIALES (HISTORIA / EXPERIENCIA)
+   Composición grande: imagen protagonista + texto amplio.
+   -------------------------------------------------------------------------- */
+.historia-section,
+.galeria-section {
+    background: var(--crema);
+}
+
+.esencia-section,
+.experiencia-section,
+.nosotros-branches-section {
+    background: var(--blanco);
+}
+
+.story-block {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+}
+
+.story-block--reverse {
+    grid-template-columns: 1fr 1.05fr;
+}
+
+.story-block--reverse .story-media {
+    order: 2;
+}
+
+.story-block--reverse .story-text {
+    order: 1;
+}
+
+.story-media {
+    overflow: hidden;
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra-media);
+}
+
+.story-media img {
+    display: block;
+    width: 100%;
+    height: clamp(360px, 46vw, 540px);
+    object-fit: cover;
+    object-position: center;
+    transition: transform .6s ease;
+}
+
+.story-block:hover .story-media img {
+    transform: scale(1.035);
+}
+
+.story-text {
+    max-width: 540px;
+}
+
+.story-text .section-label {
+    margin-bottom: 14px;
+}
+
+.story-text h2 {
+    margin-bottom: 22px;
+    color: var(--verde-principal);
+    font-family: Alata, sans-serif;
+    font-weight: 400;
+    line-height: 1.15;
+    font-size: clamp(2.1rem, 3.4vw, 2.9rem);
+}
+
+.story-text p {
+    color: var(--texto-secundario);
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+
+.story-text p + p {
+    margin-top: 16px;
+}
+
+.story-text .btn,
+.story-text .text-link {
+    margin-top: 28px;
+}
+
+.story-text .btn {
+    display: inline-flex;
+}
+
+.story-text .text-link {
+    display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   3. NUESTRA ESENCIA
+   Reutiliza la tarjeta global .experience-highlight (foto + número + texto,
+   ya usada en index.html) dentro de un contenedor propio de 4 columnas.
+   -------------------------------------------------------------------------- */
+.identidad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+}
+
+.identidad-grid .highlight-image {
+    height: 240px;
+}
+
+/* --------------------------------------------------------------------------
+   4. GALERÍA — una imagen grande + varias pequeñas
+   -------------------------------------------------------------------------- */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 20px;
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-suave);
+}
+
+.galeria-item--big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.06);
+}
+
+/* --------------------------------------------------------------------------
+   5. SUCURSALES — tarjetas fotográficas
+   -------------------------------------------------------------------------- */
+.nosotros-branches-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.branch-card-link {
+    display: block;
+}
+
+.nosotros-branches-grid .branch-image {
+    height: 340px;
+}
+
+.nosotros-branches-grid .branch-content {
+    padding: 30px 32px 32px;
+}
+
+.nosotros-branches-grid .branch-content h3 {
+    margin-bottom: 8px;
+}
+
+.nosotros-branches-grid .branch-content > p {
+    margin-bottom: 16px;
+    color: var(--texto-secundario);
+    font-size: .88rem;
+}
+
+.nosotros-branches-grid .text-link {
+    display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   6. FOOTER — más compacto, logo más pequeño, columnas más cercanas
+   .footer es un componente global (style.css) reutilizado también en
+   index.html. Esta regla solo se carga en nosotros.html (nosotros.css no
+   se enlaza en ninguna otra página), así que ajusta el footer de ESTA
+   página únicamente, sin tocar css/style.css.
+   -------------------------------------------------------------------------- */
+.footer {
+    padding: 48px 0 22px;
+}
+
+.footer-content {
+    grid-template-columns: 1.15fr repeat(2, 1fr);
+    gap: 32px;
+}
+
+.footer-brand img {
+    width: 82px;
+}
+
+.footer-brand p {
+    margin-top: 8px;
+    font-size: .85rem;
+}
+
+.footer-links {
+    gap: 7px;
+}
+
+.footer-bottom {
+    margin-top: 26px;
+    padding-top: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE — BREAKPOINTS (900px, 650px, 400px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .story-block,
+    .story-block--reverse {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .story-block--reverse .story-media,
+    .story-block--reverse .story-text {
+        order: initial;
+    }
+
+    .story-media img {
+        height: clamp(280px, 60vw, 400px);
+    }
+
+    .story-text {
+        max-width: 100%;
+    }
+
+    .identidad-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+    .nosotros-branches-grid {
+        gap: 20px;
+    }
+
+    .nosotros-branches-grid .branch-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .nosotros-hero {
+        min-height: clamp(560px, 88svh, 680px);
+        background-position: 40% center;
+    }
+
+    .nosotros-hero-content {
+        width: calc(100% - 32px);
+        padding: calc(var(--space-xl) + 16px) 0 calc(var(--space-lg) + 8px);
+    }
+
+    .nosotros-hero h1 {
+        font-size: clamp(2.2rem, 9vw, 2.9rem);
+    }
+
+    .nosotros-hero p {
+        max-width: 380px;
+        font-size: 0.94rem;
+    }
+
+    .nosotros-hero .hero-buttons {
+        width: min(100%, 260px);
+        margin: var(--space-md) auto 0;
+    }
+
+    .nosotros-hero .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .story-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .story-text p {
+        font-size: .94rem;
+    }
+
+    .identidad-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 240px;
+        gap: 14px;
+    }
+
+    .galeria-item--big {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .nosotros-branches-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 36px 0 18px;
+    }
+
+    .footer-content {
+        gap: 26px;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        margin-top: 22px;
+        padding-top: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .nosotros-hero {
+        min-height: 540px;
+    }
+
+    .nosotros-hero h1 {
+        font-size: clamp(2rem, 10vw, 2.4rem);
+    }
+
+    .story-media img {
+        height: 240px;
+    }
+
+    .identidad-grid .highlight-image {
+        height: 200px;
+    }
+
+    .galeria-grid {
+        grid-auto-rows: 200px;
+    }
+
+    .nosotros-branches-grid .branch-image {
+        height: 220px;
+    }
+
+    .footer {
+        padding: 30px 0 16px;
+    }
+}
