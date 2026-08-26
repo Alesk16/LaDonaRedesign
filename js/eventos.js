@@ -23,8 +23,8 @@
  *     descripcion: "Descripción breve del evento.",
  *     imagenPortada: "../img/eventos/sociales/dia-madre/portada.jpg", // o null
  *     galeria: [
- *         "../img/eventos/sociales/dia-madre/foto01.jpg",
- *         "../img/eventos/sociales/dia-madre/foto02.jpg"
+ *         "../img/eventos/sociales/dia-madre/foto-01.jpg",
+ *         "../img/eventos/sociales/dia-madre/foto-02.jpg"
  *     ]
  * }
  *
@@ -64,9 +64,24 @@
             // Fotografías reales pendientes: se prevén 18 fotos en total.
             imagenPortada: '../img/eventos/sociales/bautizo-familia-benalcazar/portada.jpg',
             galeria: [
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto01.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto02.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto03.jpg'
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-01.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-02.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-03.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-04.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-05.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-06.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-07.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-08.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-09.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-10.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-11.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-12.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-13.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-14.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-15.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-16.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-17.jpg',
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-18.jpg'
             ]
         },
         {
@@ -79,9 +94,14 @@
             // Fotografías reales pendientes: se prevén 8 fotos en total.
             imagenPortada: '../img/eventos/sociales/aniversario-10-anos/portada.jpg',
             galeria: [
-                '../img/eventos/sociales/aniversario-10-anos/foto01.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto02.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto03.jpg'
+                '../img/eventos/sociales/aniversario-10-anos/foto-01.jpg',
+                '../img/eventos/sociales/aniversario-10-anos/foto-02.jpg',
+                '../img/eventos/sociales/aniversario-10-anos/foto-03.jpg',
+                '../img/eventos/sociales/aniversario-10-anos/foto-04.jpg',
+                '../img/eventos/sociales/aniversario-10-anos/foto-05.jpg',
+                '../img/eventos/sociales/aniversario-10-anos/foto-06.jpg',
+                '../img/eventos/sociales/aniversario-10-anos/foto-07.jpg',
+                '../img/eventos/sociales/aniversario-10-anos/foto-08.jpg'
             ]
         },
         {
@@ -96,9 +116,28 @@
             // Fotografías reales pendientes: se prevén 22 fotos en total.
             imagenPortada: '../img/eventos/sociales/grado-universitario/portada.jpg',
             galeria: [
-                '../img/eventos/sociales/grado-universitario/foto01.jpg',
-                '../img/eventos/sociales/grado-universitario/foto02.jpg',
-                '../img/eventos/sociales/grado-universitario/foto03.jpg'
+                '../img/eventos/sociales/grado-universitario/foto-01.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-02.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-03.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-04.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-05.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-06.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-07.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-08.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-09.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-10.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-11.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-12.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-13.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-14.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-15.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-16.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-17.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-18.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-19.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-20.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-21.jpg',
+                '../img/eventos/sociales/grado-universitario/foto-22.jpg'
             ]
         },
         {
@@ -113,9 +152,21 @@
             // Fotografías reales pendientes: se prevén 15 fotos en total.
             imagenPortada: '../img/eventos/sociales/brunch-club-andino/portada.jpg',
             galeria: [
-                '../img/eventos/sociales/brunch-club-andino/foto01.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto02.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto03.jpg'
+                '../img/eventos/sociales/brunch-club-andino/foto-01.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-02.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-03.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-04.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-05.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-06.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-07.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-08.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-09.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-10.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-11.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-12.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-13.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-14.jpg',
+                '../img/eventos/sociales/brunch-club-andino/foto-15.jpg'
             ]
         },
         {
@@ -128,9 +179,19 @@
             // Fotografías reales pendientes: se prevén 13 fotos en total.
             imagenPortada: '../img/eventos/sociales/baby-shower/portada.jpg',
             galeria: [
-                '../img/eventos/sociales/baby-shower/foto01.jpg',
-                '../img/eventos/sociales/baby-shower/foto02.jpg',
-                '../img/eventos/sociales/baby-shower/foto03.jpg'
+                '../img/eventos/sociales/baby-shower/foto-01.jpg',
+                '../img/eventos/sociales/baby-shower/foto-02.jpg',
+                '../img/eventos/sociales/baby-shower/foto-03.jpg',
+                '../img/eventos/sociales/baby-shower/foto-04.jpg',
+                '../img/eventos/sociales/baby-shower/foto-05.jpg',
+                '../img/eventos/sociales/baby-shower/foto-06.jpg',
+                '../img/eventos/sociales/baby-shower/foto-07.jpg',
+                '../img/eventos/sociales/baby-shower/foto-08.jpg',
+                '../img/eventos/sociales/baby-shower/foto-09.jpg',
+                '../img/eventos/sociales/baby-shower/foto-10.jpg',
+                '../img/eventos/sociales/baby-shower/foto-11.jpg',
+                '../img/eventos/sociales/baby-shower/foto-12.jpg',
+                '../img/eventos/sociales/baby-shower/foto-13.jpg'
             ]
         },
         {
@@ -143,9 +204,25 @@
             // Fotografías reales pendientes: se prevén 19 fotos en total.
             imagenPortada: '../img/eventos/sociales/cumpleanos-50/portada.jpg',
             galeria: [
-                '../img/eventos/sociales/cumpleanos-50/foto01.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto02.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto03.jpg'
+                '../img/eventos/sociales/cumpleanos-50/foto-01.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-02.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-03.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-04.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-05.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-06.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-07.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-08.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-09.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-10.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-11.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-12.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-13.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-14.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-15.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-16.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-17.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-18.jpg',
+                '../img/eventos/sociales/cumpleanos-50/foto-19.jpg'
             ]
         },
         {
@@ -158,9 +235,16 @@
             // Fotografías reales pendientes: se prevén 10 fotos en total.
             imagenPortada: '../img/eventos/sociales/almuerzo-familiar/portada.jpg',
             galeria: [
-                '../img/eventos/sociales/almuerzo-familiar/foto01.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto02.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto03.jpg'
+                '../img/eventos/sociales/almuerzo-familiar/foto-01.jpg',
+                '../img/eventos/sociales/almuerzo-familiar/foto-02.jpg',
+                '../img/eventos/sociales/almuerzo-familiar/foto-03.jpg',
+                '../img/eventos/sociales/almuerzo-familiar/foto-04.jpg',
+                '../img/eventos/sociales/almuerzo-familiar/foto-05.jpg',
+                '../img/eventos/sociales/almuerzo-familiar/foto-06.jpg',
+                '../img/eventos/sociales/almuerzo-familiar/foto-07.jpg',
+                '../img/eventos/sociales/almuerzo-familiar/foto-08.jpg',
+                '../img/eventos/sociales/almuerzo-familiar/foto-09.jpg',
+                '../img/eventos/sociales/almuerzo-familiar/foto-10.jpg'
             ]
         }
     ];
@@ -203,9 +287,16 @@
             // Fotografías reales pendientes: se prevén 10 fotos en total.
             imagenPortada: '../img/eventos/institucionales/desayuno-constructora-andina/portada.jpg',
             galeria: [
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto01.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto02.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto03.jpg'
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-01.jpg',
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-02.jpg',
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-03.jpg',
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-04.jpg',
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-05.jpg',
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-06.jpg',
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-07.jpg',
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-08.jpg',
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-09.jpg',
+                '../img/eventos/institucionales/desayuno-constructora-andina/foto-10.jpg'
             ]
         },
         {
@@ -218,9 +309,20 @@
             // Fotografías reales pendientes: se prevén 14 fotos en total.
             imagenPortada: '../img/eventos/institucionales/almuerzo-grupo-medisur/portada.jpg',
             galeria: [
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto01.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto02.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto03.jpg'
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-01.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-02.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-03.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-04.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-05.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-06.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-07.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-08.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-09.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-10.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-11.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-12.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-13.jpg',
+                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-14.jpg'
             ]
         },
         {
@@ -233,9 +335,18 @@
             // Fotografías reales pendientes: se prevén 12 fotos en total.
             imagenPortada: '../img/eventos/institucionales/lanzamiento-linea-cafe/portada.jpg',
             galeria: [
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto01.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto02.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto03.jpg'
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-01.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-02.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-03.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-04.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-05.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-06.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-07.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-08.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-09.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-10.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-11.jpg',
+                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-12.jpg'
             ]
         },
         {
@@ -245,14 +356,25 @@
             fecha: '25 de agosto de 2026',
             sucursal: 'Cayambe',
             descripcion: 'Una jornada de capacitación acompañada de un espacio adecuado para el aprendizaje y la integración del equipo.',
-            // Evento aún no realizado (fecha futura). No se muestra en "Eventos realizados".
-            estado: 'proximo',
             // Fotografías reales pendientes: se prevén 16 fotos en total.
             imagenPortada: '../img/eventos/institucionales/capacitacion-tecnosoluciones/portada.jpg',
             galeria: [
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto01.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto02.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto03.jpg'
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-01.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-02.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-03.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-04.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-05.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-06.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-07.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-08.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-09.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-10.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-11.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-12.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-13.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-14.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-15.jpg',
+                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-16.jpg'
             ]
         },
         {
@@ -265,9 +387,17 @@
             // Fotografías reales pendientes: se prevén 11 fotos en total.
             imagenPortada: '../img/eventos/institucionales/almuerzo-agroexport/portada.jpg',
             galeria: [
-                '../img/eventos/institucionales/almuerzo-agroexport/foto01.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto02.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto03.jpg'
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-01.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-02.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-03.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-04.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-05.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-06.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-07.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-08.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-09.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-10.jpg',
+                '../img/eventos/institucionales/almuerzo-agroexport/foto-11.jpg'
             ]
         },
         {
@@ -282,9 +412,15 @@
             // Fotografías reales pendientes: se prevén 9 fotos en total.
             imagenPortada: '../img/eventos/institucionales/reunion-inmobiliaria-real/portada.jpg',
             galeria: [
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto01.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto02.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto03.jpg'
+                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-01.jpg',
+                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-02.jpg',
+                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-03.jpg',
+                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-04.jpg',
+                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-05.jpg',
+                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-06.jpg',
+                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-07.jpg',
+                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-08.jpg',
+                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-09.jpg'
             ]
         },
         {
@@ -297,9 +433,13 @@
             // Fotografías reales pendientes: se prevén 7 fotos en total.
             imagenPortada: '../img/eventos/institucionales/proyecto-vialcorp/portada.jpg',
             galeria: [
-                '../img/eventos/institucionales/proyecto-vialcorp/foto01.jpg',
-                '../img/eventos/institucionales/proyecto-vialcorp/foto02.jpg',
-                '../img/eventos/institucionales/proyecto-vialcorp/foto03.jpg'
+                '../img/eventos/institucionales/proyecto-vialcorp/foto-01.jpg',
+                '../img/eventos/institucionales/proyecto-vialcorp/foto-02.jpg',
+                '../img/eventos/institucionales/proyecto-vialcorp/foto-03.jpg',
+                '../img/eventos/institucionales/proyecto-vialcorp/foto-04.jpg',
+                '../img/eventos/institucionales/proyecto-vialcorp/foto-05.jpg',
+                '../img/eventos/institucionales/proyecto-vialcorp/foto-06.jpg',
+                '../img/eventos/institucionales/proyecto-vialcorp/foto-07.jpg'
             ]
         },
         {
@@ -312,9 +452,31 @@
             // Fotografías reales pendientes: se prevén 25 fotos en total.
             imagenPortada: '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/portada.jpg',
             galeria: [
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto01.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto02.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto03.jpg'
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-01.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-02.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-03.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-04.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-05.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-06.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-07.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-08.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-09.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-10.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-11.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-12.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-13.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-14.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-15.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-16.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-17.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-18.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-19.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-20.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-21.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-22.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-23.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-24.jpg',
+                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-25.jpg'
             ]
         }
     ];
