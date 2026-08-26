@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="Eventos en La Doña Hacienda. Momentos especiales, eventos fijos y celebraciones que vivimos y compartimos en un ambiente campestre y acogedor." />
+    <meta name="description" content="Eventos realizados en La Doña Hacienda. Historial de celebraciones sociales e institucionales que hemos compartido con familias, empresas y organizaciones." />
 
     <title>Eventos | La Doña Hacienda</title>
 
@@ -124,15 +124,15 @@
             <div class="eventos-hero-content">
 
                 <span class="section-label">
-                    EXPERIENCIAS & CELEBRACIONES
+                    HISTORIAL DE EXPERIENCIAS
                 </span>
 
                 <h1>
-                    Eventos
+                    Eventos realizados
                 </h1>
 
                 <p>
-                    Momentos especiales que vivimos y compartimos en La Doña Hacienda.
+                    Celebraciones, encuentros y experiencias que forman parte de la historia de La Doña Hacienda.
                 </p>
 
             </div>
@@ -142,327 +142,101 @@
 
 
         <!-- =====================================
-             2. SECCIÓN "PRÓXIMOS EVENTOS"
+             2. SECCIÓN "MOMENTOS PARA COMPARTIR"
+             (Categorías: Eventos sociales / institucionales)
         ====================================== -->
 
-        <section class="section eventos-section proximos-section" id="proximos">
+        <section class="section eventos-section categorias-section" id="momentos">
 
             <div class="container">
 
                 <div class="section-heading">
 
                     <span class="section-label">
-                        CALENDARIO
+                        GALERÍA DE EVENTOS
                     </span>
 
                     <h2>
-                        Próximos eventos
+                        Momentos para compartir
                     </h2>
 
                     <p>
-                        Actividades, celebraciones y momentos especiales programados para compartir en La Doña Hacienda.
+                        Conoce algunos de los eventos que hemos compartido junto a nuestros clientes, familias, empresas y organizaciones.
                     </p>
 
                 </div>
 
 
-                <!-- =======================================================
-                     DATOS REALES PENDIENTES
-                     Estructura de tarjetas preparada para próximos eventos.
-                     No colocar nombres, fechas, precios ni datos ficticios.
-                     ======================================================= -->
+                <!-- NAVEGACIÓN ENTRE CATEGORÍAS -->
 
-                <div class="eventos-grid">
+                <div class="eventos-tabs" role="tablist" aria-label="Categorías de eventos">
 
-                    <!-- TARJETA PRÓXIMO EVENTO 1 (ESTRUCTURA PREPARADA) -->
+                    <button type="button" class="eventos-tab-btn is-active" role="tab" id="tabSociales"
+                        aria-selected="true" aria-controls="panelSociales" data-eventos-tab="sociales">
+                        Eventos sociales
+                    </button>
 
-                    <article class="evento-card">
-
-                        <div class="evento-image">
-
-                            <!-- DATOS REALES PENDIENTES: Cargar imagen oficial del evento -->
-                            <div class="evento-image-placeholder">
-                                <span class="placeholder-icon">📅</span>
-                                <span class="placeholder-tag">Próximo evento</span>
-                            </div>
-
-                            <span class="evento-status-badge">
-                                Próximamente
-                            </span>
-
-                        </div>
-
-                        <div class="evento-content">
-
-                            <div class="evento-meta">
-
-                                <span class="evento-meta-item">
-                                    <span class="meta-icon">🗓️</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span class="meta-text">Fecha por anunciar</span>
-                                </span>
-
-                                <span class="evento-meta-item">
-                                    <span class="meta-icon">📍</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span class="meta-text">Por confirmar</span>
-                                </span>
-
-                            </div>
-
-                            <div class="evento-header">
-
-                                <!-- DATOS REALES PENDIENTES -->
-                                <h3>
-                                    Evento por anunciar
-                                </h3>
-
-                            </div>
-
-                            <!-- DATOS REALES PENDIENTES -->
-                            <p class="evento-description">
-                                Los detalles y la programación de este evento se publicarán próximamente.
-                            </p>
-
-                            <div class="evento-actions">
-
-                                <a href="reservas.html" class="btn btn-primary" aria-label="Solicitar más información o reservar">
-                                    Más información
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- TARJETA PRÓXIMO EVENTO 2 (ESTRUCTURA PREPARADA) -->
-
-                    <article class="evento-card">
-
-                        <div class="evento-image">
-
-                            <!-- DATOS REALES PENDIENTES: Cargar imagen oficial del evento -->
-                            <div class="evento-image-placeholder">
-                                <span class="placeholder-icon">✨</span>
-                                <span class="placeholder-tag">Próximo evento</span>
-                            </div>
-
-                            <span class="evento-status-badge">
-                                Próximamente
-                            </span>
-
-                        </div>
-
-                        <div class="evento-content">
-
-                            <div class="evento-meta">
-
-                                <span class="evento-meta-item">
-                                    <span class="meta-icon">🗓️</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span class="meta-text">Fecha por anunciar</span>
-                                </span>
-
-                                <span class="evento-meta-item">
-                                    <span class="meta-icon">📍</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span class="meta-text">Por confirmar</span>
-                                </span>
-
-                            </div>
-
-                            <div class="evento-header">
-
-                                <!-- DATOS REALES PENDIENTES -->
-                                <h3>
-                                    Evento por anunciar
-                                </h3>
-
-                            </div>
-
-                            <!-- DATOS REALES PENDIENTES -->
-                            <p class="evento-description">
-                                Los detalles y la programación de este evento se publicarán próximamente.
-                            </p>
-
-                            <div class="evento-actions">
-
-                                <a href="reservas.html" class="btn btn-primary" aria-label="Solicitar más información o reservar">
-                                    Más información
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </article>
+                    <button type="button" class="eventos-tab-btn" role="tab" id="tabInstitucionales"
+                        aria-selected="false" aria-controls="panelInstitucionales" data-eventos-tab="institucionales">
+                        Eventos institucionales
+                    </button>
 
                 </div>
 
 
-                <!-- BANNER DE PRÓXIMAS FECHAS -->
+                <!-- =======================================================
+                     PANEL: EVENTOS SOCIALES
+                     Contenido renderizado dinámicamente desde js/eventos.js
+                     (arreglo `eventosSociales`). Ver ese archivo para
+                     agregar nuevos eventos.
+                     ======================================================= -->
 
-                <div class="evento-notice-banner">
+                <div class="eventos-panel" data-eventos-panel="sociales" id="panelSociales" role="tabpanel"
+                    aria-labelledby="tabSociales">
 
-                    <div class="notice-badge">
-                        INFORMACIÓN
-                    </div>
-
-                    <div class="notice-info">
+                    <div class="eventos-panel-heading">
 
                         <h3>
-                            Nuevas fechas en preparación
+                            Eventos sociales
                         </h3>
 
                         <p>
-                            Estamos organizando nuevas experiencias y celebraciones para ti. Consulta nuestras novedades o contáctanos para eventos privados.
+                            Celebraciones especiales para compartir con familia, amigos y seres queridos.
                         </p>
 
                     </div>
 
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================
-             3. SECCIÓN "EVENTOS FIJOS"
-        ====================================== -->
-
-        <section class="section eventos-section fijos-section" id="fijos">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="section-label">
-                        ACTIVIDADES RECURRENTES
-                    </span>
-
-                    <h2>
-                        Eventos fijos
-                    </h2>
-
-                    <p>
-                        Experiencias y tradiciones regulares que se realizan de manera continua en nuestras haciendas.
-                    </p>
+                    <div id="socialesGrid" class="eventos-grid-container">
+                        <!-- Tarjetas o estado vacío inyectados por js/eventos.js -->
+                    </div>
 
                 </div>
 
 
                 <!-- =======================================================
-                     DATOS REALES PENDIENTES
-                     Estructura de tarjetas reutilizables para eventos fijos.
-                     No colocar nombres, frecuencias ni detalles inventados.
+                     PANEL: EVENTOS INSTITUCIONALES
+                     Contenido renderizado dinámicamente desde js/eventos.js
+                     (arreglo `eventosInstitucionales`).
                      ======================================================= -->
 
-                <div class="eventos-fijos-grid">
+                <div class="eventos-panel" data-eventos-panel="institucionales" id="panelInstitucionales"
+                    role="tabpanel" aria-labelledby="tabInstitucionales" hidden>
 
-                    <!-- TARJETA EVENTO FIJO 1 (ESTRUCTURA PREPARADA) -->
+                    <div class="eventos-panel-heading">
 
-                    <article class="evento-fijo-card">
+                        <h3>
+                            Eventos institucionales
+                        </h3>
 
-                        <div class="evento-fijo-image">
+                        <p>
+                            Espacios pensados para empresas, equipos de trabajo y organizaciones que buscan compartir y crear experiencias diferentes.
+                        </p>
 
-                            <!-- DATOS REALES PENDIENTES: Cargar fotografía oficial -->
-                            <div class="evento-image-placeholder fijo-placeholder">
-                                <span class="placeholder-icon">🎵</span>
-                                <span class="placeholder-tag">Actividad fija</span>
-                            </div>
+                    </div>
 
-                        </div>
-
-                        <div class="evento-fijo-content">
-
-                            <div class="evento-fijo-meta">
-
-                                <span class="frecuencia-pill">
-                                    <span class="pill-icon">🔄</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span>Frecuencia por definir</span>
-                                </span>
-
-                                <span class="sucursal-pill">
-                                    <span class="pill-icon">📍</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span>Sucursal por confirmar</span>
-                                </span>
-
-                            </div>
-
-                            <div class="evento-fijo-header">
-
-                                <!-- DATOS REALES PENDIENTES -->
-                                <h3>
-                                    Actividad recurrente
-                                </h3>
-
-                            </div>
-
-                            <!-- DATOS REALES PENDIENTES -->
-                            <p class="evento-description">
-                                Información y horarios de esta actividad disponibles próximamente en nuestros canales oficiales.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- TARJETA EVENTO FIJO 2 (ESTRUCTURA PREPARADA) -->
-
-                    <article class="evento-fijo-card">
-
-                        <div class="evento-fijo-image">
-
-                            <!-- DATOS REALES PENDIENTES: Cargar fotografía oficial -->
-                            <div class="evento-image-placeholder fijo-placeholder">
-                                <span class="placeholder-icon">🍷</span>
-                                <span class="placeholder-tag">Actividad fija</span>
-                            </div>
-
-                        </div>
-
-                        <div class="evento-fijo-content">
-
-                            <div class="evento-fijo-meta">
-
-                                <span class="frecuencia-pill">
-                                    <span class="pill-icon">🔄</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span>Frecuencia por definir</span>
-                                </span>
-
-                                <span class="sucursal-pill">
-                                    <span class="pill-icon">📍</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span>Sucursal por confirmar</span>
-                                </span>
-
-                            </div>
-
-                            <div class="evento-fijo-header">
-
-                                <!-- DATOS REALES PENDIENTES -->
-                                <h3>
-                                    Actividad recurrente
-                                </h3>
-
-                            </div>
-
-                            <!-- DATOS REALES PENDIENTES -->
-                            <p class="evento-description">
-                                Información y horarios de esta actividad disponibles próximamente en nuestros canales oficiales.
-                            </p>
-
-                        </div>
-
-                    </article>
+                    <div id="institucionalesGrid" class="eventos-grid-container">
+                        <!-- Tarjetas inyectadas por js/eventos.js -->
+                    </div>
 
                 </div>
 
@@ -473,182 +247,7 @@
 
 
         <!-- =====================================
-             4. SECCIÓN "EVENTOS REALIZADOS"
-        ====================================== -->
-
-        <section class="section eventos-section realizados-section" id="realizados">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="section-label">
-                        MEMORIA & GALERÍA
-                    </span>
-
-                    <h2>
-                        Eventos realizados
-                    </h2>
-
-                    <p>
-                        Momentos y celebraciones especiales que han formado parte de nuestra historia en La Doña Hacienda.
-                    </p>
-
-                </div>
-
-
-                <!-- =======================================================
-                     DATOS REALES PENDIENTES
-                     Estructura tipo historial/galería para eventos pasados.
-                     No colocar eventos ni fechas inventadas.
-                     ======================================================= -->
-
-                <div class="eventos-realizados-grid">
-
-                    <!-- TARJETA EVENTO REALIZADO 1 (ESTRUCTURA PREPARADA) -->
-
-                    <article class="evento-realizado-card" role="button" tabindex="0" data-evento-modal="true" aria-label="Ver imagen y detalles de Celebración realizada">
-
-                        <div class="evento-realizado-media">
-
-                            <!-- DATOS REALES PENDIENTES: Cargar fotografía de archivo -->
-                            <div class="evento-image-placeholder realizado-placeholder">
-                                <span class="placeholder-icon">📸</span>
-                                <span class="placeholder-tag">Galería de evento</span>
-                            </div>
-
-                        </div>
-
-                        <div class="evento-realizado-content">
-
-                            <div class="evento-meta">
-
-                                <span class="evento-meta-item">
-                                    <span class="meta-icon">📅</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span class="meta-text">Fecha archivada</span>
-                                </span>
-
-                            </div>
-
-                            <div class="evento-header">
-
-                                <!-- DATOS REALES PENDIENTES -->
-                                <h3>
-                                    Celebración realizada
-                                </h3>
-
-                            </div>
-
-                            <!-- DATOS REALES PENDIENTES -->
-                            <p class="evento-description">
-                                Registro fotográfico y memoria de eventos realizados en nuestras instalaciones.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- TARJETA EVENTO REALIZADO 2 (ESTRUCTURA PREPARADA) -->
-
-                    <article class="evento-realizado-card" role="button" tabindex="0" data-evento-modal="true" aria-label="Ver imagen y detalles de Celebración realizada">
-
-                        <div class="evento-realizado-media">
-
-                            <!-- DATOS REALES PENDIENTES: Cargar fotografía de archivo -->
-                            <div class="evento-image-placeholder realizado-placeholder">
-                                <span class="placeholder-icon">📸</span>
-                                <span class="placeholder-tag">Galería de evento</span>
-                            </div>
-
-                        </div>
-
-                        <div class="evento-realizado-content">
-
-                            <div class="evento-meta">
-
-                                <span class="evento-meta-item">
-                                    <span class="meta-icon">📅</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span class="meta-text">Fecha archivada</span>
-                                </span>
-
-                            </div>
-
-                            <div class="evento-header">
-
-                                <!-- DATOS REALES PENDIENTES -->
-                                <h3>
-                                    Celebración realizada
-                                </h3>
-
-                            </div>
-
-                            <!-- DATOS REALES PENDIENTES -->
-                            <p class="evento-description">
-                                Registro fotográfico y memoria de eventos realizados en nuestras instalaciones.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- TARJETA EVENTO REALIZADO 3 (ESTRUCTURA PREPARADA) -->
-
-                    <article class="evento-realizado-card" role="button" tabindex="0" data-evento-modal="true" aria-label="Ver imagen y detalles de Celebración realizada">
-
-                        <div class="evento-realizado-media">
-
-                            <!-- DATOS REALES PENDIENTES: Cargar fotografía de archivo -->
-                            <div class="evento-image-placeholder realizado-placeholder">
-                                <span class="placeholder-icon">📸</span>
-                                <span class="placeholder-tag">Galería de evento</span>
-                            </div>
-
-                        </div>
-
-                        <div class="evento-realizado-content">
-
-                            <div class="evento-meta">
-
-                                <span class="evento-meta-item">
-                                    <span class="meta-icon">📅</span>
-                                    <!-- DATOS REALES PENDIENTES -->
-                                    <span class="meta-text">Fecha archivada</span>
-                                </span>
-
-                            </div>
-
-                            <div class="evento-header">
-
-                                <!-- DATOS REALES PENDIENTES -->
-                                <h3>
-                                    Celebración realizada
-                                </h3>
-
-                            </div>
-
-                            <!-- DATOS REALES PENDIENTES -->
-                            <p class="evento-description">
-                                Registro fotográfico y memoria de eventos realizados en nuestras instalaciones.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================
-             5. CTA FINAL
+             3. CTA FINAL
         ====================================== -->
 
         <section class="eventos-cta-section">
@@ -708,30 +307,48 @@
 
         <div class="evento-modal-dialog">
 
-            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar vista ampliada">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar galería">
                 &times;
             </button>
 
             <div class="modal-media-container" id="modalMedia">
-                <!-- Imagen o contenido visual inyectado dinámicamente -->
+
+                <button type="button" class="modal-nav-btn modal-nav-prev" id="modalPrevBtn" aria-label="Fotografía anterior">
+                    &#10094;
+                </button>
+
+                <div class="modal-media-frame" id="modalMediaFrame">
+                    <!-- Imagen o placeholder inyectado dinámicamente -->
+                </div>
+
+                <button type="button" class="modal-nav-btn modal-nav-next" id="modalNextBtn" aria-label="Fotografía siguiente">
+                    &#10095;
+                </button>
+
+                <span class="modal-media-counter" id="modalCounter"></span>
+
             </div>
 
             <div class="modal-info-container">
 
                 <span class="section-label" id="modalCategory">
-                    EVENTO REALIZADO
+                    EVENTO
                 </span>
 
                 <h3 id="modalTitle">
-                    Celebración realizada
+                    Nombre del evento
                 </h3>
 
                 <span class="modal-date" id="modalDate">
-                    Fecha archivada
+                    Fecha por confirmar
+                </span>
+
+                <span class="modal-location" id="modalLocation">
+                    <span class="meta-icon">📍</span> Sucursal por confirmar
                 </span>
 
                 <p id="modalDescription">
-                    Registro fotográfico y memoria de eventos realizados en nuestras instalaciones.
+                    Descripción del evento.
                 </p>
 
             </div>

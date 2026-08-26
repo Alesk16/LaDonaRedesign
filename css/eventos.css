@@ -66,26 +66,212 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. SECCIONES Y FONDOS ALTERNOS
+   3. SECCIONES Y FONDOS
    -------------------------------------------------------------------------- */
 .eventos-section {
     padding: 85px 0 100px;
 }
 
-.proximos-section {
-    background: var(--crema);
-}
-
-.fijos-section {
-    background: var(--blanco);
-}
-
-.realizados-section {
+.categorias-section {
     background: var(--crema);
 }
 
 /* --------------------------------------------------------------------------
-   4. PLACEHOLDERS VISUALES ELEGANTES PARA IMÁGENES
+   4. NAVEGACIÓN POR TABS (Eventos sociales / institucionales)
+   -------------------------------------------------------------------------- */
+.eventos-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 0 0 56px;
+}
+
+.eventos-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 32px;
+    border-radius: 999px;
+    border: 1.5px solid rgb(80 118 77 / 25%);
+    background: var(--blanco);
+    color: var(--verde-principal);
+    font-family: Raleway, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background-color var(--transicion), color var(--transicion), border-color var(--transicion), transform var(--transicion);
+}
+
+.eventos-tab-btn:hover {
+    border-color: var(--verde-principal);
+    transform: translateY(-2px);
+}
+
+.eventos-tab-btn.is-active {
+    background: var(--verde-principal);
+    border-color: var(--verde-principal);
+    color: var(--blanco);
+    box-shadow: var(--sombra-suave);
+}
+
+.eventos-tab-btn:focus-visible {
+    outline: 3px solid var(--naranja-principal);
+    outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   5. PANELES DE CATEGORÍA
+   -------------------------------------------------------------------------- */
+.eventos-panel[hidden] {
+    display: none;
+}
+
+.eventos-panel-heading {
+    max-width: 620px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.eventos-panel-heading h3 {
+    font-family: Alata, sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 400;
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+}
+
+.eventos-panel-heading p {
+    color: var(--texto-secundario);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   6. GRID DE TARJETAS DE EVENTOS (dinámico)
+   -------------------------------------------------------------------------- */
+.eventos-grid-dynamic {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.evento-item-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--radio-grande);
+    background: var(--blanco);
+    border: 1px solid rgb(80 118 77 / 12%);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.evento-item-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-media);
+}
+
+.evento-item-card:hover .evento-item-media img,
+.evento-item-card:hover .evento-image-placeholder {
+    transform: scale(1.05);
+}
+
+.evento-item-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--verde-oscuro);
+}
+
+.evento-item-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.evento-item-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 28px 26px 30px;
+}
+
+.evento-item-category {
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--naranja-principal);
+    margin-bottom: 10px;
+}
+
+.evento-item-title {
+    font-family: Alata, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--verde-principal);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.evento-item-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.evento-item-date,
+.evento-item-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--texto-secundario);
+}
+
+.evento-item-desc {
+    color: var(--texto-secundario);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.evento-item-btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 13px 20px;
+    border-radius: 999px;
+    border: 1.5px solid var(--verde-principal);
+    background: transparent;
+    color: var(--verde-principal);
+    font-family: Raleway, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: background-color var(--transicion), color var(--transicion), transform var(--transicion);
+}
+
+.evento-item-btn:hover {
+    background: var(--verde-principal);
+    color: var(--blanco);
+}
+
+.evento-item-btn:focus-visible {
+    outline: 3px solid var(--naranja-principal);
+    outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   7. PLACEHOLDER VISUAL PARA IMÁGENES SIN FOTOGRAFÍA REAL
    -------------------------------------------------------------------------- */
 .evento-image-placeholder {
     width: 100%;
@@ -99,14 +285,6 @@
     color: rgb(255 255 255 / 85%);
     transition: transform 0.5s ease;
     user-select: none;
-}
-
-.fijo-placeholder {
-    background: linear-gradient(145deg, #2a412c, #406041);
-}
-
-.realizado-placeholder {
-    background: linear-gradient(145deg, #1f3020, #314a33);
 }
 
 .placeholder-icon {
@@ -125,309 +303,48 @@
     padding: 4px 12px;
     border-radius: 999px;
     border: 1px solid rgb(255 255 255 / 15%);
+    text-align: center;
 }
 
 /* --------------------------------------------------------------------------
-   5. SECCIÓN: PRÓXIMOS EVENTOS
+   8. ESTADO VACÍO (categoría sin eventos registrados todavía)
    -------------------------------------------------------------------------- */
-.eventos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    align-items: stretch;
-}
-
-.evento-card {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: var(--radio-grande);
+.eventos-empty-state {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 44px 38px;
+    text-align: center;
     background: var(--blanco);
-    border: 1px solid rgb(80 118 77 / 12%);
-    box-shadow: var(--sombra-suave);
-    transition: transform var(--transicion), box-shadow var(--transicion);
-}
-
-.evento-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--sombra-media);
-}
-
-.evento-card:hover .evento-image-placeholder {
-    transform: scale(1.04);
-}
-
-.evento-image {
-    position: relative;
-    height: 260px;
-    overflow: hidden;
-    background: var(--verde-oscuro);
-}
-
-.evento-status-badge {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    padding: 6px 14px;
-    border-radius: 999px;
-    background: rgb(80 118 77 / 92%);
-    color: var(--blanco);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    backdrop-filter: blur(4px);
-    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
-}
-
-.evento-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    padding: 32px 30px 34px;
-}
-
-.evento-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 16px;
-}
-
-.evento-meta-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 5px 12px;
-    border-radius: 999px;
-    background: rgb(80 118 77 / 8%);
-    color: var(--texto-secundario);
-    font-size: 0.78rem;
-    font-weight: 600;
-}
-
-.meta-icon {
-    font-size: 0.88rem;
-    line-height: 1;
-}
-
-.evento-header {
-    margin-bottom: 12px;
-}
-
-.evento-header h3 {
-    font-family: Alata, sans-serif;
-    font-size: 1.55rem;
-    font-weight: 400;
-    color: var(--verde-principal);
-    line-height: 1.25;
-}
-
-.evento-description {
-    color: var(--texto-secundario);
-    font-size: 0.94rem;
-    line-height: 1.6;
-    margin-bottom: 26px;
-    flex-grow: 1;
-}
-
-.evento-actions {
-    margin-top: auto;
-    display: flex;
-    gap: 12px;
-}
-
-.evento-actions .btn {
-    width: 100%;
-}
-
-/* Banner de aviso para próximas fechas */
-.evento-notice-banner {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-top: 48px;
-    padding: 26px 32px;
     border-radius: var(--radio-grande);
-    background: var(--blanco);
     border: 1px dashed rgb(80 118 77 / 35%);
     box-shadow: var(--sombra-suave);
 }
 
-.notice-badge {
-    flex-shrink: 0;
-    padding: 8px 18px;
-    border-radius: 999px;
-    background: rgb(234 87 27 / 12%);
-    color: var(--naranja-principal);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-}
-
-.notice-info h3 {
-    font-family: Alata, sans-serif;
-    font-size: 1.28rem;
-    font-weight: 400;
-    color: var(--verde-principal);
-    line-height: 1.2;
-    margin-bottom: 6px;
-}
-
-.notice-info p {
+.eventos-empty-text {
     color: var(--texto-secundario);
-    font-size: 0.92rem;
-    line-height: 1.55;
-    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 22px;
 }
 
-/* --------------------------------------------------------------------------
-   6. SECCIÓN: EVENTOS FIJOS
-   -------------------------------------------------------------------------- */
-.eventos-fijos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    align-items: stretch;
-}
-
-.evento-fijo-card {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: var(--radio-grande);
-    background: var(--crema);
-    border: 1px solid rgb(80 118 77 / 12%);
-    box-shadow: var(--sombra-suave);
-    transition: transform var(--transicion), box-shadow var(--transicion);
-}
-
-.evento-fijo-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--sombra-media);
-}
-
-.evento-fijo-card:hover .evento-image-placeholder {
-    transform: scale(1.04);
-}
-
-.evento-fijo-image {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-    background: var(--verde-oscuro);
-}
-
-.evento-fijo-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    padding: 28px 26px 30px;
-}
-
-.evento-fijo-meta {
+.eventos-empty-tags {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
     gap: 10px;
-    margin-bottom: 14px;
 }
 
-.frecuencia-pill,
-.sucursal-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
+.eventos-empty-tag {
+    padding: 7px 16px;
     border-radius: 999px;
-    font-size: 0.76rem;
+    background: rgb(80 118 77 / 8%);
+    color: var(--verde-principal);
+    font-size: 0.82rem;
     font-weight: 600;
 }
 
-.frecuencia-pill {
-    background: rgb(80 118 77 / 12%);
-    color: var(--verde-oscuro);
-}
-
-.sucursal-pill {
-    background: rgb(234 87 27 / 10%);
-    color: var(--naranja-secundario);
-}
-
-.pill-icon {
-    font-size: 0.85rem;
-    line-height: 1;
-}
-
-.evento-fijo-header {
-    margin-bottom: 10px;
-}
-
-.evento-fijo-header h3 {
-    font-family: Alata, sans-serif;
-    font-size: 1.45rem;
-    font-weight: 400;
-    color: var(--verde-principal);
-    line-height: 1.25;
-}
-
 /* --------------------------------------------------------------------------
-   7. SECCIÓN: EVENTOS REALIZADOS (HISTORIAL / GALERÍA)
-   -------------------------------------------------------------------------- */
-.eventos-realizados-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    align-items: stretch;
-}
-
-.evento-realizado-card {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: var(--radio);
-    background: var(--blanco);
-    border: 1px solid rgb(80 118 77 / 12%);
-    box-shadow: var(--sombra-suave);
-    transition: transform var(--transicion), box-shadow var(--transicion);
-}
-
-.evento-realizado-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--sombra-media);
-}
-
-.evento-realizado-card:hover .evento-image-placeholder {
-    transform: scale(1.04);
-}
-
-.evento-realizado-media {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-    background: var(--verde-oscuro);
-}
-
-.evento-realizado-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    padding: 24px 22px 26px;
-}
-
-.evento-realizado-content .evento-header h3 {
-    font-size: 1.32rem;
-}
-
-.evento-realizado-content .evento-description {
-    font-size: 0.9rem;
-    margin-bottom: 0;
-}
-
-/* --------------------------------------------------------------------------
-   8. SECCIÓN: CTA FINAL
+   9. SECCIÓN: CTA FINAL
    -------------------------------------------------------------------------- */
 .eventos-cta-section {
     padding: 30px 0 110px;
@@ -488,17 +405,8 @@
 }
 
 /* --------------------------------------------------------------------------
-   9. MODAL / VISTA AMPLIADA DE GALERÍA (EVENTOS REALIZADOS)
+   10. MODAL / GALERÍA AMPLIADA POR EVENTO
    -------------------------------------------------------------------------- */
-.evento-realizado-card[role="button"] {
-    cursor: pointer;
-}
-
-.evento-realizado-card:focus-visible {
-    outline: 3px solid var(--naranja-principal);
-    outline-offset: 3px;
-}
-
 .evento-modal {
     position: fixed;
     inset: 0;
@@ -575,6 +483,7 @@
 }
 
 .modal-media-container {
+    position: relative;
     width: 100%;
     min-height: 300px;
     max-height: 440px;
@@ -587,14 +496,82 @@
     border-top-right-radius: var(--radio-grande);
 }
 
-.modal-media-container img {
+.modal-media-frame {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    max-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-media-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.modal-media-container .evento-image-placeholder {
+.modal-media-frame .evento-image-placeholder {
     min-height: 300px;
+}
+
+.modal-nav-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 0;
+    background: rgb(0 0 0 / 45%);
+    color: var(--blanco);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color var(--transicion), transform var(--transicion);
+}
+
+.modal-nav-btn:hover {
+    background: var(--naranja-principal);
+}
+
+.modal-nav-btn:focus-visible {
+    outline: 3px solid var(--naranja-claro);
+    outline-offset: 2px;
+}
+
+.modal-nav-btn.modal-nav-prev {
+    left: 16px;
+}
+
+.modal-nav-btn.modal-nav-next {
+    right: 16px;
+}
+
+.modal-nav-btn[hidden] {
+    display: none;
+}
+
+.modal-media-counter {
+    position: absolute;
+    bottom: 14px;
+    right: 18px;
+    z-index: 5;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgb(0 0 0 / 55%);
+    color: var(--blanco);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.modal-media-counter[hidden] {
+    display: none;
 }
 
 .modal-info-container {
@@ -617,6 +594,16 @@
     font-size: 0.84rem;
     font-weight: 700;
     color: var(--naranja-principal);
+    margin-bottom: 6px;
+}
+
+.modal-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--texto-secundario);
     margin-bottom: 14px;
 }
 
@@ -628,7 +615,7 @@
 }
 
 /* ==========================================================================
-   10. RESPONSIVE — BREAKPOINTS EXCLUSIVOS (900px, 650px, 400px)
+   11. RESPONSIVE — BREAKPOINTS EXCLUSIVOS (900px, 650px, 400px)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -648,32 +635,16 @@
         padding: 70px 0 85px;
     }
 
-    .eventos-grid,
-    .eventos-fijos-grid {
+    .eventos-tabs {
+        margin-bottom: 44px;
+    }
+
+    .eventos-grid-dynamic {
         gap: 24px;
     }
 
-    .eventos-realizados-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-    }
-
-    .evento-image {
-        height: 240px;
-    }
-
-    .evento-content {
-        padding: 26px 22px 28px;
-    }
-
-    .evento-header h3 {
-        font-size: 1.4rem;
-    }
-
-    .evento-notice-banner {
-        margin-top: 36px;
-        padding: 24px 28px;
-        gap: 20px;
+    .evento-item-content {
+        padding: 24px 22px 26px;
     }
 
     .eventos-cta-box {
@@ -724,53 +695,38 @@
         padding: 50px 0 65px;
     }
 
-    /* Grids a 1 sola columna */
-    .eventos-grid,
-    .eventos-fijos-grid,
-    .eventos-realizados-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .evento-card,
-    .evento-fijo-card {
-        border-radius: var(--radio);
-    }
-
-    .evento-image,
-    .evento-fijo-image,
-    .evento-realizado-media {
-        height: 220px;
-    }
-
-    .evento-content {
-        padding: 24px 20px;
-    }
-
-    .evento-fijo-content,
-    .evento-realizado-content {
-        padding: 22px 18px;
-    }
-
-    .evento-header h3 {
-        font-size: 1.35rem;
-    }
-
-    .evento-actions {
+    /* Tabs a ancho completo en móvil */
+    .eventos-tabs {
         flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 34px;
     }
 
-    .evento-actions .btn {
+    .eventos-tab-btn {
         width: 100%;
+        justify-content: center;
     }
 
-    .evento-notice-banner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-        padding: 22px 20px;
+    /* Grid a 1 sola columna */
+    .eventos-grid-dynamic {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .evento-item-card {
         border-radius: var(--radio);
-        margin-top: 30px;
+    }
+
+    .evento-item-content {
+        padding: 22px 20px 24px;
+    }
+
+    .evento-item-title {
+        font-size: 1.3rem;
+    }
+
+    .eventos-empty-state {
+        padding: 32px 22px;
     }
 
     /* CTA en móvil */
@@ -808,8 +764,14 @@
         border-top-right-radius: var(--radio);
     }
 
-    .modal-media-container .evento-image-placeholder {
+    .modal-media-frame .evento-image-placeholder {
         min-height: 220px;
+    }
+
+    .modal-nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
     }
 
     .modal-info-container {
@@ -860,12 +822,6 @@
         padding: 38px 0 50px;
     }
 
-    .evento-image,
-    .evento-fijo-image,
-    .evento-realizado-media {
-        height: 190px;
-    }
-
     .placeholder-icon {
         font-size: 1.8rem;
     }
@@ -875,50 +831,28 @@
         padding: 3px 10px;
     }
 
-    .evento-content,
-    .evento-fijo-content,
-    .evento-realizado-content {
-        padding: 18px 16px;
+    .evento-item-content {
+        padding: 18px 16px 20px;
     }
 
-    .evento-meta {
-        gap: 6px;
+    .evento-item-title {
+        font-size: 1.2rem;
     }
 
-    .evento-meta-item,
-    .frecuencia-pill,
-    .sucursal-pill {
-        font-size: 0.72rem;
-        padding: 3px 9px;
-    }
-
-    .evento-header h3,
-    .evento-fijo-header h3 {
-        font-size: 1.25rem;
-    }
-
-    .evento-description {
+    .evento-item-desc {
         font-size: 0.86rem;
         line-height: 1.5;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
-    .evento-actions .btn {
+    .evento-item-btn {
         min-height: 46px;
         font-size: 0.82rem;
         padding: 10px 16px;
     }
 
-    .evento-notice-banner {
-        padding: 18px 16px;
-    }
-
-    .notice-info h3 {
-        font-size: 1.15rem;
-    }
-
-    .notice-info p {
-        font-size: 0.85rem;
+    .eventos-empty-text {
+        font-size: 0.9rem;
     }
 
     .eventos-cta-box {
@@ -945,8 +879,14 @@
         max-height: 200px;
     }
 
-    .modal-media-container .evento-image-placeholder {
+    .modal-media-frame .evento-image-placeholder {
         min-height: 180px;
+    }
+
+    .modal-nav-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.75rem;
     }
 
     .modal-info-container {
