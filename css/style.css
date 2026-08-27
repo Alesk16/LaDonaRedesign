@@ -935,6 +935,88 @@ section[id] {
     text-align: center;
 }
 
+/* Redes sociales — componente reutilizable global
+   Usado en: footer (todas las páginas), sección "Síguenos" de index.html
+   y sección de redes de pages/eventos.html. */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-link {
+    display: inline-flex;
+    flex: 0 0 46px;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color var(--transicion), background-color var(--transicion), transform var(--transicion);
+}
+
+.social-link svg {
+    width: 22px;
+    height: 22px;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+}
+
+.social-link:focus-visible {
+    outline: 3px solid var(--naranja-principal);
+    outline-offset: 3px;
+}
+
+/* Variante footer (fondo verde oscuro) */
+.footer-social {
+    margin-top: 22px;
+}
+
+.footer-social h3 {
+    margin-bottom: 12px;
+    color: var(--naranja-claro);
+    font-size: .75rem;
+    letter-spacing: .12em;
+}
+
+.footer-social .social-link {
+    color: rgb(255 255 255 / 78%);
+    background: rgb(255 255 255 / 10%);
+}
+
+.footer-social .social-link:hover {
+    color: var(--blanco);
+    background: var(--naranja-principal);
+}
+
+/* Variante sobre fondo claro — sección "Síguenos" (index.html, eventos.html) */
+.social-cta-section {
+    background: var(--crema);
+    text-align: center;
+}
+
+.social-cta-section .section-heading {
+    margin-bottom: 0;
+}
+
+.social-cta-section .social-links {
+    justify-content: center;
+    margin-top: 26px;
+}
+
+.social-cta-section .social-link {
+    color: var(--verde-principal);
+    background: rgb(80 118 77 / 8%);
+}
+
+.social-cta-section .social-link:hover {
+    color: var(--blanco);
+    background: var(--naranja-principal);
+}
+
 @media (max-width: 900px) {
     .section {
         padding: 85px 0;

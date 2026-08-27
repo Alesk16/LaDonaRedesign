@@ -1,0 +1,333 @@
+/* ==========================================================================
+   LA DOÑA HACIENDA — ESTILOS EXCLUSIVOS DE POLÍTICAS DE PRIVACIDAD
+   (pages/politicas.html)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ESTADO ACTIVO EN NAVEGACIÓN PRINCIPAL
+   (Política de privacidad no forma parte del menú principal, pero se
+   mantiene la regla por coherencia con el resto de páginas internas)
+   -------------------------------------------------------------------------- */
+.nav a.active:not(.nav-button) {
+    color: var(--blanco);
+}
+
+.nav a.active:not(.nav-button)::after {
+    transform: scaleX(1);
+    background: var(--naranja-principal);
+}
+
+.header-scrolled .nav a.active:not(.nav-button) {
+    color: var(--naranja-principal);
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO DE POLÍTICAS DE PRIVACIDAD
+   -------------------------------------------------------------------------- */
+.politicas-hero {
+    position: relative;
+    display: grid;
+    min-height: clamp(340px, 42svh, 420px);
+    place-items: center;
+    background: url("../img/hero/hero.jpg") center / cover;
+    color: var(--blanco);
+    isolation: isolate;
+    text-align: center;
+}
+
+.politicas-hero .hero-overlay {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--superposicion-hero);
+}
+
+.politicas-hero-content {
+    width: min(calc(100% - 48px), var(--ancho-contenedor));
+    padding: calc(var(--space-2xl) + var(--space-md)) 0 var(--space-lg);
+}
+
+.politicas-hero .section-label {
+    color: var(--naranja-claro);
+    margin-bottom: var(--space-xs);
+}
+
+.politicas-hero h1 {
+    font-family: Alata, sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--blanco);
+}
+
+.politicas-hero p {
+    max-width: 640px;
+    margin: var(--space-sm) auto 0;
+    font-size: clamp(0.94rem, 1.3vw, 1.05rem);
+    color: rgb(255 255 255 / 92%);
+    line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   3. SECCIÓN DOCUMENTO
+   -------------------------------------------------------------------------- */
+.politicas-section {
+    background: var(--crema);
+}
+
+.politicas-document {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   4. BLOQUES DE CONTENIDO
+   -------------------------------------------------------------------------- */
+.politicas-block {
+    padding: clamp(28px, 4vw, 42px);
+    border-radius: var(--radio-grande);
+    background: var(--blanco);
+    box-shadow: var(--sombra-suave);
+}
+
+.politicas-number {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--naranja-principal);
+    font-family: Alata, sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.politicas-block h2 {
+    margin-bottom: 16px;
+    color: var(--verde-principal);
+    font-family: Alata, sans-serif;
+    font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.politicas-block p {
+    color: var(--texto-secundario);
+    font-size: .96rem;
+    line-height: 1.75;
+}
+
+.politicas-block p + p {
+    margin-top: 14px;
+}
+
+/* Lista de direcciones (bloque "Titular del sitio web") */
+.politicas-address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+    padding: 0;
+    list-style: none;
+}
+
+.politicas-address-list li {
+    padding: 14px 18px;
+    border-radius: var(--radio);
+    background: var(--crema);
+    color: var(--texto-secundario);
+    font-size: .92rem;
+    line-height: 1.6;
+}
+
+.politicas-address-list strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--verde-principal);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   5. BLOQUE DE CONTACTO (destacado)
+   -------------------------------------------------------------------------- */
+.politicas-block--contact {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+}
+
+.politicas-block--contact .politicas-number {
+    color: var(--naranja-claro);
+}
+
+.politicas-block--contact h2 {
+    color: var(--blanco);
+}
+
+.politicas-contact-name {
+    color: var(--blanco);
+    font-family: Alata, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.politicas-contact-line {
+    color: rgb(255 255 255 / 82%);
+    font-size: .92rem;
+    margin-bottom: 22px;
+}
+
+.politicas-contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgb(255 255 255 / 18%);
+}
+
+.politicas-contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.politicas-contact-label {
+    color: var(--naranja-claro);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.politicas-contact-link {
+    color: var(--blanco);
+    font-size: .95rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgb(255 255 255 / 40%);
+    text-underline-offset: 3px;
+    transition: text-decoration-color var(--transicion);
+}
+
+.politicas-contact-link:hover {
+    text-decoration-color: var(--blanco);
+}
+
+.politicas-contact-link:focus-visible,
+.politicas-block a.text-link:focus-visible {
+    outline: 3px solid var(--naranja-principal);
+    outline-offset: 3px;
+}
+
+.politicas-contact-value {
+    color: rgb(255 255 255 / 92%);
+    font-size: .95rem;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVE — BREAKPOINTS (900px, 650px, 400px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .politicas-hero {
+        min-height: 380px;
+    }
+
+    .politicas-hero-content {
+        padding: calc(var(--space-2xl) + 8px) 0 var(--space-md);
+    }
+
+    .politicas-document {
+        gap: 20px;
+    }
+
+    .politicas-block {
+        padding: 30px 26px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .politicas-hero {
+        min-height: clamp(340px, 40svh, 380px);
+        background-position: center center;
+    }
+
+    .politicas-hero-content {
+        width: calc(100% - 32px);
+        padding: calc(var(--space-xl) + 16px) 0 var(--space-md);
+    }
+
+    .politicas-hero .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.16em;
+        margin-bottom: 6px;
+    }
+
+    .politicas-hero h1 {
+        font-size: clamp(2rem, 7.2vw, 2.5rem);
+        line-height: 1.15;
+    }
+
+    .politicas-hero p {
+        max-width: 380px;
+        margin: 10px auto 0;
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    .politicas-block {
+        padding: 24px 20px;
+        border-radius: var(--radio);
+    }
+
+    .politicas-block h2 {
+        font-size: 1.3rem;
+    }
+
+    .politicas-contact-details {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .politicas-hero {
+        min-height: 330px;
+    }
+
+    .politicas-hero-content {
+        width: calc(100% - 24px);
+        padding: calc(var(--space-xl) + 8px) 0 var(--space-sm);
+    }
+
+    .politicas-hero h1 {
+        font-size: clamp(1.8rem, 8vw, 2.2rem);
+        line-height: 1.15;
+    }
+
+    .politicas-hero p {
+        max-width: 300px;
+        margin-top: 8px;
+        font-size: 0.86rem;
+        line-height: 1.45;
+    }
+
+    .politicas-block {
+        padding: 20px 16px;
+    }
+
+    .politicas-block p {
+        font-size: .9rem;
+    }
+
+    .politicas-address-list li {
+        padding: 12px 14px;
+        font-size: .88rem;
+    }
+}

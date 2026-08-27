@@ -69,19 +69,7 @@
                 '../img/eventos/sociales/bautizo-familia-benalcazar/foto-03.jpg',
                 '../img/eventos/sociales/bautizo-familia-benalcazar/foto-04.jpg',
                 '../img/eventos/sociales/bautizo-familia-benalcazar/foto-05.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-06.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-07.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-08.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-09.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-10.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-11.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-12.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-13.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-14.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-15.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-16.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-17.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-18.jpg'
+                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-06.jpg'
             ]
         },
         {
@@ -99,9 +87,7 @@
                 '../img/eventos/sociales/aniversario-10-anos/foto-03.jpg',
                 '../img/eventos/sociales/aniversario-10-anos/foto-04.jpg',
                 '../img/eventos/sociales/aniversario-10-anos/foto-05.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto-06.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto-07.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto-08.jpg'
+                '../img/eventos/sociales/aniversario-10-anos/foto-06.jpg'
             ]
         },
         {
@@ -278,25 +264,20 @@
      */
     var eventosInstitucionales = [
         {
-            id: 'desayuno-constructora-andina',
+            id: 'Reunión-byrcon',
             tipo: 'Evento institucional',
-            titulo: 'Desayuno de trabajo — Constructora Andina',
+            titulo: 'Reunión de trabajo — Byrcon',
             fecha: '14 de marzo de 2026',
             sucursal: 'Cayambe',
-            descripcion: 'Desayuno de trabajo pensado para compartir, conversar y generar espacios de encuentro empresarial.',
+            descripcion: 'Reunión de trabajo pensada para compartir, conversar y generar espacios de encuentro empresarial.',
             // Fotografías reales pendientes: se prevén 10 fotos en total.
-            imagenPortada: '../img/eventos/institucionales/desayuno-constructora-andina/portada.jpg',
+            imagenPortada: '../img/eventos/institucionales/reunión-byrcon/portada.jpg',
             galeria: [
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-01.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-02.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-03.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-04.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-05.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-06.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-07.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-08.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-09.jpg',
-                '../img/eventos/institucionales/desayuno-constructora-andina/foto-10.jpg'
+                '../img/eventos/institucionales/reunión-byrcon/foto-01.jpg',
+                '../img/eventos/institucionales/reunión-byrcon/foto-02.jpg',
+                '../img/eventos/institucionales/reunión-byrcon/foto-03.jpg',
+                '../img/eventos/institucionales/reunión-byrcon/foto-04.jpg',
+                '../img/eventos/institucionales/reunión-byrcon/foto-05.jpg'
             ]
         },
         {
@@ -543,6 +524,12 @@
             img.src = item.imagenPortada;
             img.alt = item.titulo;
             img.loading = 'lazy';
+            // Fallback visual: si el archivo todavía no existe o falla al cargar,
+            // se reemplaza por el mismo placeholder usado cuando no hay ruta.
+            img.addEventListener('error', function () {
+                media.innerHTML = '';
+                media.appendChild(createPlaceholderElement('Fotografía por agregar'));
+            }, { once: true });
             media.appendChild(img);
         } else {
             media.appendChild(createPlaceholderElement('Fotografía por agregar'));
@@ -780,6 +767,13 @@
             img.src = currentImages[currentIndex];
             img.alt = altText + ' — fotografía ' + (currentIndex + 1) + ' de ' + currentImages.length;
             img.loading = 'lazy';
+            // Fallback visual: si esta fotografía todavía no existe o falla al
+            // cargar, se muestra el placeholder sin afectar navegación ni contador
+            // (que siguen dependiendo únicamente de currentImages.length).
+            img.addEventListener('error', function () {
+                mediaFrame.innerHTML = '';
+                mediaFrame.appendChild(createPlaceholderElement('Fotografía por agregar'));
+            }, { once: true });
             mediaFrame.appendChild(img);
 
             setNavVisibility(currentImages.length > 1);

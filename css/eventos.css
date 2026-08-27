@@ -76,6 +76,14 @@
     background: var(--crema);
 }
 
+/* La sección compartida .social-cta-section (definida en style.css) usa
+   crema por defecto; aquí se ajusta a blanco para mantener la alternancia
+   de fondos de esta página, ya que la sección anterior (categorías) ya
+   es crema. */
+.social-cta-section {
+    background: var(--blanco);
+}
+
 /* --------------------------------------------------------------------------
    4. NAVEGACIÓN POR TABS (Eventos sociales / institucionales)
    -------------------------------------------------------------------------- */

@@ -8,7 +8,7 @@
 .nosotros-hero {
     position: relative;
     display: grid;
-    min-height: clamp(680px, 94svh, 840px);
+    min-height: clamp(340px, 42svh, 420px);
     place-items: center;
     background: url("../img/hero/hero.jpg") center / cover;
     color: var(--blanco);
@@ -24,40 +24,29 @@
 }
 
 .nosotros-hero-content {
-    position: relative;
-    width: min(calc(100% - 48px), 900px);
-    padding: calc(var(--space-2xl) + var(--space-lg)) 0 calc(var(--space-xl) + var(--space-md));
+    width: min(calc(100% - 48px), var(--ancho-contenedor));
+    padding: calc(var(--space-2xl) + var(--space-md)) 0 var(--space-lg);
 }
 
-.nosotros-hero .hero-subtitle {
-    margin-bottom: var(--space-sm);
+.nosotros-hero .section-label {
+    margin-bottom: var(--space-xs);
+    color: var(--naranja-claro);
 }
 
 .nosotros-hero h1 {
     font-family: Alata, sans-serif;
-    font-size: clamp(2.8rem, 6.4vw, 4.9rem);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 400;
-    line-height: 1.06;
+    line-height: 1.15;
     color: var(--blanco);
 }
 
 .nosotros-hero p {
-    max-width: 560px;
-    margin: var(--space-md) auto 0;
-    font-size: clamp(1rem, 1.5vw, 1.16rem);
+    max-width: 620px;
+    margin: var(--space-sm) auto 0;
+    font-size: clamp(0.98rem, 1.35vw, 1.12rem);
     color: rgb(255 255 255 / 92%);
-    line-height: 1.65;
-}
-
-.nosotros-hero .hero-buttons {
-    justify-content: center;
-}
-
-.nosotros-hero .hero-scroll {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    align-items: center;
+    line-height: 1.6;
 }
 
 /* --------------------------------------------------------------------------
@@ -213,6 +202,12 @@
     display: block;
 }
 
+.branch-card-link:focus-visible {
+    outline: 3px solid var(--naranja-principal);
+    outline-offset: 4px;
+    border-radius: var(--radio);
+}
+
 .nosotros-branches-grid .branch-image {
     height: 340px;
 }
@@ -236,37 +231,49 @@
 }
 
 /* --------------------------------------------------------------------------
-   6. FOOTER — más compacto, logo más pequeño, columnas más cercanas
-   .footer es un componente global (style.css) reutilizado también en
-   index.html. Esta regla solo se carga en nosotros.html (nosotros.css no
-   se enlaza en ninguna otra página), así que ajusta el footer de ESTA
-   página únicamente, sin tocar css/style.css.
+   6. CTA DE RESERVA — versión compacta e independiente del footer
+   Reutiliza el componente global .reservation (definido en style.css, mismo
+   que usa index.html), pero sobre fondo --crema en lugar de --verde-oscuro
+   para que quede claramente separado del footer (que conserva su fondo
+   verde oscuro global, sin cambios). Los colores de kicker, título,
+   descripción, etiquetas de sucursal y botón se reajustan aquí para
+   mantener buen contraste sobre fondo claro, reutilizando únicamente los
+   tokens ya definidos en :root — sin colores hexadecimales nuevos.
    -------------------------------------------------------------------------- */
-.footer {
-    padding: 48px 0 22px;
+#cta-reserva {
+    padding: 56px 0;
+    background: var(--crema);
+    color: var(--texto-principal);
 }
 
-.footer-content {
-    grid-template-columns: 1.15fr repeat(2, 1fr);
-    gap: 32px;
+#cta-reserva .section-label {
+    color: var(--naranja-principal);
 }
 
-.footer-brand img {
-    width: 82px;
+#cta-reserva h2 {
+    margin-top: 4px;
+    color: var(--verde-principal);
+    font-size: clamp(1.7rem, 3.2vw, 2.35rem);
 }
 
-.footer-brand p {
-    margin-top: 8px;
-    font-size: .85rem;
+#cta-reserva .reservation-content > p {
+    margin-top: 10px;
+    max-width: 480px;
+    color: var(--texto-secundario);
 }
 
-.footer-links {
-    gap: 7px;
+#cta-reserva .reservation-branches {
+    margin: 16px 0 20px;
+    color: var(--verde-principal);
 }
 
-.footer-bottom {
-    margin-top: 26px;
-    padding-top: 14px;
+#cta-reserva .btn-light {
+    background: var(--naranja-principal);
+    color: var(--blanco);
+}
+
+#cta-reserva .btn-light:hover {
+    background: var(--naranja-secundario);
 }
 
 /* --------------------------------------------------------------------------
@@ -274,6 +281,14 @@
    -------------------------------------------------------------------------- */
 
 @media (max-width: 900px) {
+
+    .nosotros-hero {
+        min-height: 380px;
+    }
+
+    .nosotros-hero-content {
+        padding: calc(var(--space-2xl) + 8px) 0 var(--space-md);
+    }
 
     .story-block,
     .story-block--reverse {
@@ -305,42 +320,47 @@
     }
 
     .nosotros-branches-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .nosotros-branches-grid .branch-image {
         height: 280px;
     }
+
+    #cta-reserva {
+        padding: 48px 0;
+    }
 }
 
 @media (max-width: 650px) {
 
     .nosotros-hero {
-        min-height: clamp(560px, 88svh, 680px);
-        background-position: 40% center;
+        min-height: clamp(340px, 40svh, 380px);
+        background-position: center center;
     }
 
     .nosotros-hero-content {
         width: calc(100% - 32px);
-        padding: calc(var(--space-xl) + 16px) 0 calc(var(--space-lg) + 8px);
+        padding: calc(var(--space-xl) + 16px) 0 var(--space-md);
+    }
+
+    .nosotros-hero .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.16em;
+        margin-bottom: 6px;
     }
 
     .nosotros-hero h1 {
-        font-size: clamp(2.2rem, 9vw, 2.9rem);
+        font-size: clamp(2rem, 7.2vw, 2.5rem);
+        line-height: 1.15;
     }
 
     .nosotros-hero p {
         max-width: 380px;
-        font-size: 0.94rem;
-    }
-
-    .nosotros-hero .hero-buttons {
-        width: min(100%, 260px);
-        margin: var(--space-md) auto 0;
-    }
-
-    .nosotros-hero .hero-buttons .btn {
-        width: 100%;
+        margin: 10px auto 0;
+        font-size: 0.92rem;
+        line-height: 1.5;
     }
 
     .story-text h2 {
@@ -367,36 +387,40 @@
         grid-row: span 1;
     }
 
-    .nosotros-branches-grid {
-        grid-template-columns: 1fr;
+    #cta-reserva {
+        padding: 40px 0;
     }
 
-    .footer {
-        padding: 36px 0 18px;
-    }
-
-    .footer-content {
-        gap: 26px;
-    }
-
-    .footer-brand p {
-        max-width: 100%;
-    }
-
-    .footer-bottom {
-        margin-top: 22px;
-        padding-top: 12px;
+    #cta-reserva .reservation-content > p {
+        max-width: 340px;
     }
 }
 
 @media (max-width: 400px) {
 
     .nosotros-hero {
-        min-height: 540px;
+        min-height: 330px;
+    }
+
+    .nosotros-hero-content {
+        width: calc(100% - 24px);
+        padding: calc(var(--space-xl) + 8px) 0 var(--space-sm);
+    }
+
+    .nosotros-hero .section-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
     }
 
     .nosotros-hero h1 {
-        font-size: clamp(2rem, 10vw, 2.4rem);
+        font-size: clamp(1.8rem, 8vw, 2.2rem);
+        line-height: 1.15;
+    }
+
+    .nosotros-hero p {
+        max-width: 300px;
+        margin-top: 8px;
+        font-size: 0.86rem;
     }
 
     .story-media img {
@@ -415,7 +439,7 @@
         height: 220px;
     }
 
-    .footer {
-        padding: 30px 0 16px;
+    #cta-reserva {
+        padding: 32px 0;
     }
 }

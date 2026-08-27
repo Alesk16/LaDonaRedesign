@@ -7,9 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="Canal de Denuncias de La Doña Hacienda. Canal ético y confidencial para reportar irregularidades y garantizar la transparencia." />
+    <meta name="description" content="Atención al cliente de La Doña Hacienda. Comparte tus sugerencias, comentarios, consultas o cualquier situación relacionada con tu experiencia. Estamos para escucharte." />
 
-    <title>Canal de Denuncias | La Doña Hacienda</title>
+    <title>Atención al Cliente | La Doña Hacienda</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
     <!-- CSS Global -->
     <link rel="stylesheet" href="../css/style.css">
 
-    <!-- CSS Denuncia -->
+    <!-- CSS Denuncia / Atención al cliente -->
     <link rel="stylesheet" href="../css/denuncia.css">
 
 </head>
@@ -86,7 +86,7 @@
                 </a>
 
                 <a href="denuncia.html" class="active">
-                    Denuncias
+                    Atención al cliente
                 </a>
 
                 <a href="../index.html#contacto">
@@ -114,7 +114,7 @@
     <main>
 
         <!-- =====================================
-             1. HERO DE DENUNCIAS
+             1. HERO DE ATENCIÓN AL CLIENTE
         ====================================== -->
 
         <section class="denuncia-hero">
@@ -124,15 +124,15 @@
             <div class="denuncia-hero-content">
 
                 <span class="section-label">
-                    TRANSPARENCIA Y ÉTICA
+                    ATENCIÓN AL CLIENTE
                 </span>
 
                 <h1>
-                    Canal de Denuncias
+                    Estamos para escucharte
                 </h1>
 
                 <p>
-                    Espacio confidencial orientado a la integridad, la transparencia y el cumplimiento de nuestros principios institucionales.
+                    Tu opinión nos ayuda a mejorar. Comparte con nosotros tus comentarios, sugerencias o cualquier situación que quieras hacernos saber.
                 </p>
 
             </div>
@@ -151,7 +151,7 @@
 
                 <div class="denuncia-layout">
 
-                    <!-- COLUMNA PRINCIPAL: FORMULARIO DE REPORTE -->
+                    <!-- COLUMNA PRINCIPAL: FORMULARIO DE CONTACTO -->
 
                     <div class="denuncia-form-container">
 
@@ -160,15 +160,15 @@
                             <div class="form-header">
 
                                 <span class="card-subtitle">
-                                    FORMULARIO DE REPORTE
+                                    FORMULARIO DE CONTACTO
                                 </span>
 
                                 <h2>
-                                    Registrar un reporte
+                                    Cuéntanos tu experiencia
                                 </h2>
 
                                 <p>
-                                    Completa los campos para ingresar tu reporte. Puedes elegir realizarlo de forma identificada o anónima.
+                                    Completa los campos para compartir tu comentario, sugerencia, consulta o cualquier situación que quieras hacernos saber. Puedes hacerlo de forma identificada o anónima.
                                 </p>
 
                             </div>
@@ -178,7 +178,7 @@
                             <div class="denuncia-notice" role="note">
                                 <div class="notice-icon" aria-hidden="true">ℹ</div>
                                 <div class="notice-body">
-                                    <strong>Canal en fase de integración visual:</strong>
+                                    <strong>Formulario en fase de integración visual:</strong>
                                     <p>Este formulario opera de forma estática para revisión de interfaz. Los campos y categorías mostrados están sujetos a confirmación oficial.</p>
                                 </div>
                             </div>
@@ -188,12 +188,12 @@
                             <!-- DATO REAL PENDIENTE: Estructura definitiva de campos validada por la administración de La Doña Hacienda -->
                             <form id="denunciaForm" class="denuncia-form" novalidate>
 
-                                <!-- MODALIDAD DE REPORTE: IDENTIFICADA / ANÓNIMA -->
+                                <!-- MODALIDAD DEL MENSAJE: IDENTIFICADA / ANÓNIMA -->
                                 <!-- DATO REAL PENDIENTE: Modalidades y políticas de anonimato oficiales -->
                                 <div class="form-group form-col-full">
                                     <fieldset class="form-fieldset">
                                         <legend class="form-legend">
-                                            Modalidad del reporte <span class="form-required">*</span>
+                                            Modalidad de tu mensaje <span class="form-required">*</span>
                                         </legend>
 
                                         <div class="modality-options">
@@ -201,8 +201,8 @@
                                                 <input type="radio" name="modalidad" value="identificada" checked id="modIdentificada">
                                                 <span class="modality-custom-radio" aria-hidden="true"></span>
                                                 <div class="modality-info">
-                                                    <span class="modality-title">Reporte identificado</span>
-                                                    <span class="modality-desc">Permite dar seguimiento personalizado a tu caso manteniendo estricta confidencialidad.</span>
+                                                    <span class="modality-title">Mensaje identificado</span>
+                                                    <span class="modality-desc">Permite dar seguimiento personalizado a tu comentario manteniendo estricta confidencialidad.</span>
                                                 </div>
                                             </label>
 
@@ -210,7 +210,7 @@
                                                 <input type="radio" name="modalidad" value="anonima" id="modAnonima">
                                                 <span class="modality-custom-radio" aria-hidden="true"></span>
                                                 <div class="modality-info">
-                                                    <span class="modality-title">Reporte anónimo</span>
+                                                    <span class="modality-title">Mensaje anónimo</span>
                                                     <span class="modality-desc">No se registrarán tus datos personales de contacto.</span>
                                                 </div>
                                             </label>
@@ -221,23 +221,22 @@
 
                                 <div class="form-grid">
 
-                                    <!-- TIPO O MOTIVO DE REPORTE -->
-                                    <!-- DATO REAL PENDIENTE: Catálogo oficial de tipos de denuncia aprobados por La Doña Hacienda -->
+                                    <!-- MOTIVO DEL MENSAJE -->
+                                    <!-- DATO REAL PENDIENTE: Catálogo oficial de categorías aprobado por La Doña Hacienda -->
                                     <div class="form-group form-col-full">
                                         <label for="tipoDenuncia">
-                                            Tipo o motivo del reporte <span class="form-required">*</span>
+                                            ¿Sobre qué quieres escribirnos? <span class="form-required">*</span>
                                         </label>
                                         <select id="tipoDenuncia" name="tipoDenuncia" required>
-                                            <option value="">Selecciona una opción provisional...</option>
-                                            <!-- DATO REAL PENDIENTE: Categorías oficiales -->
-                                            <option value="conducta">Conducta inapropiada o trato laboral</option>
-                                            <option value="higiene">Calidad, higiene y seguridad alimentaria</option>
-                                            <option value="servicio">Atención al cliente y servicio</option>
-                                            <option value="administrativa">Irregularidad administrativa o financiera</option>
-                                            <option value="politicas">Incumplimiento de normativas internas</option>
-                                            <option value="otro">Otro motivo</option>
+                                            <option value="">Selecciona una opción...</option>
+                                            <option value="sugerencia">Sugerencia</option>
+                                            <option value="comentario">Comentario sobre mi experiencia</option>
+                                            <option value="consulta">Consulta</option>
+                                            <option value="felicitacion">Felicitación</option>
+                                            <option value="reportar">Reportar una situación</option>
+                                            <option value="otro">Otro</option>
                                         </select>
-                                        <span class="form-error-msg" id="errorTipo">Por favor selecciona un motivo de reporte.</span>
+                                        <span class="form-error-msg" id="errorTipo">Por favor selecciona una opción.</span>
                                     </div>
 
 
@@ -245,7 +244,7 @@
                                     <!-- DATO REAL PENDIENTE: Lista de locaciones y áreas administrativas oficiales -->
                                     <div class="form-group">
                                         <label for="sucursal">
-                                            Sucursal o área involucrada <span class="form-required">*</span>
+                                            Sucursal relacionada <span class="form-required">*</span>
                                         </label>
                                         <select id="sucursal" name="sucursal" required>
                                             <option value="">Selecciona una sucursal...</option>
@@ -253,7 +252,7 @@
                                             <option value="Cumbayá">Sucursal Cumbayá</option>
                                             <option value="General">Administración / General</option>
                                         </select>
-                                        <span class="form-error-msg" id="errorSucursal">Selecciona la sucursal o área relacionada.</span>
+                                        <span class="form-error-msg" id="errorSucursal">Selecciona la sucursal relacionada.</span>
                                     </div>
 
 
@@ -261,25 +260,25 @@
                                     <!-- DATO REAL PENDIENTE: Requerimiento de fecha exacta o aproximada -->
                                     <div class="form-group">
                                         <label for="fechaHecho">
-                                            Fecha aproximada del hecho <span class="form-required">*</span>
+                                            Fecha aproximada <span class="form-required">*</span>
                                         </label>
                                         <input type="date" id="fechaHecho" name="fechaHecho" required>
                                         <span class="form-error-msg" id="errorFecha">Ingresa una fecha válida.</span>
                                     </div>
 
 
-                                    <!-- DESCRIPCIÓN DE LOS HECHOS -->
+                                    <!-- DESCRIPCIÓN -->
                                     <!-- DATO REAL PENDIENTE: Preguntas guía y límite de extensión oficial -->
                                     <div class="form-group form-col-full">
                                         <div class="label-with-counter">
                                             <label for="descripcion">
-                                                Descripción detallada de los hechos <span class="form-required">*</span>
+                                                Cuéntanos con más detalle <span class="form-required">*</span>
                                             </label>
                                             <span class="char-counter" id="charCounter">0 / 2000</span>
                                         </div>
                                         <textarea id="descripcion" name="descripcion" rows="6" maxlength="2000"
-                                            placeholder="Detalla de forma objetiva qué sucedió, personas involucradas, circunstancias y cualquier detalle relevante..." required></textarea>
-                                        <span class="form-error-msg" id="errorDescripcion">Por favor ingresa una descripción detallada (mínimo 20 caracteres).</span>
+                                            placeholder="Cuéntanos con el mayor detalle posible: qué ocurrió, cuándo, y cualquier información que nos ayude a atender mejor tu mensaje..." required></textarea>
+                                        <span class="form-error-msg" id="errorDescripcion">Por favor ingresa un mensaje más detallado (mínimo 20 caracteres).</span>
                                     </div>
 
                                 </div>
@@ -290,8 +289,8 @@
                                 <div class="contact-data-section" id="contactoSection">
 
                                     <div class="contact-section-header">
-                                        <h3>Datos de contacto del denunciante</h3>
-                                        <p>Esta información solo se utilizará para fines de verificación y seguimiento confidencial.</p>
+                                        <h3>Datos de contacto</h3>
+                                        <p>Esta información solo se utilizará para poder responderte y darte seguimiento de forma confidencial.</p>
                                     </div>
 
                                     <div class="form-grid">
@@ -328,15 +327,15 @@
                                 </div>
 
 
-                                <!-- DECLARACIÓN DE VERACIDAD Y TÉRMINOS -->
-                                <!-- DATO REAL PENDIENTE: Texto legal oficial de consentimiento y política de privacidad del canal ético -->
+                                <!-- DECLARACIÓN DE VERACIDAD -->
+                                <!-- DATO REAL PENDIENTE: Texto legal oficial de consentimiento y política de tratamiento de datos -->
                                 <div class="form-group form-col-full legal-check-group">
                                     <label class="custom-checkbox">
                                         <input type="checkbox" id="declaracionLegal" name="declaracionLegal" required>
                                         <span class="checkbox-box" aria-hidden="true"></span>
                                         <span class="checkbox-label">
-                                            Declaro que la información proporcionada es presentada de buena fe y corresponde a hechos verídicos según mi conocimiento.
-                                            <!-- DATO REAL PENDIENTE: Enlace a términos oficiales del canal de denuncias -->
+                                            Declaro que la información proporcionada es verídica y ha sido presentada de buena fe.
+                                            <!-- DATO REAL PENDIENTE: Enlace a términos oficiales de atención al cliente -->
                                         </span>
                                     </label>
                                     <span class="form-error-msg" id="errorLegal">Debes confirmar la declaración para continuar.</span>
@@ -346,7 +345,7 @@
                                 <!-- BOTÓN DE ACCIÓN (SOLO INTERFAZ / SIN ENVÍO A BACKEND) -->
                                 <div class="form-actions">
                                     <button type="submit" id="btnSubmitDenuncia" class="btn btn-primary btn-full">
-                                        Registrar reporte
+                                        Enviar mensaje
                                     </button>
                                     <p class="form-disclaimer">
                                         * Interfaz visual estática para revisión del diseño. No se realiza envío de datos ni almacenamiento en servidores.
@@ -380,46 +379,46 @@
                             <div class="sidebar-card-icon">🛡️</div>
                             <h3>Confidencialidad y Protección</h3>
                             <p>
-                                La Doña Hacienda fomenta un canal seguro donde toda información recibida es tratada con reserva y respeto.
+                                La Doña Hacienda fomenta un espacio seguro donde toda información recibida es tratada con reserva y respeto.
                             </p>
-                            <!-- DATO REAL PENDIENTE: Política oficial institucional de no represalias y resguardo de identidad -->
+                            <!-- DATO REAL PENDIENTE: Política oficial institucional de confidencialidad y resguardo de identidad -->
                             <ul class="sidebar-list">
                                 <li>Tratamiento estrictamente confidencial.</li>
                                 <li>Opción de anonimato en todo momento.</li>
-                                <li><!-- DATO REAL PENDIENTE: Cláusula de protección al denunciante -->Protección y no represalias.</li>
+                                <li><!-- DATO REAL PENDIENTE: Cláusula oficial de protección de tu información -->Protección de tu información en todo momento.</li>
                             </ul>
                         </div>
 
 
                         <!-- TARJETA 2: PROCESO GENERAL DE ATENCIÓN -->
-                        <!-- DATO REAL PENDIENTE: Flujo de atención, comité responsable y plazos oficiales de resolución -->
+                        <!-- DATO REAL PENDIENTE: Flujo de atención, equipo responsable y plazos oficiales de respuesta -->
                         <div class="sidebar-card">
                             <div class="sidebar-card-icon">📋</div>
                             <h3>Proceso de Atención</h3>
                             <p>
-                                Procedimiento informativo previsto para la gestión de reportes:
+                                Procedimiento informativo previsto para la gestión de tu mensaje:
                             </p>
                             <ol class="sidebar-steps">
                                 <li>
-                                    <strong>1. Recepción:</strong> Registro del reporte a través de los canales habilitados.
+                                    <strong>1. Recepción:</strong> Registro de tu mensaje a través de los canales habilitados.
                                 </li>
                                 <li>
-                                    <strong>2. Evaluación:</strong> Análisis preliminar de pertinencia y antecedentes.
-                                    <!-- DATO REAL PENDIENTE: Órgano evaluador oficial -->
+                                    <strong>2. Revisión:</strong> Análisis preliminar de tu comentario o consulta.
+                                    <!-- DATO REAL PENDIENTE: Equipo responsable oficial -->
                                 </li>
                                 <li>
-                                    <strong>3. Indagación:</strong> Revisión interna con la debida reserva.
+                                    <strong>3. Seguimiento:</strong> Gestión interna con la debida reserva.
                                     <!-- DATO REAL PENDIENTE: Tiempos de respuesta oficiales -->
                                 </li>
                                 <li>
-                                    <strong>4. Resolución:</strong> Adopción de medidas correctivas cuando corresponda.
+                                    <strong>4. Respuesta:</strong> Comunicación de la respuesta o acción correspondiente.
                                 </li>
                             </ol>
                         </div>
 
 
                         <!-- TARJETA 3: CANALES DE ATENCIÓN -->
-                        <!-- DATO REAL PENDIENTE: Datos de contacto reales, correos del comité ético y líneas telefónicas oficiales -->
+                        <!-- DATO REAL PENDIENTE: Datos de contacto reales, correo y líneas telefónicas oficiales de atención al cliente -->
                         <div class="sidebar-card sidebar-card-highlight">
                             <div class="sidebar-card-icon">📞</div>
                             <h3>Canales de Atención</h3>
@@ -471,6 +470,39 @@
                     <p>
                         Una experiencia para compartir.
                     </p>
+
+                    <div class="footer-social">
+
+                        <h3>
+                            Síguenos
+                        </h3>
+
+                        <div class="social-links">
+
+                            <a href="https://www.instagram.com/ladonahacienda/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram de La Doña Hacienda">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                                    <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"></circle>
+                                    <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"></circle>
+                                </svg>
+                            </a>
+
+                            <a href="https://www.facebook.com/ladonahacienda" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook de La Doña Hacienda">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path fill="currentColor" d="M15 3h-2.5C10.02 3 8.5 4.62 8.5 7.1V10H6v3.5h2.5V21h3.6v-7.5H14.9L15.5 10h-3.4V7.4c0-.95.47-1.4 1.4-1.4H15V3z"></path>
+                                </svg>
+                            </a>
+
+                            <a href="https://www.youtube.com/@ladonahacienda5906" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube de La Doña Hacienda">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                                    <path fill="currentColor" d="M10 8.5l6 3.5-6 3.5z"></path>
+                                </svg>
+                            </a>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -527,14 +559,18 @@
                     </a>
 
                     <a href="denuncia.html" class="active-footer-link">
-                        Denuncias
+                        Atención al cliente
+                    </a>
+
+                    <a href="faq.html">
+                        Preguntas frecuentes
                     </a>
 
                     <a href="#">
                         Términos y condiciones
                     </a>
 
-                    <a href="#">
+                    <a href="politicas.html">
                         Política de privacidad
                     </a>
 
@@ -560,7 +596,7 @@
     <!-- JAVASCRIPT GLOBAL -->
     <script src="../js/main.js"></script>
 
-    <!-- JAVASCRIPT EXCLUSIVO DE DENUNCIAS -->
+    <!-- JAVASCRIPT EXCLUSIVO DE ATENCIÓN AL CLIENTE -->
     <script src="../js/denuncia.js"></script>
 
 </body>
