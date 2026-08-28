@@ -35,7 +35,7 @@
 }
 
 .faq-hero h1 {
-    font-family: Alata, sans-serif;
+    font-family: var(--font-titular);
     font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 400;
     line-height: 1.15;
@@ -96,7 +96,7 @@
 }
 
 .faq-trigger-text {
-    font-family: Alata, sans-serif;
+    font-family: var(--font-titular);
     font-size: clamp(1.02rem, 1.6vw, 1.18rem);
     font-weight: 400;
     line-height: 1.35;
@@ -112,7 +112,7 @@
     border-radius: 50%;
     background: rgb(80 118 77 / 8%);
     color: var(--naranja-principal);
-    font-family: Alata, sans-serif;
+    font-family: var(--font-titular);
     font-size: 1.1rem;
     line-height: 1;
     transition: background-color var(--transicion), color var(--transicion), transform var(--transicion);

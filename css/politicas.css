@@ -53,7 +53,7 @@
 }
 
 .politicas-hero h1 {
-    font-family: Alata, sans-serif;
+    font-family: var(--font-titular);
     font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 400;
     line-height: 1.15;
@@ -97,7 +97,7 @@
     display: block;
     margin-bottom: 10px;
     color: var(--naranja-principal);
-    font-family: Alata, sans-serif;
+    font-family: var(--font-titular);
     font-size: 1rem;
     line-height: 1;
 }
@@ -105,7 +105,7 @@
 .politicas-block h2 {
     margin-bottom: 16px;
     color: var(--verde-principal);
-    font-family: Alata, sans-serif;
+    font-family: var(--font-titular);
     font-size: clamp(1.35rem, 2.2vw, 1.7rem);
     font-weight: 400;
     line-height: 1.25;
@@ -168,7 +168,7 @@
 
 .politicas-contact-name {
     color: var(--blanco);
-    font-family: Alata, sans-serif;
+    font-family: var(--font-titular);
     font-size: 1.05rem;
     font-weight: 400;
     margin-bottom: 4px;
