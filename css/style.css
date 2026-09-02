@@ -316,6 +316,24 @@ section[id] {
     padding: calc(var(--space-2xl) + var(--space-lg) + 2px) 0 calc(var(--space-xl) + var(--space-md) + 2px);
 }
 
+.hero-header-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: var(--space-sm);
+}
+
+.hero-header-badge .hero-subtitle {
+    margin-bottom: 0;
+}
+
+.hero-badge-img {
+    width: 90px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgb(0 0 0 / 25%));
+}
+
 .hero-subtitle {
     margin-bottom: var(--space-sm);
     color: var(--blanco);
@@ -467,6 +485,8 @@ section[id] {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-top: 18px;
+    margin-bottom: 20px;
 }
 
 .carousel-dot {
@@ -493,9 +513,13 @@ section[id] {
     outline-offset: 3px;
 }
 
-/* Nosotros */
+.carousel-section .menu-cta {
+    margin-top: 10px;
+}
+
+/* Nosotros / Conócenos */
 .experience {
-    background: var(--crema);
+    background: #f8f5ee url("../img/marca/textura-papel.png") center / cover;
 }
 
 .experience .section-heading {
@@ -592,7 +616,8 @@ section[id] {
 .menu-card {
     overflow: hidden;
     border-radius: var(--radio);
-    background: var(--crema);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 12%);
     box-shadow: var(--sombra-suave);
     transition: transform var(--transicion), box-shadow var(--transicion);
 }
@@ -604,8 +629,28 @@ section[id] {
 }
 
 .menu-image {
+    position: relative;
     height: 255px;
     overflow: hidden;
+}
+
+.menu-card-icon {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+    padding: 6px;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 92%);
+    backdrop-filter: blur(4px);
+    box-shadow: var(--sombra-suave);
+    object-fit: contain;
+    transition: transform var(--transicion);
+}
+
+.menu-card:hover .menu-card-icon {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .menu-content {
@@ -630,15 +675,87 @@ section[id] {
     font-size: .92rem;
 }
 
+.menu-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
+    text-align: center;
+}
+
+.menu-a-comer-img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
 .menu-cta {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 0;
+}
+
+/* Banner frasología — Manual de Marca */
+.frase-banner {
+    padding: 60px 0;
+    background: url("../img/marca/textura-papel.png") center / cover;
+    background-color: #f5f0e8;
+    text-align: center;
+}
+
+.frase-banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    width: min(calc(100% - 48px), 900px);
+    margin: auto;
+}
+
+.frase-banner-img {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+}
+
+.frase-banner-destello {
+    width: 80px;
+    height: auto;
+    flex: 0 0 auto;
+    animation: destello-spin 12s linear infinite;
+}
+
+.frase-banner-destello--right {
+    animation-direction: reverse;
+}
+
+@keyframes destello-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Sucursales — placas de calle del Manual de Marca */
+.branch-placa {
+    display: block;
+    height: 46px;
+    width: auto;
+    max-width: 210px;
+    object-fit: contain;
+    margin-bottom: 22px;
+}
+
+.branch-icon svg {
+    width: 18px;
+    height: 18px;
+    color: var(--verde-principal);
+    stroke: var(--verde-principal);
 }
 
 .branches-section {
     background: var(--crema);
 }
+
 
 .branches-grid {
     display: grid;
@@ -649,7 +766,8 @@ section[id] {
 .branch-card {
     overflow: hidden;
     border-radius: var(--radio);
-    background: var(--blanco);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 14%);
     box-shadow: var(--sombra-suave);
     transition: transform var(--transicion), box-shadow var(--transicion);
 }
@@ -741,6 +859,48 @@ section[id] {
     font-size: .88rem;
 }
 
+/* Banner Pet Friendly */
+.branch-pet-friendly {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 720px;
+    margin: 28px auto 0;
+    padding: 20px 28px;
+    border-radius: var(--radio-grande);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 18%);
+    box-shadow: var(--sombra-suave);
+}
+
+.pet-friendly-badge-img {
+    width: 68px;
+    height: auto;
+    flex: 0 0 68px;
+}
+
+.pet-friendly-text h4 {
+    color: var(--verde-principal);
+    font-family: var(--font-titular);
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.pet-friendly-text p {
+    color: var(--texto-secundario);
+    font-size: .88rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+    .branch-pet-friendly {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
 /* Experiencias */
 .experiences {
     background: var(--blanco);
@@ -755,7 +915,8 @@ section[id] {
     grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
     border-radius: var(--radio-grande);
-    background: var(--crema);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 12%);
     box-shadow: var(--sombra-suave);
 }
 
@@ -819,7 +980,8 @@ section[id] {
     flex-direction: column;
     overflow: hidden;
     border-radius: var(--radio-grande);
-    background: var(--crema);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 12%);
     box-shadow: var(--sombra-suave);
     transition: transform var(--transicion), box-shadow var(--transicion);
 }
@@ -830,8 +992,28 @@ section[id] {
 }
 
 .highlight-image {
+    position: relative;
     height: 220px;
     overflow: hidden;
+}
+
+.highlight-animal-accent {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    padding: 6px;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 90%);
+    backdrop-filter: blur(4px);
+    box-shadow: var(--sombra-suave);
+    object-fit: contain;
+    transition: transform var(--transicion);
+}
+
+.experience-highlight:hover .highlight-animal-accent {
+    transform: scale(1.15) rotate(6deg);
 }
 
 .highlight-image img {
@@ -925,7 +1107,7 @@ section[id] {
 }
 
 .reservation {
-    padding: 105px 0;
+    padding: 90px 0;
     background: var(--verde-oscuro);
     color: var(--blanco);
 }
@@ -937,15 +1119,14 @@ section[id] {
     text-align: center;
 }
 
-.reservation .section-label {
-    color: var(--naranja-claro);
-}
-
-.reservation h2 {
-    max-width: 740px;
-    margin-top: 6px;
-    color: var(--blanco);
-    font-size: clamp(2.3rem, 5vw, 3.7rem);
+/* Frasología oficial del Manual de Marca en la sección de reservas */
+.reservation-frase {
+    max-width: 520px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    filter: brightness(0) invert(1);
+    /* Invierte a blanco sobre el fondo verde oscuro */
 }
 
 .reservation-content>p {
@@ -1007,7 +1188,9 @@ section[id] {
 .contact-box {
     padding: clamp(30px, 5vw, 50px);
     border-radius: var(--radio-grande);
-    background: var(--crema);
+    background: #f8f5ee url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 14%);
+    box-shadow: var(--sombra-suave);
 }
 
 .contact-box h3 {
@@ -1140,7 +1323,7 @@ section[id] {
 
 /* Variante sobre fondo claro — sección "Síguenos" (index.html, eventos.html) */
 .social-cta-section {
-    background: var(--crema);
+    background: #f8f5ee url("../img/marca/textura-papel.png") center / cover;
     text-align: center;
 }
 
@@ -1572,3 +1755,42 @@ section[id] {
 }
 
 
+
+/* =============================================
+   Responsive — elementos del Manual de Marca
+   ============================================= */
+
+@media (max-width: 640px) {
+
+    .frase-banner {
+        padding: 44px 0;
+    }
+
+    .frase-banner-inner {
+        gap: 14px;
+    }
+
+    .frase-banner-destello {
+        width: 44px;
+    }
+
+    .frase-banner-img {
+        max-width: 260px;
+    }
+
+    .reservation-frase {
+        max-width: 340px;
+    }
+
+    .branch-placa {
+        height: 38px;
+        max-width: 175px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .frase-banner-destello {
+        animation: none;
+    }
+}

@@ -33,6 +33,20 @@
     color: var(--naranja-claro);
 }
 
+.nosotros-hero-brand-img {
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto var(--space-xs);
+    filter: drop-shadow(0 4px 12px rgb(0 0 0 / 25%));
+}
+
+.story-illustration-img {
+    max-width: 130px;
+    height: auto;
+    margin-bottom: 14px;
+}
+
 .nosotros-hero h1 {
     font-family: var(--font-titular);
     font-size: clamp(2.4rem, 5vw, 3.8rem);
@@ -53,7 +67,10 @@
    2. BLOQUES EDITORIALES (HISTORIA / EXPERIENCIA)
    Composición grande: imagen protagonista + texto amplio.
    -------------------------------------------------------------------------- */
-.historia-section,
+.historia-section {
+    background: #f8f5ee url("../img/marca/textura-papel.png") center / cover;
+}
+
 .galeria-section {
     background: var(--crema);
 }

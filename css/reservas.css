@@ -97,9 +97,9 @@
 .reservas-card {
     padding: 38px 42px;
     border-radius: var(--radio-grande);
-    background: var(--crema);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
     box-shadow: var(--sombra-suave);
-    border: 1px solid rgb(80 118 77 / 12%);
+    border: 1px solid rgb(80 118 77 / 14%);
 }
 
 .form-header {
@@ -316,7 +316,7 @@
     top: 96px;
     padding: 30px 28px;
     border-radius: var(--radio-grande);
-    background: var(--crema);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
     box-shadow: var(--sombra-suave);
     border: 1px solid rgb(80 118 77 / 14%);
 }

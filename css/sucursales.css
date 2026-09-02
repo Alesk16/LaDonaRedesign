@@ -88,8 +88,8 @@
     flex-direction: column;
     overflow: hidden;
     border-radius: var(--radio-grande);
-    background: var(--blanco);
-    border: 1px solid rgb(80 118 77 / 12%);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 14%);
     box-shadow: var(--sombra-suave);
     transition: transform var(--transicion), box-shadow var(--transicion);
 }
@@ -97,6 +97,14 @@
 .sucursal-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--sombra-media);
+}
+
+.sucursal-placa-img {
+    display: block;
+    height: 48px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
 }
 
 /* Compensar header fijo al navegar con ancla (#cayambe, #cumbaya) */

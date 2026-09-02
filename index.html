@@ -7,20 +7,74 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="La Doña Hacienda - Experiencia gastronómica única" />
+    <meta name="description" content="La Doña Hacienda — Restaurante de comida tradicional ecuatoriana. Tradición que alimenta tu corazón en Cayambe y Cumbayá." />
 
-    <title>La Doña Hacienda</title>
+    <title>La Doña Hacienda | Comida Tradicional Ecuatoriana</title>
 
-    <!--Google Fonts-->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/marca/favicon.png">
+    <link rel="apple-touch-icon" href="img/marca/favicon.png">
+
+    <!-- Open Graph (WhatsApp, Facebook, Instagram) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:site_name" content="La Doña Hacienda">
+    <meta property="og:title" content="La Doña Hacienda | Comida Tradicional Ecuatoriana">
+    <meta property="og:description" content="Tradición que alimenta tu corazón. Disfruta de la mejor gastronomía tradicional ecuatoriana en nuestras sedes de Cayambe y Cumbayá.">
+    <meta property="og:image" content="img/marca/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Doña Hacienda | Comida Tradicional Ecuatoriana">
+    <meta name="twitter:description" content="Tradición que alimenta tu corazón. Visítanos en Cayambe y Cumbayá.">
+    <meta name="twitter:image" content="img/marca/og-image.jpg">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Raleway:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!--css-->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Schema.org Datos Estructurados (Google Search & Maps) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "La Doña Hacienda",
+      "image": "img/marca/og-image.jpg",
+      "servesCuisine": "Ecuatoriana Tradicional",
+      "priceRange": "$$",
+      "department": [
+        {
+          "@type": "Restaurant",
+          "name": "La Doña Hacienda - Cayambe",
+          "telephone": "+593994031040",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Barrio Ishigto, calle antiguo Camino Real s/n y Panamericana norte",
+            "addressLocality": "Cayambe",
+            "postalCode": "170202",
+            "addressCountry": "EC"
+          },
+          "openingHours": "Mo-Su 08:00-18:00"
+        },
+        {
+          "@type": "Restaurant",
+          "name": "La Doña Hacienda - Cumbayá",
+          "telephone": "+593980240747",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Florencia S5-48 y Borromini, La Primavera 1",
+            "addressLocality": "Cumbayá",
+            "addressCountry": "EC"
+          },
+          "openingHours": "Su-We 08:00-18:00, Th-Sa 08:00-20:00"
+        }
+      ]
+    }
+    </script>
 </head>
 
 
@@ -122,9 +176,18 @@
 
             <div class="hero-content">
 
-                <span class="hero-subtitle">
-                    COMIDA TRADICIONAL ECUATORIANA
-                </span>
+                <div class="hero-header-badge">
+
+                    <span class="hero-subtitle">
+                        COMIDA TRADICIONAL ECUATORIANA
+                    </span>
+
+                    <img src="img/marca/badge-aqui-se-come-bien.png"
+                         alt="Aquí se come bien - Aquí alimentamos el corazón"
+                         class="hero-badge-img"
+                         loading="lazy">
+
+                </div>
 
                 <h1>
                     La Doña<br>
@@ -236,14 +299,14 @@
 
                     <!-- SLIDE 6 -->
                     <div class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="6 de 17">
-                        <img src="img/menu/plato5.jpg" alt="Platos tradicionales" loading="lazy">
-                        <span class="carousel-caption">Tradición</span>
+                        <img src="img/menu/plato5.jpg" alt="Hamburguesa doble de carne con tocino, queso y papas fritas de La Doña Hacienda" loading="lazy">
+                        <span class="carousel-caption">Internacional</span>
                     </div>
 
                     <!-- SLIDE 7 -->
                     <div class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="7 de 17">
-                        <img src="img/menu/plato6.jpg" alt="Platos para compartir" loading="lazy">
-                        <span class="carousel-caption">Para compartir</span>
+                        <img src="img/menu/plato6.jpg" alt="Porción de pie de manzana con helado de vainilla de La Doña Hacienda" loading="lazy">
+                        <span class="carousel-caption">De la casa</span>
                     </div>
 
                     <!-- SLIDE 8 -->
@@ -260,14 +323,14 @@
 
                     <!-- SLIDE 10 -->
                     <div class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="10 de 17">
-                        <img src="img/menu/plato9.jpg" alt="Platos vegetarianos" loading="lazy">
-                        <span class="carousel-caption">Vegetariano</span>
+                        <img src="img/menu/plato9.jpg" alt="Milanesa apanada gratinada con papa al horno y ensalada de La Doña Hacienda" loading="lazy">
+                        <span class="carousel-caption">Especialidades</span>
                     </div>
 
                     <!-- SLIDE 11 -->
                     <div class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="11 de 17">
-                        <img src="img/menu/plato10.jpg" alt="Platos veganos" loading="lazy">
-                        <span class="carousel-caption">Vegano</span>
+                        <img src="img/menu/plato10.jpg" alt="Sánduche de cerdo desmechado con papas fritas de La Doña Hacienda" loading="lazy">
+                        <span class="carousel-caption">De la casa</span>
                     </div>
 
                     <!-- SLIDE 12 -->
@@ -303,7 +366,7 @@
                     <!-- SLIDE 17 (cierre) -->
                     <div class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="17 de 17">
                         <img src="img/menu/plato17.jpg"
-                            alt="Terraza de La Doña Hacienda con horno de leña"
+                            alt="Carne en salsa barbacoa con papa al horno gratinada de La Doña Hacienda"
                             loading="lazy">
                     </div>
 
@@ -543,6 +606,7 @@
 
                             <img src="img/menu/plato13.jpg" alt="Platos para compartir en La Doña Hacienda">
 
+                        
                         </div>
 
                         <div class="menu-content">
@@ -573,15 +637,24 @@
                 </div>
 
 
-                <!-- CTA -->
+                <!-- CTA CON FRASOLOGÍA DE MARCA -->
 
-                <div class="menu-cta">
+                <div class="menu-cta-wrapper">
 
-                    <a href="pages/menu.html" class="btn btn-primary">
+                    <img src="img/marca/a-comer.png"
+                         alt="¡A comer se ha dicho!"
+                         class="menu-a-comer-img"
+                         loading="lazy">
 
-                        Ver menú completo
+                    <div class="menu-cta">
 
-                    </a>
+                        <a href="pages/menu.html" class="btn btn-primary">
+
+                            Ver menú completo
+
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -589,185 +662,30 @@
 
         </section>
 
+
+
         <!-- =====================================
-     SUCURSALES
-====================================== -->
-
-        <section class="section branches-section" id="sucursales">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="section-label">
-                        VISÍTANOS
-                    </span>
-
-                    <h2>
-                        Nuestras sucursales
-                    </h2>
-
-                    <p>
-                        Encuentra La Doña Hacienda más cerca de ti
-                        y disfruta de una experiencia pensada para compartir.
-                    </p>
-
-                </div>
-
-
-                <div class="branches-grid">
-
-
-                    <!-- =================================
-                 CAYAMBE
-            ================================== -->
-
-                    <article class="branch-card" data-branch-url="pages/sucursales.html#cayambe" data-branch-label="Ver información de la sucursal Cayambe">
-
-                        <div class="branch-image">
-
-                            <img src="img/sucursales/cayambe.jpg" alt="La Doña Hacienda Cayambe">
-
-                        </div>
-
-
-                        <div class="branch-content">
-
-                            <span class="branch-label">
-                                SUCURSAL
-                            </span>
-
-                            <h3>
-                                Cayambe
-                            </h3>
-
-
-                            <div class="branch-info">
-
-                                <div class="branch-info-item">
-
-                                    <span class="branch-icon">
-                                        📍
-                                    </span>
-
-                                    <p>
-                                        Cayambe, Barrio Ishigto, calle antiguo Camino Real s/n y
-                                        Panamericana norte, Cayambe 170202
-                                    </p>
-
-                                </div>
-
-
-                                <div class="branch-info-item">
-
-                                    <span class="branch-icon">
-                                        🕐
-                                    </span>
-
-                                    <p>
-                                        HORARIOS: 8:00 – 18:00
-                                        Todos los días
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- =================================
-                 CUMBAYÁ
-            ================================== -->
-
-                    <article class="branch-card" data-branch-url="pages/sucursales.html#cumbaya" data-branch-label="Ver información de la sucursal Cumbayá">
-
-                        <div class="branch-image">
-
-                            <img src="img/sucursales/cumbaya.jpg" alt="La Doña Hacienda Cumbayá">
-
-                        </div>
-
-
-                        <div class="branch-content">
-
-                            <span class="branch-label">
-                                SUCURSAL
-                            </span>
-
-                            <h3>
-                                Cumbayá
-                            </h3>
-
-
-                            <div class="branch-info">
-
-                                <div class="branch-info-item">
-
-                                    <span class="branch-icon">
-                                        📍
-                                    </span>
-
-                                    <p>
-                                        Cumbayá, Florencia S5-48 y Borromini
-                                        La Primavera 1.
-                                    </p>
-
-                                </div>
-
-
-                                <div class="branch-info-item">
-
-                                    <span class="branch-icon">
-                                        🕐
-                                    </span>
-
-                                    <p>
-                                        HORARIOS DE ATENCIÓN<br>
-                                        Domingo a Miércoles: 08:00 – 18:00 <br>
-                                        Jueves a Sábado: 08:00 – 20:00
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-                <!-- FUTURA TERCERA SUCURSAL -->
-
-                <div class="branch-future">
-
-                    <span>
-                        PRÓXIMAMENTE
-                    </span>
-
-                    <p>
-                        Una nueva experiencia de La Doña Hacienda
-                        llegará próximamente.
-                    </p>
-
-                </div>
-
-
-                <!-- CTA SUCURSALES -->
-
-                <div class="menu-cta">
-
-                    <a href="pages/sucursales.html" class="btn btn-primary">
-
-                        Ver nuestras sucursales →
-
-                    </a>
-
-                </div>
+             BANNER FRASOLOGÍA — BARRIGA LLENA
+        ====================================== -->
+
+        <section class="frase-banner" aria-hidden="true">
+
+            <div class="frase-banner-inner">
+
+                <img src="img/marca/destello.png"
+                     alt=""
+                     class="frase-banner-destello frase-banner-destello--left"
+                     loading="lazy">
+
+                <img src="img/marca/frase-barriga-llena.png"
+                     alt="Barriga llena, corazón contento"
+                     class="frase-banner-img"
+                     loading="lazy">
+
+                <img src="img/marca/destello-2.png"
+                     alt=""
+                     class="frase-banner-destello frase-banner-destello--right"
+                     loading="lazy">
 
             </div>
 
@@ -847,7 +765,7 @@
                 </div>
 
 
-                <!-- EXPERIENCIAS SECUNDARIAS -->
+                <!-- EXPERIENCIAS SECUNDARIAS CON DETALLES DE HACIENDA -->
 
                 <div class="experience-highlights">
 
@@ -933,8 +851,8 @@
                             </h3>
 
                             <p>
-                                Momentos para compartir
-                                con quienes más quieres.
+                                Encuentros y celebraciones en un
+                                ambiente campestre y acogedor.
                             </p>
 
                         </div>
@@ -990,6 +908,208 @@
 
 
 
+        <!-- =====================================
+     SUCURSALES
+====================================== -->
+
+        <section class="section branches-section" id="sucursales">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        VISÍTANOS
+                    </span>
+
+                    <h2>
+                        Nuestras sucursales
+                    </h2>
+
+                    <p>
+                        Encuentra La Doña Hacienda más cerca de ti
+                        y disfruta de una experiencia pensada para compartir.
+                    </p>
+
+                </div>
+
+
+                <div class="branches-grid">
+
+
+                    <!-- =================================
+                 CAYAMBE
+            ================================== -->
+
+                    <article class="branch-card" data-branch-url="pages/sucursales.html#cayambe" data-branch-label="Ver información de la sucursal Cayambe">
+
+                        <div class="branch-image">
+
+                            <img src="img/sucursales/cayambe.jpg" alt="La Doña Hacienda Cayambe">
+
+                        </div>
+
+
+                        <div class="branch-content">
+
+                            <!-- Placa de calle oficial del Manual de Marca -->
+                            <img src="img/marca/placa-cayambe.png"
+                                 alt="Cayambe"
+                                 class="branch-placa"
+                                 loading="lazy">
+
+
+                            <div class="branch-info">
+
+                                <div class="branch-info-item">
+
+                                    <span class="branch-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    </span>
+
+                                    <p>
+                                        Cayambe, Barrio Ishigto, calle antiguo Camino Real s/n y
+                                        Panamericana norte, Cayambe 170202
+                                    </p>
+
+                                </div>
+
+
+                                <div class="branch-info-item">
+
+                                    <span class="branch-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    </span>
+
+                                    <p>
+                                        HORARIOS: 8:00 – 18:00
+                                        Todos los días
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                 CUMBAYÁ
+            ================================== -->
+
+                    <article class="branch-card" data-branch-url="pages/sucursales.html#cumbaya" data-branch-label="Ver información de la sucursal Cumbayá">
+
+                        <div class="branch-image">
+
+                            <img src="img/sucursales/cumbaya.jpg" alt="La Doña Hacienda Cumbayá">
+
+                        </div>
+
+
+                        <div class="branch-content">
+
+                            <!-- Placa de calle oficial del Manual de Marca -->
+                            <img src="img/marca/placa-cumbaya.png"
+                                 alt="Cumbayá"
+                                 class="branch-placa branch-placa--cumbaya"
+                                 loading="lazy">
+
+
+                            <div class="branch-info">
+
+                                <div class="branch-info-item">
+
+                                    <span class="branch-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    </span>
+
+                                    <p>
+                                        Cumbayá, Florencia S5-48 y Borromini
+                                        La Primavera 1.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="branch-info-item">
+
+                                    <span class="branch-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    </span>
+
+                                    <p>
+                                        HORARIOS DE ATENCIÓN<br>
+                                        Domingo a Miércoles: 08:00 – 18:00 <br>
+                                        Jueves a Sábado: 08:00 – 20:00
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- FUTURA TERCERA SUCURSAL -->
+
+                <div class="branch-future">
+
+                    <span>
+                        PRÓXIMAMENTE
+                    </span>
+
+                    <p>
+                        Una nueva experiencia de La Doña Hacienda
+                        llegará próximamente.
+                    </p>
+
+                </div>
+
+
+                <!-- BANNER PET FRIENDLY OFICIAL -->
+
+                <div class="branch-pet-friendly">
+
+                    <img src="img/marca/pet-friendly.png"
+                         alt="Todos son bienvenidos - Pet Friendly"
+                         class="pet-friendly-badge-img"
+                         loading="lazy">
+
+                    <div class="pet-friendly-text">
+
+                        <h4>¡Somos Pet Friendly!</h4>
+
+                        <p>En La Doña Hacienda tus peluditos son bienvenidos en nuestros espacios abiertos y jardines familiares.</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CTA SUCURSALES -->
+
+                <div class="menu-cta">
+
+                    <a href="pages/sucursales.html" class="btn btn-primary">
+
+                        Ver nuestras sucursales →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
         <!--=====================================RESERVAS======================================-->
 
         <section class="reservation" id="reservas">
@@ -998,13 +1118,11 @@
 
                 <div class="reservation-content">
 
-                    <span class="section-label">
-                        RESERVACIONES
-                    </span>
-
-                    <h2>
-                        Tu mesa te espera
-                    </h2>
+                    <!-- Frasología oficial del Manual de Marca -->
+                    <img src="img/marca/frase-reserva.png"
+                         alt="¡Qué esperas! Haz tu reserva hoy"
+                         class="reservation-frase"
+                         loading="lazy">
 
                     <p>
                         Reserva tu espacio y prepárate para disfrutar
@@ -1174,7 +1292,12 @@
                         </svg>
                     </a>
 
-                </div>
+                    <a href="https://www.tiktok.com/@ladonahacienda" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok de La Doña Hacienda">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.28 6.34 6.34 0 0 0 9.34 21.6a6.34 6.34 0 0 0 6.34-6.32V8.62a8.28 8.28 0 0 0 4.85 1.57v-3.5z"/>
+                        </svg>
+                    </a>
+                    </div>
 
             </div>
 
@@ -1232,7 +1355,12 @@
                                 </svg>
                             </a>
 
-                        </div>
+                    <a href="https://www.tiktok.com/@ladonahacienda" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok de La Doña Hacienda">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.28 6.34 6.34 0 0 0 9.34 21.6a6.34 6.34 0 0 0 6.34-6.32V8.62a8.28 8.28 0 0 0 4.85 1.57v-3.5z"/>
+                        </svg>
+                    </a>
+                    </div>
 
                     </div>
 

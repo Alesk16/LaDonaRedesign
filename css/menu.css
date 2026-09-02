@@ -64,6 +64,74 @@
     color: rgb(255 255 255 / 90%);
 }
 
+/* Buscador interactivo de platos */
+.menu-search-container {
+    max-width: 560px;
+    margin: 24px auto 0;
+}
+
+.menu-search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 95%);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 22%);
+    padding: 4px 18px;
+    border: 2px solid transparent;
+    transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.menu-search-box:focus-within {
+    border-color: var(--naranja-principal);
+    box-shadow: 0 10px 28px rgb(0 0 0 / 30%);
+}
+
+.menu-search-icon {
+    color: var(--verde-principal);
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+#menuSearchInput {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    font-family: var(--font-cuerpo);
+    font-size: 0.95rem;
+    color: var(--texto-principal);
+    outline: none;
+}
+
+#menuSearchInput::placeholder {
+    color: #888;
+    font-size: 0.88rem;
+}
+
+.menu-search-clear {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+    transition: color var(--transicion);
+}
+
+.menu-search-clear:hover {
+    color: var(--naranja-principal);
+}
+
+.menu-search-results-count {
+    margin-top: 10px;
+    font-size: 0.88rem;
+    color: var(--naranja-claro);
+    font-weight: 600;
+}
+
 /* --------------------------------------------------------------------------
    3. BARRA DE NAVEGACIÓN DE CATEGORÍAS (STICKY) — ESCRITORIO
    -------------------------------------------------------------------------- */
@@ -160,7 +228,7 @@
 }
 
 .menu-page-section.section-alt {
-    background: var(--crema);
+    background: #f8f5ee url("../img/marca/textura-papel.png") center / cover;
 }
 
 .menu-page-section[id] {
@@ -210,6 +278,13 @@
     line-height: 1.5;
 }
 
+.menu-heading-brand-img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 12px;
+}
+
 /* --------------------------------------------------------------------------
    6. GRILLA Y ESTRUCTURA DE PRODUCTOS ESTÁNDAR
    -------------------------------------------------------------------------- */
@@ -225,22 +300,27 @@
     justify-content: center;
     padding: 20px 24px;
     border-radius: var(--radio);
-    background: var(--blanco);
-    box-shadow: var(--sombra-suave);
-    transition: transform var(--transicion), box-shadow var(--transicion);
+    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion);
 }
 
+/* Tarjetas con textura en secciones con fondo blanco liso */
 .menu-page-section:not(.section-alt) .menu-item {
-    background: var(--crema);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 10%);
+    box-shadow: var(--sombra-suave);
 }
 
+/* Tarjetas blancas puras y nítidas en secciones con fondo de textura de papel (Entradas, Sanduches, Vegetariano, Cafetería, Bebidas) */
 .menu-page-section.section-alt .menu-item {
-    background: var(--blanco);
+    background: #ffffff;
+    border: 1px solid rgb(80 118 77 / 14%);
+    box-shadow: 0 4px 16px rgb(48 51 47 / 7%);
 }
 
 .menu-item:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: var(--sombra-media);
+    border-color: rgb(80 118 77 / 28%);
 }
 
 .menu-item-header {
@@ -289,22 +369,25 @@
     gap: 10px;
     padding: 12px 18px;
     border-radius: 12px;
-    background: var(--blanco);
-    box-shadow: 0 2px 10px rgb(48 51 47 / 4%);
-    transition: transform var(--transicion), box-shadow var(--transicion);
+    transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion);
 }
 
 .menu-page-section:not(.section-alt) .menu-item-compact {
-    background: var(--crema);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 10%);
+    box-shadow: 0 2px 10px rgb(48 51 47 / 4%);
 }
 
 .menu-page-section.section-alt .menu-item-compact {
-    background: var(--blanco);
+    background: #ffffff;
+    border: 1px solid rgb(80 118 77 / 14%);
+    box-shadow: 0 3px 12px rgb(48 51 47 / 6%);
 }
 
 .menu-item-compact:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: var(--sombra-suave);
+    border-color: rgb(80 118 77 / 26%);
 }
 
 .menu-item-compact .menu-item-name {

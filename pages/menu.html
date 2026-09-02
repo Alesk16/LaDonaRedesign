@@ -7,16 +7,25 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="Menú de La Doña Hacienda - Sabores auténticos, especialidades y momentos para compartir." />
+    <meta name="description" content="Menú de La Doña Hacienda: especialidades a la parrilla, desayunos tradicionales, platos para compartir y postres en Cayambe y Cumbayá." />
 
-    <title>Menú | La Doña Hacienda</title>
+    <title>Menú Completo | La Doña Hacienda</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/marca/favicon.png">
+    <link rel="apple-touch-icon" href="../img/marca/favicon.png">
+
+    <!-- Open Graph (WhatsApp, Redes Sociales) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="La Doña Hacienda">
+    <meta property="og:title" content="Menú Completo | La Doña Hacienda">
+    <meta property="og:description" content="Explora nuestras especialidades tradicionales, desayunos, platos fuertes y bebidas en La Doña Hacienda.">
+    <meta property="og:image" content="../img/marca/og-image.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Raleway:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS Global -->
     <link rel="stylesheet" href="../css/style.css">
@@ -137,6 +146,16 @@
                     Una selección pensada para disfrutar buenos sabores y compartir momentos especiales.
                 </p>
 
+                <!-- BUSCADOR EN TIEMPO REAL -->
+                <div class="menu-search-container">
+                    <div class="menu-search-box">
+                        <svg class="menu-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <input type="search" id="menuSearchInput" placeholder="Buscar plato o bebida (ej. locro, parrillada, chocolate)..." aria-label="Buscar en el menú">
+                        <button type="button" id="menuSearchClear" class="menu-search-clear" aria-label="Limpiar búsqueda" hidden>&times;</button>
+                    </div>
+                    <div id="menuSearchResultsCount" class="menu-search-results-count" hidden></div>
+                </div>
+
             </div>
 
         </section>
@@ -224,10 +243,6 @@
             <div class="container">
 
                 <div class="section-heading">
-
-                    <span class="section-label">
-                        PARA EMPEZAR EL DÍA
-                    </span>
 
                     <h2>
                         Desayunos
@@ -2026,7 +2041,12 @@
                                 </svg>
                             </a>
 
-                        </div>
+                    <a href="https://www.tiktok.com/@ladonahacienda" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok de La Doña Hacienda">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.28 6.34 6.34 0 0 0 9.34 21.6a6.34 6.34 0 0 0 6.34-6.32V8.62a8.28 8.28 0 0 0 4.85 1.57v-3.5z"/>
+                        </svg>
+                    </a>
+                    </div>
 
                     </div>
 
@@ -2088,7 +2108,7 @@
                         Preguntas frecuentes
                     </a>
 
-                    <a href="#">
+                    <a href="politicas.html">
                         Términos y condiciones
                     </a>
 

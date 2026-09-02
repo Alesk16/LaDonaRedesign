@@ -50,6 +50,13 @@
     line-height: 1.6;
 }
 
+.faq-heading-img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 12px;
+}
+
 /* --------------------------------------------------------------------------
    2. SECCIÓN Y ACORDEÓN
    -------------------------------------------------------------------------- */
@@ -67,7 +74,8 @@
 
 .faq-item {
     border-radius: var(--radio-grande);
-    background: var(--blanco);
+    background: #ffffff url("../img/marca/textura-papel.png") center / cover;
+    border: 1px solid rgb(80 118 77 / 10%);
     box-shadow: var(--sombra-suave);
     transition: box-shadow var(--transicion);
 }

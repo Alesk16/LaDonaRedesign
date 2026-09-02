@@ -298,11 +298,111 @@
     }
   }
 
+  /**
+   * Normaliza texto para búsqueda insensible a acentos y mayúsculas
+   */
+  function normalizeStr(str) {
+    return (str || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+  }
+
+  /**
+   * Inicializa el buscador interactivo de platos
+   */
+  function setupMenuSearch() {
+    var searchInput = document.getElementById('menuSearchInput');
+    var clearBtn = document.getElementById('menuSearchClear');
+    var countBadge = document.getElementById('menuSearchResultsCount');
+    var allItems = document.querySelectorAll('.menu-item');
+    if (!searchInput) return;
+
+    function handleSearch() {
+      var query = normalizeStr(searchInput.value.trim());
+
+      if (clearBtn) {
+        clearBtn.hidden = query.length === 0;
+      }
+
+      if (query.length === 0) {
+        // Restaurar modo normal de categorías
+        if (countBadge) countBadge.hidden = true;
+        allItems.forEach(function (item) {
+          item.style.display = '';
+        });
+        switchCategory(activeCategoryId, false);
+        return;
+      }
+
+      // Modo búsqueda: evaluar todos los platos
+      var matchCount = 0;
+      var sectionsWithMatches = new Set();
+
+      allItems.forEach(function (item) {
+        var nameEl = item.querySelector('.menu-item-name');
+        var descEl = item.querySelector('.menu-item-desc');
+        var nameText = nameEl ? nameEl.textContent : '';
+        var descText = descEl ? descEl.textContent : '';
+
+        var isMatch = normalizeStr(nameText).includes(query) || normalizeStr(descText).includes(query);
+
+        if (isMatch) {
+          item.style.display = '';
+          matchCount++;
+          var parentSection = item.closest('.menu-page-section');
+          if (parentSection) {
+            sectionsWithMatches.add(parentSection.id);
+          }
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      // Mostrar secciones que tienen coincidencias y ocultar las demás
+      categorySections.forEach(function (section) {
+        if (sectionsWithMatches.has(section.id)) {
+          section.removeAttribute('hidden');
+          section.classList.add('is-active');
+        } else {
+          section.setAttribute('hidden', '');
+          section.classList.remove('is-active');
+        }
+      });
+
+      // Actualizar contador
+      if (countBadge) {
+        countBadge.hidden = false;
+        if (matchCount === 1) {
+          countBadge.textContent = 'Se encontró 1 plato coincidente';
+        } else if (matchCount > 1) {
+          countBadge.textContent = 'Se encontraron ' + matchCount + ' platos coincidentes';
+        } else {
+          countBadge.textContent = 'No se encontraron platos con "' + searchInput.value + '"';
+        }
+      }
+    }
+
+    searchInput.addEventListener('input', handleSearch);
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        handleSearch();
+        searchInput.focus();
+      });
+    }
+  }
+
   // Ejecutar inicialización cuando el DOM esté listo
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function () {
+      init();
+      setupMenuSearch();
+    });
   } else {
     init();
+    setupMenuSearch();
   }
 })();
 
