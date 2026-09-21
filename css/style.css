@@ -634,25 +634,6 @@ section[id] {
     overflow: hidden;
 }
 
-.menu-card-icon {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 44px;
-    height: 44px;
-    padding: 6px;
-    border-radius: 50%;
-    background: rgb(255 255 255 / 92%);
-    backdrop-filter: blur(4px);
-    box-shadow: var(--sombra-suave);
-    object-fit: contain;
-    transition: transform var(--transicion);
-}
-
-.menu-card:hover .menu-card-icon {
-    transform: scale(1.1) rotate(5deg);
-}
-
 .menu-content {
     padding: 28px;
 }
@@ -827,13 +808,6 @@ section[id] {
     overflow-wrap: break-word;
 }
 
-.branch-actions {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
 .branch-future {
     display: flex;
     align-items: center;
@@ -997,25 +971,6 @@ section[id] {
     overflow: hidden;
 }
 
-.highlight-animal-accent {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-    width: 38px;
-    height: 38px;
-    padding: 6px;
-    border-radius: 50%;
-    background: rgb(255 255 255 / 90%);
-    backdrop-filter: blur(4px);
-    box-shadow: var(--sombra-suave);
-    object-fit: contain;
-    transition: transform var(--transicion);
-}
-
-.experience-highlight:hover .highlight-animal-accent {
-    transform: scale(1.15) rotate(6deg);
-}
-
 .highlight-image img {
     object-position: center;
 }
@@ -1094,16 +1049,6 @@ section[id] {
     max-width: 570px;
     margin-top: 14px;
     color: rgb(255 255 255 / 84%);
-}
-
-.placeholder-badge {
-    margin-top: 24px;
-    padding: 9px 14px;
-    border: 1px solid rgb(255 255 255 / 35%);
-    border-radius: 999px;
-    font-size: .68rem;
-    font-weight: 700;
-    letter-spacing: .16em;
 }
 
 .reservation {
@@ -1589,20 +1534,6 @@ section[id] {
         padding: 26px 20px;
     }
 
-    .branch-map {
-        height: 250px;
-        margin-bottom: 20px;
-        border-radius: 12px;
-    }
-
-    .branch-actions {
-        gap: 12px;
-    }
-
-    .branch-actions .btn {
-        width: 100%;
-    }
-
     .highlight-content {
         padding: 22px 20px;
     }
@@ -1611,20 +1542,9 @@ section[id] {
         font-size: 1.35rem;
     }
 
-    .branch-actions {
-        align-items: stretch;
-        flex-direction: column;
-        gap: 14px;
-    }
-
     .about-content .btn,
-    .branch-actions .btn,
     .feature-content .btn {
         width: 100%;
-    }
-
-    .branch-actions .text-link {
-        text-align: center;
     }
 
     .branch-future {
@@ -1703,10 +1623,6 @@ section[id] {
 
     .branch-content {
         padding: 22px 16px;
-    }
-
-    .branch-map {
-        height: 230px;
     }
 
     .highlight-image {
