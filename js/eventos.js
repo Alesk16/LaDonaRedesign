@@ -55,140 +55,13 @@
      */
     var eventosSociales = [
         {
-            id: 'bautizo-familia-benalcazar',
-            tipo: 'Evento social',
-            titulo: 'Bautizo familia Benalcázar',
-            fecha: '3 de mayo de 2026',
-            sucursal: 'Cayambe',
-            descripcion: 'Una celebración familiar especial compartida en un ambiente acogedor de La Doña Hacienda.',
-            // Fotografías reales pendientes: se prevén 18 fotos en total.
-            imagenPortada: '../img/eventos/sociales/bautizo-familia-benalcazar/portada.jpg',
-            galeria: [
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-01.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-02.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-03.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-04.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-05.jpg',
-                '../img/eventos/sociales/bautizo-familia-benalcazar/foto-06.jpg'
-            ]
-        },
-        {
-            id: 'aniversario-10-anos',
-            tipo: 'Evento social',
-            titulo: 'Cena romántica — Aniversario 10 años',
-            fecha: '17 de julio de 2026',
-            sucursal: 'Cumbayá',
-            descripcion: 'Una velada especial para celebrar diez años de historia, compañía y momentos para recordar.',
-            // Fotografías reales pendientes: se prevén 8 fotos en total.
-            imagenPortada: '../img/eventos/sociales/aniversario-10-anos/portada.jpg',
-            galeria: [
-                '../img/eventos/sociales/aniversario-10-anos/foto-01.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto-02.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto-03.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto-04.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto-05.jpg',
-                '../img/eventos/sociales/aniversario-10-anos/foto-06.jpg'
-            ]
-        },
-        {
-            id: 'grado-universitario',
-            tipo: 'Evento social',
-            titulo: 'Celebración de grado universitario',
-            fecha: '5 de septiembre de 2026',
-            sucursal: 'Cayambe',
-            descripcion: 'Una celebración especial para compartir el logro de una nueva etapa junto a familiares y amigos.',
-            // Evento aún no realizado (fecha futura). No se muestra en "Eventos realizados".
-            estado: 'proximo',
-            // Fotografías reales pendientes: se prevén 22 fotos en total.
-            imagenPortada: '../img/eventos/sociales/grado-universitario/portada.jpg',
-            galeria: [
-                '../img/eventos/sociales/grado-universitario/foto-01.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-02.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-03.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-04.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-05.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-06.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-07.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-08.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-09.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-10.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-11.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-12.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-13.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-14.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-15.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-16.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-17.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-18.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-19.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-20.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-21.jpg',
-                '../img/eventos/sociales/grado-universitario/foto-22.jpg'
-            ]
-        },
-        {
-            id: 'brunch-club-andino',
-            tipo: 'Evento social',
-            titulo: 'Brunch de amigas — Club Andino',
-            fecha: '8 de noviembre de 2026',
-            sucursal: 'Cayambe',
-            descripcion: 'Un encuentro para compartir, conversar y disfrutar de una experiencia gastronómica entre amigas.',
-            // Evento aún no realizado (fecha futura). No se muestra en "Eventos realizados".
-            estado: 'proximo',
-            // Fotografías reales pendientes: se prevén 15 fotos en total.
-            imagenPortada: '../img/eventos/sociales/brunch-club-andino/portada.jpg',
-            galeria: [
-                '../img/eventos/sociales/brunch-club-andino/foto-01.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-02.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-03.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-04.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-05.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-06.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-07.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-08.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-09.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-10.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-11.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-12.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-13.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-14.jpg',
-                '../img/eventos/sociales/brunch-club-andino/foto-15.jpg'
-            ]
-        },
-        {
-            id: 'baby-shower',
-            tipo: 'Evento social',
-            titulo: 'Baby Shower sorpresa',
-            fecha: 'Fecha por confirmar',
-            sucursal: 'Cayambe',
-            descripcion: 'Una celebración especial llena de alegría para acompañar la llegada de un nuevo integrante de la familia.',
-            // Fotografías reales pendientes: se prevén 13 fotos en total.
-            imagenPortada: '../img/eventos/sociales/baby-shower/portada.jpg',
-            galeria: [
-                '../img/eventos/sociales/baby-shower/foto-01.jpg',
-                '../img/eventos/sociales/baby-shower/foto-02.jpg',
-                '../img/eventos/sociales/baby-shower/foto-03.jpg',
-                '../img/eventos/sociales/baby-shower/foto-04.jpg',
-                '../img/eventos/sociales/baby-shower/foto-05.jpg',
-                '../img/eventos/sociales/baby-shower/foto-06.jpg',
-                '../img/eventos/sociales/baby-shower/foto-07.jpg',
-                '../img/eventos/sociales/baby-shower/foto-08.jpg',
-                '../img/eventos/sociales/baby-shower/foto-09.jpg',
-                '../img/eventos/sociales/baby-shower/foto-10.jpg',
-                '../img/eventos/sociales/baby-shower/foto-11.jpg',
-                '../img/eventos/sociales/baby-shower/foto-12.jpg',
-                '../img/eventos/sociales/baby-shower/foto-13.jpg'
-            ]
-        },
-        {
             id: 'cumpleanos-50',
             tipo: 'Evento social',
             titulo: 'Fiesta de cumpleaños — 50 años',
             fecha: '28 de enero de 2026',
             sucursal: 'Cumbayá',
             descripcion: 'Una celebración especial para compartir y conmemorar cinco décadas de momentos y experiencias.',
-            // Fotografías reales pendientes: se prevén 19 fotos en total.
-            imagenPortada: '../img/eventos/sociales/cumpleanos-50/portada.jpg',
+            imagenPortada: '../img/eventos/sociales/cumpleanos-50/foto-01.jpg',
             galeria: [
                 '../img/eventos/sociales/cumpleanos-50/foto-01.jpg',
                 '../img/eventos/sociales/cumpleanos-50/foto-02.jpg',
@@ -197,40 +70,73 @@
                 '../img/eventos/sociales/cumpleanos-50/foto-05.jpg',
                 '../img/eventos/sociales/cumpleanos-50/foto-06.jpg',
                 '../img/eventos/sociales/cumpleanos-50/foto-07.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-08.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-09.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-10.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-11.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-12.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-13.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-14.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-15.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-16.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-17.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-18.jpg',
-                '../img/eventos/sociales/cumpleanos-50/foto-19.jpg'
+                '../img/eventos/sociales/cumpleanos-50/foto-08.jpg'
             ]
         },
         {
-            id: 'almuerzo-familiar',
+            id: 'bautizo-familia-joaquin',
             tipo: 'Evento social',
-            titulo: 'Almuerzo familiar de fin de mes',
+            titulo: 'Bautizo familia Joaquín',
             fecha: 'Fecha por confirmar',
-            sucursal: 'Cumbayá',
-            descripcion: 'Un encuentro familiar para compartir una experiencia gastronómica en un ambiente acogedor.',
-            // Fotografías reales pendientes: se prevén 10 fotos en total.
-            imagenPortada: '../img/eventos/sociales/almuerzo-familiar/portada.jpg',
+            sucursal: 'Sucursal por confirmar',
+            descripcion: 'Una celebración familiar especial compartida en La Doña Hacienda.',
+            imagenPortada: '../img/eventos/sociales/bautizo-familia-joaquin/foto-01.jpg',
             galeria: [
-                '../img/eventos/sociales/almuerzo-familiar/foto-01.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto-02.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto-03.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto-04.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto-05.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto-06.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto-07.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto-08.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto-09.jpg',
-                '../img/eventos/sociales/almuerzo-familiar/foto-10.jpg'
+                '../img/eventos/sociales/bautizo-familia-joaquin/foto-01.jpg',
+                '../img/eventos/sociales/bautizo-familia-joaquin/foto-02.jpg',
+                '../img/eventos/sociales/bautizo-familia-joaquin/foto-03.jpg',
+                '../img/eventos/sociales/bautizo-familia-joaquin/foto-04.jpg',
+                '../img/eventos/sociales/bautizo-familia-joaquin/foto-05.jpg',
+                '../img/eventos/sociales/bautizo-familia-joaquin/foto-06.jpg'
+            ]
+        },
+        {
+            id: 'cumpleanos-80',
+            tipo: 'Evento social',
+            titulo: 'Cumpleaños de 80 años',
+            fecha: 'Fecha por confirmar',
+            sucursal: 'Sucursal por confirmar',
+            descripcion: 'Una celebración especial para conmemorar ochenta años de vida en La Doña Hacienda.',
+            imagenPortada: '../img/eventos/sociales/cumpleanos-80/foto-01.jpg',
+            galeria: [
+                '../img/eventos/sociales/cumpleanos-80/foto-01.jpg',
+                '../img/eventos/sociales/cumpleanos-80/foto-02.jpg',
+                '../img/eventos/sociales/cumpleanos-80/foto-03.jpg',
+                '../img/eventos/sociales/cumpleanos-80/foto-04.jpg',
+                '../img/eventos/sociales/cumpleanos-80/foto-05.jpg'
+            ]
+        },
+        {
+            id: 'boda-cayambe',
+            tipo: 'Evento social',
+            titulo: 'Boda, sucursal Cayambe',
+            fecha: 'Fecha por confirmar',
+            sucursal: 'Cayambe',
+            descripcion: 'Una boda celebrada en las instalaciones de La Doña Hacienda.',
+            imagenPortada: '../img/eventos/sociales/boda-cayambe/foto-01.jpg',
+            galeria: [
+                '../img/eventos/sociales/boda-cayambe/foto-01.jpg',
+                '../img/eventos/sociales/boda-cayambe/foto-02.jpg',
+                '../img/eventos/sociales/boda-cayambe/foto-03.jpg',
+                '../img/eventos/sociales/boda-cayambe/foto-04.jpg'
+            ]
+        },
+        {
+            id: 'dia-de-la-madre',
+            tipo: 'Evento social',
+            titulo: 'Celebración del Día de la Madre',
+            fecha: 'Fecha por confirmar',
+            sucursal: 'Sucursal por confirmar',
+            descripcion: 'Una celebración especial del Día de la Madre en La Doña Hacienda.',
+            imagenPortada: '../img/eventos/sociales/dia-de-la-madre/foto-01.jpg',
+            galeria: [
+                '../img/eventos/sociales/dia-de-la-madre/foto-01.jpg',
+                '../img/eventos/sociales/dia-de-la-madre/foto-02.jpg',
+                '../img/eventos/sociales/dia-de-la-madre/foto-03.jpg',
+                '../img/eventos/sociales/dia-de-la-madre/foto-04.jpg',
+                '../img/eventos/sociales/dia-de-la-madre/foto-05.jpg',
+                '../img/eventos/sociales/dia-de-la-madre/foto-06.jpg',
+                '../img/eventos/sociales/dia-de-la-madre/foto-07.jpg'
             ]
         }
     ];
@@ -281,183 +187,79 @@
             ]
         },
         {
-            id: 'almuerzo-grupo-medisur',
+            id: 'evento-corporativo',
             tipo: 'Evento institucional',
-            titulo: 'Almuerzo de integración — Grupo Medisur',
-            fecha: '22 de abril de 2026',
-            sucursal: 'Cumbayá',
-            descripcion: 'Un espacio de integración empresarial acompañado de una experiencia gastronómica en La Doña Hacienda.',
-            // Fotografías reales pendientes: se prevén 14 fotos en total.
-            imagenPortada: '../img/eventos/institucionales/almuerzo-grupo-medisur/portada.jpg',
-            galeria: [
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-01.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-02.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-03.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-04.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-05.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-06.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-07.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-08.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-09.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-10.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-11.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-12.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-13.jpg',
-                '../img/eventos/institucionales/almuerzo-grupo-medisur/foto-14.jpg'
-            ]
-        },
-        {
-            id: 'lanzamiento-linea-cafe',
-            tipo: 'Evento institucional',
-            titulo: 'Lanzamiento de nueva línea de café',
-            fecha: '1 de junio de 2026',
-            sucursal: 'Cumbayá',
-            descripcion: 'Un encuentro especial para presentar una nueva propuesta y compartir alrededor de la cultura del café.',
-            // Fotografías reales pendientes: se prevén 12 fotos en total.
-            imagenPortada: '../img/eventos/institucionales/lanzamiento-linea-cafe/portada.jpg',
-            galeria: [
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-01.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-02.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-03.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-04.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-05.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-06.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-07.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-08.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-09.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-10.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-11.jpg',
-                '../img/eventos/institucionales/lanzamiento-linea-cafe/foto-12.jpg'
-            ]
-        },
-        {
-            id: 'capacitacion-tecnosoluciones',
-            tipo: 'Evento institucional',
-            titulo: 'Capacitación anual — TecnoSoluciones',
-            fecha: '25 de agosto de 2026',
-            sucursal: 'Cayambe',
-            descripcion: 'Una jornada de capacitación acompañada de un espacio adecuado para el aprendizaje y la integración del equipo.',
-            // Fotografías reales pendientes: se prevén 16 fotos en total.
-            imagenPortada: '../img/eventos/institucionales/capacitacion-tecnosoluciones/portada.jpg',
-            galeria: [
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-01.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-02.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-03.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-04.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-05.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-06.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-07.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-08.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-09.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-10.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-11.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-12.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-13.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-14.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-15.jpg',
-                '../img/eventos/institucionales/capacitacion-tecnosoluciones/foto-16.jpg'
-            ]
-        },
-        {
-            id: 'almuerzo-agroexport',
-            tipo: 'Evento institucional',
-            titulo: 'Almuerzo empresarial — AgroExport',
+            titulo: 'Evento corporativo', // TODO: confirmar nombre real del cliente
             fecha: 'Fecha por confirmar',
-            sucursal: 'Cumbayá',
-            descripcion: 'Un encuentro empresarial acompañado de una experiencia gastronómica pensada para compartir y generar vínculos.',
-            // Fotografías reales pendientes: se prevén 11 fotos en total.
-            imagenPortada: '../img/eventos/institucionales/almuerzo-agroexport/portada.jpg',
+            sucursal: 'Sucursal por confirmar',
+            descripcion: 'Un encuentro corporativo realizado en las instalaciones de La Doña Hacienda.',
+            imagenPortada: '../img/eventos/institucionales/evento-corporativo/foto-01.jpg',
             galeria: [
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-01.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-02.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-03.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-04.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-05.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-06.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-07.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-08.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-09.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-10.jpg',
-                '../img/eventos/institucionales/almuerzo-agroexport/foto-11.jpg'
+                '../img/eventos/institucionales/evento-corporativo/foto-01.jpg',
+                '../img/eventos/institucionales/evento-corporativo/foto-02.jpg',
+                '../img/eventos/institucionales/evento-corporativo/foto-03.jpg'
             ]
         },
         {
-            id: 'reunion-inmobiliaria-real',
+            id: 'evento-corporativo-cayambe',
             tipo: 'Evento institucional',
-            titulo: 'Reunión de socios — Inmobiliaria Real',
-            fecha: '18 de octubre de 2026',
-            sucursal: 'Cumbayá',
-            descripcion: 'Un espacio de encuentro para compartir, conversar y fortalecer vínculos entre socios.',
-            // Evento aún no realizado (fecha futura). No se muestra en "Eventos realizados".
-            estado: 'proximo',
-            // Fotografías reales pendientes: se prevén 9 fotos en total.
-            imagenPortada: '../img/eventos/institucionales/reunion-inmobiliaria-real/portada.jpg',
-            galeria: [
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-01.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-02.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-03.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-04.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-05.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-06.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-07.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-08.jpg',
-                '../img/eventos/institucionales/reunion-inmobiliaria-real/foto-09.jpg'
-            ]
-        },
-        {
-            id: 'proyecto-vialcorp',
-            tipo: 'Evento institucional',
-            titulo: 'Presentación de proyecto — VialCorp',
-            fecha: '11 de febrero de 2026',
+            titulo: 'Evento corporativo, sucursal Cayambe', // TODO: confirmar nombre real del cliente
+            fecha: 'Fecha por confirmar',
             sucursal: 'Cayambe',
-            descripcion: 'Un encuentro empresarial destinado a presentar y compartir los detalles de un nuevo proyecto.',
-            // Fotografías reales pendientes: se prevén 7 fotos en total.
-            imagenPortada: '../img/eventos/institucionales/proyecto-vialcorp/portada.jpg',
+            descripcion: 'Un encuentro corporativo realizado en las instalaciones de La Doña Hacienda.',
+            imagenPortada: '../img/eventos/institucionales/evento-corporativo-cayambe/foto-01.jpg',
             galeria: [
-                '../img/eventos/institucionales/proyecto-vialcorp/foto-01.jpg',
-                '../img/eventos/institucionales/proyecto-vialcorp/foto-02.jpg',
-                '../img/eventos/institucionales/proyecto-vialcorp/foto-03.jpg',
-                '../img/eventos/institucionales/proyecto-vialcorp/foto-04.jpg',
-                '../img/eventos/institucionales/proyecto-vialcorp/foto-05.jpg',
-                '../img/eventos/institucionales/proyecto-vialcorp/foto-06.jpg',
-                '../img/eventos/institucionales/proyecto-vialcorp/foto-07.jpg'
+                '../img/eventos/institucionales/evento-corporativo-cayambe/foto-01.jpg',
+                '../img/eventos/institucionales/evento-corporativo-cayambe/foto-02.jpg',
+                '../img/eventos/institucionales/evento-corporativo-cayambe/foto-03.jpg',
+                '../img/eventos/institucionales/evento-corporativo-cayambe/foto-04.jpg',
+                '../img/eventos/institucionales/evento-corporativo-cayambe/foto-05.jpg'
             ]
         },
         {
-            id: 'cena-navidad-grupo-financiero-sur',
+            id: 'lee-jeans-ecuador',
             tipo: 'Evento institucional',
-            titulo: 'Cena de Navidad — Grupo Financiero Sur',
-            fecha: '10 de diciembre de 2025',
-            sucursal: 'Cumbayá',
-            descripcion: 'Una celebración empresarial de fin de año para compartir y cerrar el año junto al equipo.',
-            // Fotografías reales pendientes: se prevén 25 fotos en total.
-            imagenPortada: '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/portada.jpg',
+            titulo: 'Evento corporativo, Lee Jeans Ecuador',
+            fecha: 'Fecha por confirmar',
+            sucursal: 'Sucursal por confirmar',
+            descripcion: 'Un encuentro corporativo realizado en las instalaciones de La Doña Hacienda.',
+            imagenPortada: '../img/eventos/institucionales/lee-jeans-ecuador/foto-01.jpg',
             galeria: [
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-01.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-02.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-03.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-04.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-05.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-06.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-07.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-08.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-09.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-10.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-11.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-12.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-13.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-14.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-15.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-16.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-17.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-18.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-19.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-20.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-21.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-22.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-23.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-24.jpg',
-                '../img/eventos/institucionales/cena-navidad-grupo-financiero-sur/foto-25.jpg'
+                '../img/eventos/institucionales/lee-jeans-ecuador/foto-01.jpg',
+                '../img/eventos/institucionales/lee-jeans-ecuador/foto-02.jpg',
+                '../img/eventos/institucionales/lee-jeans-ecuador/foto-03.jpg',
+                '../img/eventos/institucionales/lee-jeans-ecuador/foto-04.jpg',
+                '../img/eventos/institucionales/lee-jeans-ecuador/foto-05.jpg'
+            ]
+        },
+        {
+            id: 'coworking-cerveceria-nacional',
+            tipo: 'Evento institucional',
+            titulo: 'Coworking, Cervecería Nacional',
+            fecha: 'Fecha por confirmar',
+            sucursal: 'Sucursal por confirmar',
+            descripcion: 'Un espacio de coworking compartido en las instalaciones de La Doña Hacienda.',
+            imagenPortada: '../img/eventos/institucionales/coworking-cerveceria-nacional/foto-01.jpg',
+            galeria: [
+                '../img/eventos/institucionales/coworking-cerveceria-nacional/foto-01.jpg',
+                '../img/eventos/institucionales/coworking-cerveceria-nacional/foto-02.jpg',
+                '../img/eventos/institucionales/coworking-cerveceria-nacional/foto-03.jpg',
+                '../img/eventos/institucionales/coworking-cerveceria-nacional/foto-04.jpg'
+            ]
+        },
+        {
+            id: 'evento-corporativo-cayambe-2',
+            tipo: 'Evento institucional',
+            titulo: 'Evento corporativo, sucursal Cayambe', // TODO: confirmar nombre real del cliente y diferenciarlo del otro evento en Cayambe
+            fecha: 'Fecha por confirmar',
+            sucursal: 'Cayambe',
+            descripcion: 'Un encuentro corporativo realizado en las instalaciones de La Doña Hacienda.',
+            imagenPortada: '../img/eventos/institucionales/evento-corporativo-cayambe-2/foto-01.jpg',
+            galeria: [
+                '../img/eventos/institucionales/evento-corporativo-cayambe-2/foto-01.jpg',
+                '../img/eventos/institucionales/evento-corporativo-cayambe-2/foto-02.jpg',
+                '../img/eventos/institucionales/evento-corporativo-cayambe-2/foto-03.jpg',
+                '../img/eventos/institucionales/evento-corporativo-cayambe-2/foto-04.jpg'
             ]
         }
     ];

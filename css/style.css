@@ -1165,6 +1165,7 @@ section[id] {
 
 .footer-brand img {
     width: 115px;
+    height: auto;
 }
 
 .footer-brand p {
