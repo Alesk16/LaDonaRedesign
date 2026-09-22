@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://ladonahacienda.com/sitemap.xml
+Sitemap: https://ladonahacienda.com.ec/sitemap.xml
