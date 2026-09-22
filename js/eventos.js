@@ -48,10 +48,6 @@
 
     /**
      * Eventos sociales.
-     * Información proporcionada por el negocio. Las fotografías reales aún
-     * no han sido cargadas: las rutas de `imagenPortada` y `galeria` son
-     * referencias preparadas (los archivos todavía no existen físicamente
-     * en el proyecto) para que puedan colocarse allí más adelante.
      */
     var eventosSociales = [
         {
@@ -163,10 +159,6 @@
 
     /**
      * Eventos institucionales.
-     * Información proporcionada por el negocio. Las fotografías reales aún
-     * no han sido cargadas: las rutas de `imagenPortada` y `galeria` son
-     * referencias preparadas (los archivos todavía no existen físicamente
-     * en el proyecto) para que puedan colocarse allí más adelante.
      */
     var eventosInstitucionales = [
         {
@@ -176,7 +168,6 @@
             fecha: '14 de marzo de 2026',
             sucursal: 'Cayambe',
             descripcion: 'Reunión de trabajo pensada para compartir, conversar y generar espacios de encuentro empresarial.',
-            // Fotografías reales pendientes: se prevén 10 fotos en total.
             imagenPortada: '../img/eventos/institucionales/reunión-byrcon/portada.jpg',
             galeria: [
                 '../img/eventos/institucionales/reunión-byrcon/foto-01.jpg',
@@ -527,6 +518,8 @@
                     showPrevious();
                 } else if (e.key === 'ArrowRight') {
                     showNext();
+                } else if (e.key === 'Tab' && window.FocusTrap) {
+                    window.FocusTrap.trapFocus(e, modal);
                 }
             });
         }

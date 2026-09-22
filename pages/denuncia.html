@@ -184,12 +184,12 @@
                             </div>
 
 
-                            <!-- AVISO DE INTERFAZ PROVISIONAL -->
+                            <!-- AVISO: CAMPOS Y CATEGORÍAS SUJETOS A CONFIRMACIÓN OFICIAL -->
                             <div class="denuncia-notice" role="note">
                                 <div class="notice-icon" aria-hidden="true">ℹ</div>
                                 <div class="notice-body">
-                                    <strong>Formulario en fase de integración visual:</strong>
-                                    <p>Este formulario opera de forma estática para revisión de interfaz. Los campos y categorías mostrados están sujetos a confirmación oficial.</p>
+                                    <strong>Tu mensaje se envía y llega a nuestro equipo:</strong>
+                                    <p>Los campos y categorías mostrados están sujetos a confirmación oficial por parte de la administración de La Doña Hacienda.</p>
                                 </div>
                             </div>
 
@@ -344,31 +344,40 @@
                                         <input type="checkbox" id="declaracionLegal" name="declaracionLegal" required>
                                         <span class="checkbox-box" aria-hidden="true"></span>
                                         <span class="checkbox-label">
-                                            Declaro que la información proporcionada es verídica y ha sido presentada de buena fe.
-                                            <!-- DATO REAL PENDIENTE: Enlace a términos oficiales de atención al cliente -->
+                                            Declaro que la información proporcionada es verídica y ha sido presentada de buena fe, conforme a los <a href="terminos-atencion.html" class="text-link" target="_blank" rel="noopener noreferrer">Términos de Atención al Cliente</a>.
                                         </span>
                                     </label>
                                     <span class="form-error-msg" id="errorLegal">Debes confirmar la declaración para continuar.</span>
                                 </div>
 
 
-                                <!-- BOTÓN DE ACCIÓN (SOLO INTERFAZ / SIN ENVÍO A BACKEND) -->
+                                <!-- BOTÓN DE ENVÍO (el envío se realiza con EmailJS, ver js/denuncia.js) -->
                                 <div class="form-actions">
                                     <button type="submit" id="btnSubmitDenuncia" class="btn btn-primary btn-full">
                                         Enviar mensaje
                                     </button>
                                     <p class="form-disclaimer">
-                                        * Interfaz visual estática para revisión del diseño. No se realiza envío de datos ni almacenamiento en servidores.
+                                        * Tu mensaje se envía por correo electrónico al equipo de La Doña Hacienda mediante un servicio externo de envío (EmailJS).
                                     </p>
                                 </div>
 
 
-                                <!-- ESTADO VISUAL DE VALIDACIÓN EN INTERFAZ -->
+                                <!-- ESTADO DE ENVÍO EXITOSO -->
                                 <div class="denuncia-ui-feedback" id="uiFeedback" hidden aria-live="polite">
                                     <div class="feedback-badge">✓</div>
                                     <div class="feedback-text">
-                                        <h4>Validación de interfaz completada</h4>
-                                        <p>Todos los campos requeridos han sido completados correctamente en esta prueba de diseño.</p>
+                                        <h4>Mensaje enviado</h4>
+                                        <p>Recibimos tu mensaje. Gracias por escribirnos.</p>
+                                    </div>
+                                </div>
+
+
+                                <!-- ESTADO DE ERROR AL ENVIAR -->
+                                <div class="denuncia-ui-feedback denuncia-ui-feedback-error" id="uiError" hidden role="alert">
+                                    <div class="feedback-badge">!</div>
+                                    <div class="feedback-text">
+                                        <h4>No se pudo enviar tu mensaje</h4>
+                                        <p>Intenta de nuevo en unos minutos o contáctanos directamente por los canales de atención. Lo que escribiste no se ha perdido.</p>
                                     </div>
                                 </div>
 
@@ -413,12 +422,10 @@
                                     <strong>1. Recepción:</strong> Registro de tu mensaje a través de los canales habilitados.
                                 </li>
                                 <li>
-                                    <strong>2. Revisión:</strong> Análisis preliminar de tu comentario o consulta.
-                                    <!-- DATO REAL PENDIENTE: Equipo responsable oficial -->
+                                    <strong>2. Revisión:</strong> Análisis preliminar a cargo del Jefe de Operaciones, Fernando Tipán, o quien él designe.
                                 </li>
                                 <li>
-                                    <strong>3. Seguimiento:</strong> Gestión interna con la debida reserva.
-                                    <!-- DATO REAL PENDIENTE: Tiempos de respuesta oficiales -->
+                                    <strong>3. Seguimiento:</strong> Gestión interna con la debida reserva. Si dejaste tus datos de contacto, recibirás respuesta en un plazo de 2 a 5 días hábiles.
                                 </li>
                                 <li>
                                     <strong>4. Respuesta:</strong> Comunicación de la respuesta o acción correspondiente.
@@ -463,6 +470,103 @@
         </section>
 
     </main>
+
+
+
+    <!-- =====================================
+         MODAL: TÉRMINOS DE ATENCIÓN AL CLIENTE
+         (mismo contenido de pages/terminos-atencion.html)
+    ====================================== -->
+
+    <div class="terminos-modal" id="terminosModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="terminosModalTitle" tabindex="-1">
+
+        <div class="terminos-modal-backdrop" id="terminosModalBackdrop"></div>
+
+        <div class="terminos-modal-dialog">
+
+            <button class="modal-close-btn" id="terminosModalCloseBtn" aria-label="Cerrar">
+                &times;
+            </button>
+
+            <div class="terminos-modal-content">
+
+                <span class="section-label">
+                    ATENCIÓN AL CLIENTE
+                </span>
+
+                <h3 id="terminosModalTitle">
+                    Términos de Atención al Cliente
+                </h3>
+
+                <p>
+                    Este canal está destinado a recibir sugerencias, comentarios, consultas, felicitaciones y reportes relacionados con tu experiencia en cualquiera de nuestras sucursales (Cayambe y Cumbayá).
+                </p>
+
+                <h4>
+                    Cómo funciona este canal
+                </h4>
+
+                <p>
+                    Puedes escribirnos de forma identificada o anónima. En ambos casos, tu mensaje será revisado internamente por nuestro equipo de Operaciones.
+                </p>
+
+                <h4>
+                    Proceso de atención
+                </h4>
+
+                <ol class="terminos-modal-steps">
+
+                    <li>
+                        <strong>1. Recepción</strong>
+                        Tu mensaje llega directamente a nuestro equipo a través de este formulario.
+                    </li>
+
+                    <li>
+                        <strong>2. Revisión</strong>
+                        Cada mensaje es revisado por el Jefe de Operaciones, Fernando Tipán, o quien él designe.
+                    </li>
+
+                    <li>
+                        <strong>3. Seguimiento</strong>
+                        Según el tipo de mensaje, se da seguimiento interno con el área correspondiente.
+                    </li>
+
+                    <li>
+                        <strong>4. Respuesta</strong>
+                        Si dejaste tus datos de contacto, te responderemos en un plazo de 2 a 5 días hábiles.
+                    </li>
+
+                </ol>
+
+                <h4>
+                    Modalidad anónima
+                </h4>
+
+                <p>
+                    Si elegiste la modalidad anónima, no podremos contactarte directamente, pero tu mensaje será igualmente revisado y considerado.
+                </p>
+
+                <h4>
+                    Tratamiento de datos personales
+                </h4>
+
+                <p>
+                    El tratamiento de los datos personales que nos compartas se rige por nuestra <a href="politicas.html" class="text-link">Política de Privacidad</a>.
+                </p>
+
+                <h4>
+                    Resolución de casos
+                </h4>
+
+                <p>
+                    Nos reservamos el derecho de determinar la resolución más adecuada para cada caso, según su naturaleza.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
 
@@ -584,7 +688,7 @@
                         Preguntas frecuentes
                     </a>
 
-                    <a href="politicas.html">
+                    <a href="terminos-condiciones.html">
                         Términos y condiciones
                     </a>
 
@@ -613,6 +717,9 @@
 
     <!-- JAVASCRIPT GLOBAL -->
     <script src="../js/main.js"></script>
+
+    <!-- SDK OFICIAL DE EMAILJS (envío del formulario sin backend propio) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- JAVASCRIPT EXCLUSIVO DE ATENCIÓN AL CLIENTE -->
     <script src="../js/denuncia.js"></script>

@@ -69,3 +69,44 @@ function updateHeaderState() {
 
 window.addEventListener("scroll", updateHeaderState, { passive: true });
 updateHeaderState();
+
+/* ----------------------------------------------------------
+   5. TRAMPA DE FOCO PARA MODALES
+   Utilidad genérica compartida por cualquier modal del sitio
+   (galería de Eventos, Términos de Atención en Denuncia, etc.):
+   mientras el modal esté abierto, Tab/Shift+Tab deben ciclar
+   solo entre sus propios elementos enfocables.
+   ---------------------------------------------------------- */
+function getFocusableElements(container) {
+  if (!container) return [];
+  var selector = 'button:not([hidden]):not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
+  return Array.prototype.slice.call(container.querySelectorAll(selector)).filter(function (el) {
+    return el.offsetParent !== null;
+  });
+}
+
+function trapFocus(e, container) {
+  var focusable = getFocusableElements(container);
+  if (!focusable.length) return;
+
+  var first = focusable[0];
+  var last = focusable[focusable.length - 1];
+  var active = document.activeElement;
+
+  if (e.shiftKey) {
+    if (active === first || !container.contains(active)) {
+      e.preventDefault();
+      last.focus();
+    }
+  } else {
+    if (active === last || !container.contains(active)) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+}
+
+window.FocusTrap = {
+  getFocusableElements: getFocusableElements,
+  trapFocus: trapFocus
+};

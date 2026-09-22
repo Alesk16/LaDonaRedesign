@@ -5,9 +5,14 @@
  * Responsabilidades:
  * - Control de modalidad de reporte (identificado vs. anónimo).
  * - Actualización en tiempo real del contador de caracteres en la descripción.
- * - Validación de campos obligatorios en el cliente para revisión de interfaz.
- * - Prevención estricta de envío a backend o simulación falsa de comunicación con servidores.
+ * - Validación de campos obligatorios en el cliente.
+ * - Envío del mensaje por correo mediante EmailJS (sin backend propio), con estados de éxito y error.
  */
+
+// Configuración de EmailJS: reemplaza estos 3 valores con los de tu cuenta (emailjs.com > Dashboard).
+const EMAILJS_PUBLIC_KEY = 'Sk2xC4xrZiTztyaLT';
+const EMAILJS_SERVICE_ID = 'service_fn0enuu';
+const EMAILJS_TEMPLATE_ID = 'template_vud8oom';
 
 (function () {
   'use strict';
@@ -38,6 +43,14 @@
   const checkLegal = document.getElementById('declaracionLegal');
   const btnSubmit = document.getElementById('btnSubmitDenuncia');
   const uiFeedback = document.getElementById('uiFeedback');
+  const uiError = document.getElementById('uiError');
+  const submitLabel = btnSubmit ? btnSubmit.textContent : '';
+  let isSending = false;
+
+  // Inicializa el SDK de EmailJS (si el script del CDN no cargó, el envío mostrará el estado de error)
+  if (window.emailjs) {
+    window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
 
   /**
    * Configura la fecha máxima como la fecha actual (no se pueden reportar hechos futuros)
@@ -172,7 +185,7 @@
   }
 
   /**
-   * Manejador del envío (puramente interfaz estática, sin backend)
+   * Manejador del envío: valida los campos y, si todo es correcto, envía el mensaje con EmailJS
    */
   function handleSubmit(e) {
     e.preventDefault();
@@ -212,16 +225,142 @@
       return;
     }
 
-    // Mostrar confirmación visual de validación de interfaz
-    if (uiFeedback) {
-      uiFeedback.removeAttribute('hidden');
-      uiFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    sendMessage(isAnonima);
+  }
+
+  /**
+   * Arma las variables que recibe la plantilla de EmailJS.
+   * En modo anónimo los datos de contacto se envían vacíos, aunque el usuario los haya escrito antes de cambiar de modalidad.
+   */
+  function buildTemplateParams(isAnonima) {
+    const optionLabel = (select) => {
+      const opt = select && select.options[select.selectedIndex];
+      return opt ? opt.textContent.trim() : '';
+    };
+
+    return {
+      modalidad: isAnonima ? 'Anónima' : 'Identificada',
+      tipo_mensaje: optionLabel(selectTipo),
+      sucursal: optionLabel(selectSucursal),
+      fecha_hecho: inputFecha.value,
+      descripcion: textareaDescripcion.value.trim(),
+      nombre: isAnonima ? '' : inputNombre.value.trim(),
+      telefono: isAnonima ? '' : inputTelefono.value.trim(),
+      email: isAnonima ? '' : inputEmail.value.trim(),
+      declaracion_veracidad: 'Sí',
+      fecha_envio: new Date().toLocaleString('es-EC', { timeZone: 'America/Guayaquil' })
+    };
+  }
+
+  function setSendingState(sending) {
+    isSending = sending;
+    if (!btnSubmit) return;
+    btnSubmit.disabled = sending;
+    btnSubmit.setAttribute('aria-busy', String(sending));
+    btnSubmit.textContent = sending ? 'Enviando…' : submitLabel;
+  }
+
+  function showFeedback(el) {
+    if (uiFeedback) uiFeedback.setAttribute('hidden', '');
+    if (uiError) uiError.setAttribute('hidden', '');
+    if (!el) return;
+    el.removeAttribute('hidden');
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  /**
+   * Envía el mensaje con EmailJS. Si falla, conserva lo que el usuario escribió.
+   */
+  function sendMessage(isAnonima) {
+    if (isSending) return;
+
+    const notConfigured = [EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID]
+      .some((value) => value.indexOf('PEGAR_AQUI') === 0);
+
+    if (notConfigured || !window.emailjs) {
+      console.error(notConfigured
+        ? 'EmailJS sin configurar: completa EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID y EMAILJS_TEMPLATE_ID en js/denuncia.js.'
+        : 'El SDK de EmailJS no se cargó (revisa la conexión o un bloqueador de contenido).');
+      showFeedback(uiError);
+      return;
     }
 
-    if (btnSubmit) {
-      btnSubmit.textContent = 'Interfaz validada ✓';
-      btnSubmit.style.background = 'var(--verde-oscuro)';
+    setSendingState(true);
+    showFeedback(null);
+
+    window.emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, buildTemplateParams(isAnonima), { publicKey: EMAILJS_PUBLIC_KEY })
+      .then(() => {
+        form.reset();
+        updateModality();
+        updateCharCounter();
+        showFeedback(uiFeedback);
+      })
+      .catch((error) => {
+        console.error('EmailJS: no se pudo enviar el mensaje.', error);
+        showFeedback(uiError);
+      })
+      .finally(() => {
+        setSendingState(false);
+      });
+  }
+
+  /**
+   * Modal de "Términos de Atención al Cliente": el enlace dentro del checkbox
+   * de declaración sigue siendo un <a href> real (funciona sin JS o al abrirlo
+   * en una pestaña nueva), pero con click normal se intercepta para mostrar
+   * el mismo contenido en un modal sin sacar al usuario del formulario.
+   */
+  function setupTerminosModal() {
+    const trigger = document.querySelector('a[href="terminos-atencion.html"]');
+    const modal = document.getElementById('terminosModal');
+    if (!trigger || !modal) return;
+
+    const backdrop = document.getElementById('terminosModalBackdrop');
+    const closeBtn = document.getElementById('terminosModalCloseBtn');
+    let lastActiveElement = null;
+
+    function isOpen() {
+      return modal.classList.contains('is-active');
     }
+
+    function openModal() {
+      lastActiveElement = document.activeElement;
+      modal.classList.add('is-active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+        lastActiveElement.focus();
+      }
+    }
+
+    trigger.addEventListener('click', (e) => {
+      // Click normal: abre el modal. Click con modificador (nueva pestaña,
+      // nueva ventana) o distinto del botón izquierdo: deja el href real.
+      if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      openModal();
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (!isOpen()) return;
+
+      if (e.key === 'Escape') {
+        closeModal();
+      } else if (e.key === 'Tab' && window.FocusTrap) {
+        window.FocusTrap.trapFocus(e, modal);
+      }
+    });
   }
 
   // Inicialización
@@ -229,5 +368,6 @@
   updateModality();
   updateCharCounter();
   setupEventListeners();
+  setupTerminosModal();
   form.addEventListener('submit', handleSubmit);
 })();

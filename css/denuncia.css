@@ -498,6 +498,10 @@
     align-items: flex-start;
 }
 
+.denuncia-ui-feedback[hidden] {
+    display: none;
+}
+
 .feedback-badge {
     width: 28px;
     height: 28px;
@@ -509,6 +513,16 @@
     font-weight: 700;
     font-size: .95rem;
     flex-shrink: 0;
+}
+
+/* Estado de error al enviar (misma estructura que el de éxito) */
+.denuncia-ui-feedback-error {
+    background: #fdf3ee;
+    border-color: rgb(243 92 34 / 30%);
+}
+
+.denuncia-ui-feedback-error .feedback-badge {
+    background: var(--naranja-principal);
 }
 
 .feedback-text h4 {
@@ -710,5 +724,153 @@
     .btn-full {
         padding: 13px 20px;
         font-size: .92rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   MODAL: TÉRMINOS DE ATENCIÓN AL CLIENTE
+   Mismo lenguaje visual que el modal de Eventos (fondo oscurecido, caja
+   centrada, botón de cerrar), adaptado a contenido de texto.
+   -------------------------------------------------------------------------- */
+.terminos-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.terminos-modal.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.terminos-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgb(20 35 22 / 85%);
+    backdrop-filter: blur(6px);
+}
+
+.terminos-modal-dialog {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 680px);
+    max-height: 85vh;
+    overflow-y: auto;
+    background: var(--blanco);
+    border-radius: var(--radio-grande);
+    border: 1px solid rgb(80 118 77 / 18%);
+    box-shadow: 0 20px 50px rgb(0 0 0 / 30%);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.terminos-modal.is-active .terminos-modal-dialog {
+    transform: scale(1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(0 0 0 / 60%);
+    color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0;
+    transition: background-color var(--transicion), transform var(--transicion);
+}
+
+.modal-close-btn:hover {
+    background: var(--naranja-principal);
+    transform: rotate(90deg);
+}
+
+.modal-close-btn:focus-visible {
+    outline: 3px solid var(--naranja-claro);
+    outline-offset: 2px;
+}
+
+.terminos-modal-content {
+    padding: 44px 36px 36px;
+}
+
+.terminos-modal-content .section-label {
+    display: block;
+    color: var(--naranja-principal);
+    margin-bottom: 6px;
+}
+
+.terminos-modal-content h3 {
+    font-family: var(--font-titular);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--verde-oscuro);
+    margin-bottom: 14px;
+}
+
+.terminos-modal-content h4 {
+    font-family: var(--font-titular);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--verde-principal);
+    margin: 24px 0 10px;
+}
+
+.terminos-modal-content p {
+    color: var(--texto-secundario);
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+.terminos-modal-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.terminos-modal-steps li {
+    padding: 14px 18px;
+    border-radius: var(--radio);
+    background: var(--crema);
+    color: var(--texto-secundario);
+    font-size: .92rem;
+    line-height: 1.6;
+}
+
+.terminos-modal-steps strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--verde-principal);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+    .terminos-modal-content {
+        padding: 40px 22px 28px;
+    }
+
+    .terminos-modal-content h3 {
+        font-size: 1.35rem;
     }
 }
