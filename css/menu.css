@@ -344,7 +344,7 @@
 .menu-items-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px 32px;
+    gap: 24px;
 }
 
 .menu-item {
@@ -404,6 +404,125 @@
     color: var(--texto-secundario);
     font-size: .9rem;
     line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   6.3 FORMATO HORIZONTAL (DESAYUNOS Y ENTRADAS)
+   -------------------------------------------------------------------------- */
+.menu-item--horizontal {
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 18px;
+    height: 126px;
+}
+
+.menu-item-photo-horizontal {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    border-radius: calc(var(--radio) - 4px);
+    background-color: var(--crema);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2350764d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='0.35'%3E%3Cpath d='M3 12h18'/%3E%3Cpath d='M19 12a7 7 0 0 0-14 0'/%3E%3Cpath d='M12 5v2'/%3E%3Cpath d='M5 16h14'/%3E%3Cpath d='M7 19h10'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px 28px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.menu-item-photo-horizontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.menu-item--horizontal:hover .menu-item-photo-horizontal img {
+    transform: scale(1.05);
+}
+
+.menu-item--horizontal .menu-item-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.menu-item--horizontal .menu-item-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   6.1 GRILLA Y TARJETAS GRANDES CON FOTO (PILOTO: ESPECIALES DE LA HACIENDA)
+   -------------------------------------------------------------------------- */
+.menu-items-grid--featured {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.menu-item--featured {
+    padding: 0;
+    overflow: hidden;
+    justify-content: flex-start;
+}
+
+.menu-item-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--crema);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2350764d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='0.35'%3E%3Cpath d='M3 12h18'/%3E%3Cpath d='M19 12a7 7 0 0 0-14 0'/%3E%3Cpath d='M12 5v2'/%3E%3Cpath d='M5 16h14'/%3E%3Cpath d='M7 19h10'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px 40px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.menu-item-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.menu-item--featured:hover .menu-item-photo img {
+    transform: scale(1.04);
+}
+
+.menu-item--featured .menu-item-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 16px 18px 18px;
+    gap: 8px;
+}
+
+.menu-item--featured .menu-item-name {
+    font-size: 1.12rem;
+    line-height: 1.25;
+}
+
+.menu-item--featured .menu-item-desc {
+    margin-top: 2px;
+    font-size: .88rem;
+    line-height: 1.45;
+}
+
+.menu-item--featured .menu-item-price {
+    font-size: 1.2rem;
+    color: var(--naranja-principal);
+    margin-top: auto;
+    padding-top: 4px;
 }
 
 /* --------------------------------------------------------------------------
@@ -674,6 +793,11 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 22px;
     }
+
+    .menu-items-grid--featured {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -900,8 +1024,30 @@
         gap: 14px;
     }
 
+    .menu-items-grid--featured {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
     .menu-item {
         padding: 16px 18px;
+    }
+
+    .menu-item--featured {
+        padding: 0;
+    }
+
+    .menu-item--featured .menu-item-body {
+        padding: 12px 14px 14px;
+        gap: 6px;
+    }
+
+    .menu-item--featured .menu-item-name {
+        font-size: 1rem;
+    }
+
+    .menu-item--featured .menu-item-price {
+        font-size: 1.1rem;
     }
 
     .menu-visual-image {
@@ -1029,6 +1175,23 @@
 
     .menu-item {
         padding: 14px 16px;
+    }
+
+    .menu-items-grid--featured {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .menu-item--featured {
+        padding: 0;
+    }
+
+    .menu-item--featured .menu-item-body {
+        padding: 14px 16px 16px;
+    }
+
+    .menu-item--horizontal .menu-item-desc {
+        -webkit-line-clamp: 2;
     }
 
     .menu-cooking-label {

@@ -1,3 +1,14 @@
 node_modules/
 package.json 
 package-lock.json
+_cleanup_backup_*/
+*.log
+.DS_Store
+/convert*.js
+/opt*.js
+/fix.js
+/repl.js
+/merge.js
+/list_js.js
+/get_descs.js
+/search_refs.js
